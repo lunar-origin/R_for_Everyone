@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="shift_jis" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>『Rで心理統計法』の数学ノート</title>
+		<meta name="keywords" content="月元　敬 Tsukimoto Takashi" />
+		<meta name="description" content="月元　敬のページ" />
+		<link rel="stylesheet" href="css/mathnote.css">
+
+		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+			MathJax.Hub.Config({
+				tex2jax: {
+					inlineMath: [['$','$'], ['\\(','\\)']],
+					processEscapes: true
+				},
+				"HTML-CSS": { matchFontHeight: false },
+				displayAlign: "left",
+				displayIndent: "2em"
+			});
+		</script>
+	</head>
+	
+	<body>
+		<p><img src="img/Rlogo.png" alt=""><font size="8">で心理統計法の数学ノート<img src="img/eipi2.png" alt=""></font></p>
+		<div class="main">
+			<h1 id="sum-of-deviation">偏差の総和はゼロ</h1>
+			<div style="border-style:solid;border-width:1px;padding:10px;border-radius:10px;border-color:red;margin-left:auto;margin-right:auto;width:100%">
+				\[ \sum_{i=1}^N \left( X_i - \bar{X} \right) = 0 \]
+			</div>
+			<div class="proof">
+				\[
+					\begin{align*}
+						\sum_{i=1}^N \left( X_i - \bar{X} \right) &= \sum_{i=1}^N X_i - \sum_{i=1}^N \bar{X} \\
+							&= \sum_{i=1}^N X_i - N\bar{X} \\
+							&= \sum_{i=1}^N X_i - N\left( \frac{1}{N} \sum_{i=1}^N X_i \right) \\
+							&= \sum_{i=1}^N X_i - \sum_{i=1}^N X_i \\
+							&= 0
+					\end{align*}
+				\]
+			</div>
+		    <p style="text-align: right">Last modified: July 29, 2015</p>
+		</div>
+		
+		<div class="main">
+			<h1 id="outlier-to-variance">分散（標準偏差）は極端な値に影響を受ける</h1>
+			<p>　例えば，{0, 1, 2, ..., 9, 10} という11個のデータの場合，平均値は5である。分散の定義式通りに計算するとして，平均値と同じサンプルである5と，それに隣接するサンプル6と最大のサンプル10に着目すると，</p>
+			\[
+				\begin{align*}
+				s^2 &= \frac{1}{11-1}\left\{\left( 0 - 5 \right)^2 + \cdots + \left( 5 - 5\right)^2 + \left( 6 - 5 \right)^2 + \cdots + \left( 10 - 5 \right)^2 \right\} \\
+					&= \frac{25}{10} + \cdots + \frac{0}{10} + \frac{1}{10} + \cdots + \frac{25}{10}
+				\end{align*}
+			\]
+			<p>つまり，6と10は平均値から見ればそれぞれ1単位，5単位という違いであるが，分散への貢献は相対的に1:25になっている。</p>
+			<p style="text-align: right">Last modified: July 30, 2015</p>
+		</div>
+		
+		<div class="main">
+			<h1 id="expected-value">期待値の定義と基本公式</h1>
+			<p>　確率変数が離散型の場合と連続型の場合がある。</p>
+			<h2>定義（離散型）</h2>
+			<p>　$x$ が離散確率変数で，その確率分布が $P(x)$ である時，$x$ の期待値は，</p>
+			 \[ E\left[ x \right] = \sum_x x P(x) \]
+			<p>で定義される。（例えば，$x$ を賞金，$P(x)$ を当選確率とすれば，1枚の宝くじに対して，もらえる可能性がある金額が期待値である。）</p>
+			<h2>定義（連続型）</h2>
+			<p>　$x$ が連続確率変数で，その確率密度関数が $f(x)$ である時，$x$ の期待値は（$x$の定義域を $(-\infty, +\infty )$として），</p>
+			 \[ E\left[ x \right] = \int_{-\infty}^{+\infty} x f(x) dx \]
+			<p>で定義される。</p>
+			<h2>基本公式</h2>
+			<p>　(1) $E\left[ c \right] = c$（$c$ は定数）</p>
+			<div class="proof">
+				\[
+					\begin{align*}
+						【離散型】　E\left[ c \right] &= \sum_x c P(x) \\
+						&= c\sum_x P(x) \\
+						&= c
+					\end{align*}
+				\]
+				\[
+					\begin{align*}
+						【連続型】　E\left[ c \right] &= \int_{-\infty}^{+\infty} c f(x) dx \\
+						&= c\int_{-\infty}^{+\infty} f(x) dx \\
+						&= c
+					\end{align*}
+				\]
+			</div>
+			<p>　(2) $E\left[ cx \right] = cE\left[ x \right]$（$c$ は定数）</p>
+			<div class="proof">
+				\[
+					\begin{align*}
+						【離散型】　E\left[ cx \right] &= \sum_x cx P(x) \\
+						&= c\sum_x x P(x) \\
+						&= cE\left[ x \right]
+					\end{align*}
+				\]
+				\[
+					\begin{align*}
+						【連続型】　E\left[ cx \right] &= \int_{-\infty}^{+\infty} cx f(x) dx \\
+						&= c\int_{-\infty}^{+\infty} x f(x) dx \\
+						&= cE\left[ x \right]
+					\end{align*}
+				\]
+			</div>			
+			<p>　(3) $E\left[ x \pm y \right] = E\left[ x \right] \pm E\left[ y \right]$（期待値の加法性：和の期待値は期待値の和，差の期待値は期待値の差）</p>
+			<div class="proof">
+				\[
+					\begin{align*}
+						【離散型】　E\left[ x \pm y \right] &= \sum_x \sum_y \left( x \pm y \right) P(x, y) \\
+						&= \sum_x \sum_y x P(x, y) \pm \sum_x \sum_y y P(x, y) \\
+						&= \sum_x x \sum_y P(x, y) \pm \sum_y y \sum_x P(x, y) \\
+						&= \sum_x x P(x) \pm \sum_y y P(y) \\
+						&= E\left[ x \right] \pm E\left[ y \right]
+					\end{align*}
+				\]
+				\[
+					\begin{align*}
+						【連続型】　E\left[ x \pm y \right] &= \int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} \left( x \pm y \right) f(x, y) dx dy \\
+						&= \int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} x f(x, y) dx dy \pm \int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} y f(x, y) dx dy \\
+						&= \int_{-\infty}^{+\infty} x \int_{-\infty}^{+\infty} f(x, y) dx dy \pm \int_{-\infty}^{+\infty} y \int_{-\infty}^{+\infty} f(x, y) dx dy \\
+						&= \int_{-\infty}^{+\infty} x f(x) dx \pm \int_{-\infty}^{+\infty} y f(y) dy \\
+						&= E\left[ x \right] \pm E\left[ y \right]
+					\end{align*}
+				\]
+			</div>
+			<p>　以上のように，離散型と連続型の期待値は，“$\displaystyle \sum \leftrightarrow \int$”という対応を示す1例である。</p>
+			<p>　さらに，分散に関する定義と基本公式（導出は省略）は次の通り。</p>
+			<h2>期待値に基づく分散の定義（離散型）</h2>
+			\[ V\left[ x \right] = E\left[ \left( x - \mu \right)^2 \right] \]
+			<p>　右辺を展開していくと，次の式が得られる。</p>
+			\[ V\left[ x \right] = E\left[ x^2 \right] - \left( E[x]\right)^2 \]
+			<h2>基本公式</h2>
+			<p>　(1) $V\left[ cx \right] = c^2 V\left[ x \right]$（$c$ は定数）</p>
+			<p>　(2) $V\left[ x \pm y \right] = V\left[ x \right] + V\left[ y \right]$（但し，$x$ と $y$ が独立である場合。右辺が $\pm$ になっていないことに注意）</p>
+			<p style="text-align: right">Last modified: July 30, 2015</p>
+		</div>
+		
+		<div class="main">
+			<h1 id="sample-distribution">標本分布の平均値と分散</h1>
+			<p>　平均値 $\mu$，分散 $\sigma^2$ の母集団からサンプリングされたサイズ $N$ のサンプルの平均値 $\bar{X}$ の平均値は $\mu$，分散は $\sigma^2 / N$ である。</p>
+			<div class="proof">
+				<p>　$N$ 個のサンプルはサンプリングごとに変わるので，その平均値 $\bar{X}$ もバラつき，標本分布と呼ばれる分布を構成する。この分布の平均値は“$\bar{X}$の期待値”であるから，<a href="#expected-value">期待値の公式</a>を使えば，</p>
+				\[
+					\begin{align*}
+						E\left[ \bar{X} \right] &= E\left[\frac{1}{N}\left( X_1 + X_2 + \cdots + X_N \right) \right] \\
+						&= \frac{1}{N} E\left[ X_1 + X_2 + \cdots + X_N \right] \\
+						&= \frac{1}{N} \left( E[X_1] + E[X_2] + \cdots + E[X_N] \right) \\
+						&= \frac{1}{N} \left( \mu + \mu + \cdots + \mu \right) \\
+						&= \frac{1}{N} N\mu \\
+						&= \mu
+					\end{align*}
+				\]
+				<p>となり，$\mu$であることが分かる。</p>
+				<p>　また，標本分布の分散を求めると，</p>
+				\[
+					\begin{align*}
+						V\left[ \bar{X} \right] &= V\left[\frac{1}{N}\left( X_1 + X_2 + \cdots + X_N \right) \right] \\
+						&= \frac{1}{N^2} V\left[ X_1 + X_2 + \cdots + X_N \right] 
+					\end{align*}
+				\]
+				<p>　ここで，$N$ 個のサンプルはランダムサンプリングされたものであるから，互いに独立している。したがって，最右辺の分散の部分は，</p>
+				\[ V[X_1] + V[X_2] + \cdots + V[X_N] \]
+				<p>である。さらに，各サンプルは同一母集団出身だから，$V[X_1] = V[X_2] = \cdots = V[X_N] = \sigma^2$ である。よって，</p>
+				\[
+					\begin{align*}
+						V\left[ \bar{X} \right] &= \frac{1}{N^2} N\sigma^2 \\
+						&= \frac{\sigma^2}{N} 
+					\end{align*}
+				\]
+				<p>となる。</p>
+			</div>
+			<p style="text-align: right">Last modified: July 30, 2015</p>
+		</div>
+		
+		<div class="main">
+			<h1 id="compu-formula-variance">分散の“計算式”</h1>
+			\[ s^2 = \frac{1}{N-1}\left\{ \sum X^2 - \frac{1}{N}\left( \sum X \right)^2 \right\} \]
+			<div class="proof">
+				<p>　定義式における偏差平方和 $\sum \left( X - \bar{X} \right)^2$ を変形していけばよい。</p>
+				\[
+					\begin{align*}
+					\sum \left( X - \bar{X} \right)^2 &= \sum \left( X^2 - 2\bar{X}X + \bar{X}^2 \right) \\
+						&= \sum X^2 - 2\bar{X} \sum X + \sum \bar{X}^2 \\
+						&= \sum X^2 - 2 \cdot \frac{1}{N}\sum X \cdot \sum X + N \bar{X}^2 \\
+						&= \sum X^2 - \frac{2}{N}\left( \sum X \right)^2 + N\left( \frac{1}{N}\sum X \right)^2 \\
+						&= \sum X^2 - \frac{2}{N}\left( \sum X \right)^2 + \frac{1}{N}\left( \sum X \right)^2 \\
+						&= \sum X^2 - \frac{1}{N}\left( \sum X \right)^2
+					\end{align*}
+				\]
+				<p>したがって，</p>
+				\[ 
+					\begin{align*}
+					s^2 &= \frac{1}{N-1}\sum \left( X - \bar{X} \right)^2 \\
+						&= \frac{1}{N-1}\left\{ \sum X^2 - \frac{1}{N}\left( \sum X \right)^2 \right\}
+					\end{align*}
+				\]
+			</div>
+			<p style="text-align: right">Last modified: July 31, 2015</p>
+		</div>
+
+		<div class="main">
+			<h1 id="unbiased-estimator">不偏推定量</h1>
+			<p>　推定量 $\hat{\theta}$ が平均的にパラメータ $\theta$ に一致する時，すなわち，</p>
+			\[ E \left[ \hat{\theta} \right] = \theta \]
+			<p>である時，$\hat{\theta}$ を $\theta$ の不偏推定量という。平均値と分散に関して，</p>
+			\[ E \left[ \bar{X} \right] = \mu \]
+			\[ E \left[ s^2 \right] = \sigma^2 \]
+			<p>が成り立つ。つまり，$\bar{X}$ は $\mu$ の不偏推定量であり，$s^2$ は $\sigma^2$ の不偏推定量である。</p>
+			<p>　母平均 $\mu$ の不偏推定量は<a href="#sample-distribution">ココ</a>で証明済みなので，母分散 $\sigma^2$ の不偏推定量を導出する。</p>
+			<div class="proof">
+				\[
+					\begin{align*}
+						E \left[ \sum \left( X_i - \bar{X} \right)^2 \right] &= \sum E \left[ \left( X_i - \bar{X} \right)^2 \right] \\
+							&= \sum E \left[ \left\{ X_i - \mu - \left( \bar{X} - \mu \right) \right\}^2 \right] \\
+							&= \sum E \left[ \left( X_i - \mu \right)^2 \right] + \sum E \left[ \left( \bar{X} - \mu \right)^2 \right] -2\sum E \left[ \left( X_i - \mu \right) \left( \bar{X} - \mu \right) \right]
+					\end{align*}
+				\]
+				<p>ここで，第1項と第2項はそれぞれ，</p>
+				\[ \sum E \left[ \left( X_i - \mu \right)^2 \right] = \sum V \left[ X \right] = N\sigma^2 \]
+				\[ \sum E \left[ \left( \bar{X} - \mu \right)^2 \right] = \sum V \left[ \bar{X} \right] = N\frac{\sigma^2}{N} = \sigma^2 \]
+				<p>であり（第2項の $V[\bar{X}]$ は<a href="#sample-distribution">ココ</a>で証明済み），第3項は，</p>
+				\[
+					\begin{align*}
+						2\sum E \left[ \left( X_i - \mu \right) \left( \bar{X} - \mu \right) \right] &= 2E \left[ \sum \left( X_i - \mu \right) \left( \bar{X} - \mu \right) \right] \\
+							&= 2E \left[ N \left( \bar{X} - \mu \right) \left( \bar{X} - \mu \right) \right] \\
+							&= 2N\cdot E \left[ \left(\ \bar{X} - \mu \right)^2 \right] \\
+							&= 2N\frac{\sigma^2}{N} \\
+							&= 2\sigma^2
+					\end{align*}
+				\]
+				<p>となるから，結局，</p>
+				\[ E \left[ \sum \left( X_i - \bar{X} \right)^2 \right] = N\sigma^2 + \sigma^2 - 2\sigma^2 = (N - 1)\sigma^2 \]
+				<p>両辺を $N - 1$ で割って，</p>
+				\[ \frac{1}{N - 1} E \left[ \sum \left( X_i - \bar{X} \right)^2 \right] = \sigma^2 \]
+				<p>すなわち，</p>
+				\[ E \left[ s^2 \right] = \sigma^2 \]
+				<p>であり，$s^2$ が $\sigma^2$ の不偏推定量であることが示された。</p>
+				<p>　ちなみに，分散を$N-1$ ではなく $N$ で偏差平方和を割ることによって定義していれば，</p>
+				\[ E \left[ \frac{1}{N}\sum \left( X_i - \bar{X} \right)^2 \right] = E \left[ \frac{N-1}{N} s^2 \right] = \frac{N-1}{N}\sigma^2 < \sigma^2 \]
+				<p>であるから，$N$ で割る場合は，$\sigma^2$ を平均的に過小評価していることになる。</p>
+			</div>
+			<p style="text-align: right">Last modified: August 1, 2015</p>
+		</div>
+
+		<div class="main">
+			<h1 id="linear-transform">データの線型変換</h1>
+			<p>　元のデータ $X_{old}$ に対して，線型変換</p>
+			\[ X_{new} = bX_{old} + a \]
+			<p>を行って得られる $X_{new}$ の平均値と分散は次のようになる。</p>
+			\[ \bar{X}_{new} = b\bar{X}_{old} + a \]
+			\[ s^2_{new} = b^2s^2_{old} \]
+			<div class="proof">
+				<p>　定義式における偏差平方和 $\sum \left( X - \bar{X} \right)^2$ を変形していけばよい。</p>
+				\[
+					\begin{align*}
+						\bar{X}_{new} &= \frac{1}{N}\sum X_{new} \\
+							&= \frac{1}{N}\sum \left( bX_{old} + a \right) \\
+							&= \frac{1}{N}\left( \sum bX_{old} + \sum a \right) \\
+							&= b\frac{1}{N}\sum X_{old} + \frac{1}{N}Na \\
+							&= b\bar{X}_{old} + a
+					\end{align*}
+				\]
+				\[
+					\begin{align*}
+						s_{new}^2 &= \frac{1}{N}\sum \left( X_{new} - \bar{X}_{new} \right)^2 \\
+							&= \frac{1}{N}\sum \left\{ \left( b X_{old} + a \right) - \left( b\bar{X}_{old} + a \right) \right\}^2 \\
+							&= \frac{1}{N}\sum b^2 \left( X_{old} - \bar{X}_{old} \right)^2 \\
+							&= b^2 \frac{1}{N}\sum \left( X_{old} - \bar{X}_{old} \right)^2 \\
+							&= b^2 s^2_{old}
+					\end{align*}
+				\]
+				<p>　このように，分散は線型変換を保持しない。これは標準偏差も同様である。</p>
+				\[ s_{new} = |b| s_{old} \]
+			</div>
+			<p style="text-align: right">Last modified: August 3, 2015</p>
+		</div>
+
+		<div class="main">
+			<h1 id="standardization">標準化</h1>
+			<p>　標準化によって，平均値0，分散1のデータとなる。通常，標準化の議論は正規分布でなされるが，標準化そのものには分布の型は関係ない。</p>
+			<div class="proof">
+				<p>　標準化の式は，</p>
+				\[ \frac{X - \bar{X}}{s} = \frac{1}{s}X - \frac{1}{s}\bar{X} \]
+				<p>であるので，標準化は<a href="#linear-transform">線形変換</a>である。したがって，標準化前後の変数をそれぞれ $X_{new}$，$X_{old}$ とすると，</p>
+				\[ \bar{X}_{new} = \frac{1}{s_{old}}\bar{X}_{old} - \frac{1}{s_{old}}\bar{X}_{old} = 0 \]
+				\[ s^2_{new} = \frac{1}{s^2_{old}} \cdot s^2_{old} = 1 \]
+			</div>
+			<p style="text-align: right">Last modified: August 3, 2015</p>
+		</div>
+        
+		<div class="main">
+			<h1 id="gauss-int">ガウス積分</h1>
+			<p>　正規分布関数と横軸で囲まれた面積が1になること，すなわち，</p>
+			\[ \int_{-\infty}^{+\infty} \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(X-\mu)^2}{2\sigma^2}} dX = 1 \]
+			<p>を示す前に，ガウス積分</p>
+			\[ I = \int_{-\infty}^{+\infty} e^{-ax^2}dx = \sqrt{\frac{\pi}{a}} \]
+			<p>となることを示し，これを利用して最初の式が成立することを確認する。</p>
+				
+			<div class="proof">
+				<p>　被積分関数は常に正となる関数であるから，$I>0$であることは明らか。</p>
+				\[
+					\begin{align*}
+						I^2 &= \left( \int_{-\infty}^{+\infty} e^{-ax^2}dx \right)^2 \\
+							&= \left( \int_{-\infty}^{+\infty} e^{-ax^2}dx \right)\cdot\left( \int_{-\infty}^{+\infty} e^{-ay^2}dy \right) \\
+							&= \int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} e^{-a(x^2 + y^2)} dx dy
+					\end{align*}
+				\]
+				<p>　ここで，極座標変換 $x = r\cos\theta$，$y = r\sin\theta$を行うと，</p>
+				\[
+					\begin{align*}
+						I^2 &= \int_0^{2\pi} \int_0^{+\infty} e^{-ar^2} rdrd\theta \\
+							&= \int_0^{2\pi} d\theta \int_0^{+\infty} e^{-ar^2} rdr \\
+							&= 2\pi \int_0^{+\infty} e^{-ar^2} rdr
+					\end{align*}
+				\]
+				<p>さらに $t = r^2$ で置換すると，$dt = 2rdr$ となるから，</p>
+				\[
+					\begin{align*}
+						I^2 &= \pi \int_0^{+\infty} e^{-at} dt \\
+							&= \pi \left[ -\frac{1}{a} e^{-at} \right]_0^{+\infty} \\
+							&= \frac{\pi}{a}
+					\end{align*}
+				\]
+				<p>したがって，</p>
+				\[ I = \sqrt{\frac{\pi}{a}} \]
+				<p>である。</p>
+				<p>　正規分布関数の積分とガウス積分を比較すると，</p>
+				\[ a = \frac{1}{2\sigma^2} \]
+				\[ x = X - \mu \]
+				<p>とみなせばよいことが分かるので，</p>
+				\[
+					\begin{align*}
+						\int_{-\infty}^{+\infty} \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(X-\mu)^2}{2\sigma^2}} dX &= \frac{1}{\sigma \sqrt{2\pi}} \int_{-\infty}^{+\infty} e^{-\frac{1}{2\sigma^2}x^2} dx \\
+							&=  \frac{1}{\sigma \sqrt{2\pi}} \sqrt{\pi \div \frac{1}{2\sigma^2}} \\
+							&= \frac{1}{\sigma \sqrt{2\pi}}\cdot \sqrt{2\pi\sigma^2} \\
+							&= 1
+						\end{align*}
+				\]
+			</div>
+			<p style="text-align: right">Last modified: August 5, 2015</p>
+		</div>
+		
+		<div class="main">
+			<h1 id="shapiro">シャピロ-ウィルク検定</h1>
+			<p>　シャピロ-ウィルク検定（Shapiro-Wilk test）は，データが正規分布に従うものか否かを調べる検定法である。多くのパラメトリック検定において，検定対象のデータは正規分布に従うことが前提となっている点で，正規性の検定は本来的には重要である（が，あまり用いられていない）。帰無仮説は“サンプルは正規母集団かサンプリングされたものである”となる。シャピロ-ウィルク検定は以下のように行う。</p>
+			<ol>
+				<li>データを昇順に並び替える。すなわち，$X_1 \le \cdots \le X_N$。</li>
+				<li>平方和 $SS$ を計算する。</li>
+				\[ SS = \sum_{i=1}^N (X_i - \bar{X})^2 \]
+				<li>$N$ が偶数なら $m=N/2$，奇数なら $m=(N-1)/2$ とする。</li>
+				<li>次の式により $b$ を計算する。なお，$a_i$ は <a href="https://www.google.co.jp/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0CCIQFjAAahUKEwiJnbLUzJ3HAhVGnJQKHSBdCKc&url=http%3A%2F%2Fsci2s.ugr.es%2Fkeel%2Fpdf%2Falgorithm%2Farticulo%2Fshapiro1965.pdf&ei=6x3IVcn7Jca40gSguqG4Cg&usg=AFQjCNFyIS9W0N7izQDvtORA1zmO_-W40A&sig2=8wfvAn12ikY83-RyUykDMQ" target="blank">Shapiro & Wilk (1965) のTable 5 (pp. 603-604)</a> を参照。</li>
+				\[ b = \sum_{i=1}^m a_i (X_{N+1-i} - X_i) \]
+				<li>検定統計量 $W$ を計算する。</li>
+				\[ W = \frac{b^2}{SS} \]
+				<li>$W$ 表（<a href="https://www.google.co.jp/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0CCIQFjAAahUKEwiJnbLUzJ3HAhVGnJQKHSBdCKc&url=http%3A%2F%2Fsci2s.ugr.es%2Fkeel%2Fpdf%2Falgorithm%2Farticulo%2Fshapiro1965.pdf&ei=6x3IVcn7Jca40gSguqG4Cg&usg=AFQjCNFyIS9W0N7izQDvtORA1zmO_-W40A&sig2=8wfvAn12ikY83-RyUykDMQ" target="blank">Shapiro & Wilk (1965) のTable 6 (p. 605)</a>）から $p$ 値を見つける。</li>
+			</ol>
+			<p>　以上の方法では，データが50個までしか対応できない。この限界を超えるために提案された拡張版では，12個から5000個のデータに対応できる（最低でも20個のデータが推奨される）。</p>
+			<ol>
+				<li>データを昇順に並び替える。すなわち，$X_1 \le \cdots \le X_N$。</li>
+				<li>標準正規分布の累積分布関数</li>
+				\[ F(x) = \int_{-\infty}^x \frac{1}{\sqrt{2\pi}} e^{-\frac{1}{2}z^2} dz \]
+				の逆関数により，$m_1, \cdots, m_N$ を次のように定義する。
+				\[ m_i = F^{-1}\left( \frac{i - .375}{N + .25} \right) \]
+				<li>$mi$ を要素とする列ベクトルを $\boldsymbol{M}$ とし，その内積を $m$ とする。</li>
+				\[ m = \boldsymbol{M}\cdot\boldsymbol{M} = \sum_{i=1}^N m_i^2 \]
+				<li>$\displaystyle u = \frac{1}{\sqrt{N}}$ とし，係数 $a_1, \cdots, a_N$ を次のように順次定義する。</li>
+				\[ a_N = -2.706056u^5 + 4.434685u^4 -2.071190u^3 - 0.147981u^2 + 0.221157u + m_N m^{-0.5} \]
+				\[ a_{N-1} = -3.582633u^5 + 5.682633u^4 - 1.752461u^3 - 0.293762u^2 + 0.042981u + m_{N-1} m^{-0.5} \]
+				$2 < i < N-1$ に対して，
+				\[ a_i = \frac{m_i}{\sqrt{\epsilon}} \ \ \ \mbox{但し，} \epsilon = \frac{m - 2m_N^2 - 2m_{N-1^2}}{1 - 2a_N^2 - 2a_{N-1}^2} \]
+				\[a_2 = -a_{N-1} \]
+				\[a_1 = -a_N \]
+				以上の $a_i$ は，全ての $i$ について $a_i = -a_{N-i+1}$ となっていて（つまり，$\sum a_i = 0$ であるから $\bar{a} = 0$），さらに，
+				\[ \sum_{i=1}^N a_i^2 = 1 \]
+				になるように定められている。
+				<li>検定統計量 $W$ を次式で計算する。</li>
+				\[ W = \frac{\displaystyle \left( \sum_{i=1}^N a_i X_i \right)^2}{\displaystyle \sum_{i=1}^N \left( X_i - \bar{X} \right)^2} \]
+				$W$ は $a_i$ と $X_i$ の相関係数の2乗である。したがって，$W$ は0から1の間の値をとる。また，統計量 $\ln (1 - W)$ は12から5000までの $N$ で，次の平均値と標準偏差を持つ正規分布に近似できることが知られている。
+				\[ \mu = 0.0038915 (\ln N)^3 - 0.083751 (\ln N)^2 - 0.31082 \ln N - 1.5861 \]
+				\[ \sigma = e^{0.0030302 (\ln N)^2 - 0.082676 \ln N - 0.4803} \]
+				<li>したがって，以下の統計量</li>
+				\[ z = \frac{\ln (1 - W) - \mu}{\sigma} \]
+				について，標準正規分布により検定できる。
+			</ol>
+			<p style="text-align: right">Last modified: August 11, 2015</p>
+		</div>
+		
+		<div class="main">
+			<h1 id="moment">積率と積率母関数</h1>
+			<p>　平均，分散，歪度，尖度は確率分布の性質を表す指標だが，これらをより一般的に取り扱う概念が積率である。</p>
+			<h2>定義（離散型の積率）</h2>
+			<p>　$x$ の確率分布を $P(x)$ で表す。この時，$x^n$ の期待値</p>
+			\[ \mu'_n = E\left[ x^n \right] \]
+			<p>を $n$ 次の原点積率という。特に $n = 1$ の時，すなわち1次の原点積率 $\mu'_1$ は平均値 $\mu$ のことである。つまり，</p>
+			\[ \mu = \mu'_1 = E[x] \]
+			<p>　よく用いられるのは，平均値の周りの $n$ 次の積率（中心積率）である。すなわち，</p>
+			\[ \mu_n = E\left[ (x - \mu )^n \right] = \sum_x (x - \mu )^n P(x) \]
+			<p>$n = 1$ の時，</p>
+			\[ \mu_1 = M_1 (\mu ) = E\left[ (x - \mu ) \right] = \sum_x (x - \mu ) P(x) = \sum_x x P(x) - \mu \sum_x P(x) = \mu - \mu = 0 \]
+			<p>$n = 2$ の時，すなわち2次の中心積率 $\mu_2$ は分散のことであり，$\sigma^2$ と表す。したがって，</p>
+			\[ \sigma^2 = \mu_2 = E\left[ (x - \mu )^2 \right] = E\left[ x^2 \right] - \left( E[x]\right)^2 = \mu'_2 - \mu^2 \]
+			<h2>定義（連続型の積率）</h2>
+			<p>　$x$ の確率分布を $f(x)$ で表す。この時，原点積率と中心積率はそれぞれ，</p>
+			\[ \mu'_n = \int_{-\infty}^\infty x^n f(x) dx \]
+			\[ \mu_n = \int_{-\infty}^\infty (x - \mu )^n f(x) dx \]
+			<p><br>　積率は，定義式に沿って直接計算することでも求められるが，積率母関数を用いることによって解析的に求めることができるようになる。</p>
+			<h2>定義（離散型の積率母関数）</h2>
+			<p>　$\theta$ をダミー変数とした，収束が仮定される関数</p>
+			\[ M_x (\theta ) = \sum_x e^{\theta x} P(x) \]
+			<p>を積率母関数という。</p>
+			<p>　$e^z$ のマクローリン展開は</p>
+			\[ e^z = 1 + z + \frac{1}{2!}z^2 + \frac{1}{3!}z^3 + \cdots \]
+			<p>であるから，</p>
+			\[
+				\begin{align*}
+					M_x (\theta ) &= \sum_x \left( 1 + \theta x + \frac{1}{2!}\theta^2 x^2 + \frac{1}{3!}\theta^3 x^3 + \cdots \right) P(x) \\
+						&= \sum_x P(x) + \theta\sum_x x P(x) + \frac{\theta^2}{2!}\sum_x x^2 P(x) + \frac{\theta^3}{3!}\sum_x x^3 P(x) + \cdots \\
+						&= 1 + \theta\mu'_1 + \frac{\theta^2}{2!} \mu'_2 + \frac{\theta^3}{3!} \mu'_3 + \cdots
+				\end{align*}
+			\]
+			<p>$\theta$ について微分すると，</p>
+			\[ \frac{dM_x (\theta )}{d\theta} = \mu'_1 + \theta\mu'_2 + \frac{\theta^2}{2!}\mu'_3 + \cdots \]
+			<p>$\theta = 0$ として，</p>
+			\[ \left. \frac{dM_x (\theta )}{d\theta} \right|_{\theta = 0} = \mu'_1 \]
+			<p>もう1度微分し，$\theta = 0$ とすれば，</p>
+			\[ \left. \frac{d^2 M_x (\theta )}{d\theta^2} \right|_{\theta = 0} = \mu'_2 \]
+			<p>一般に，</p>
+			\[ \left. \frac{d^n M_x (\theta )}{d\theta^n} \right|_{\theta = 0} = \mu'_n \]
+			<h2>定義（連続型の積率母関数）</h2>
+			<p>　$\theta$ をダミー変数とした，収束が仮定される関数</p>
+			\[ M_x (\theta ) = \int_{-\infty}^\infty e^{\theta x} f(x) dx \]
+			<p>を積率母関数という。</p>
+			<p>　離散型の場合と同様にすれば，</p>
+			\[
+				\begin{align*}
+					 M_x (\theta ) &= \int_{-\infty}^\infty \left\{ 1 + \theta x + \frac{\theta^2}{2!}x^2 + \frac{\theta^3}{3!}x^3 + \cdots \right\} f(x) dx \\
+						&= \int_{-\infty}^\infty f(x)dx + \theta\int_{-\infty}^\infty xf(x)dx + \frac{\theta^2}{2!}\int_{-\infty}^\infty x^2 f(x)dx + \frac{\theta^3}{3!}\int_{-\infty}^\infty x^3 f(x)dx + \cdots \\
+						&= 1 + \theta \mu'_1 + \frac{\theta^2}{2!}\mu'_2 + \frac{\theta^3}{3!}\mu'_3 + \cdots  
+				\end{align*}
+			\]
+			<p>よって，一般に，</p>
+			\[ \left. \frac{d^n M_x (\theta )}{d\theta^n} \right|_{\theta = 0} = \mu'_n \]
+			<h2>計算例（正規分布）</h2>
+			<p>正規分布 $N(\mu, \sigma^2)$ の平均値と分散は当然 $\mu$ と $\sigma^2$ である。これを積率母関数を用いて確認する。</p>
+			\[
+				\begin{align*}
+					M_x (\theta ) &= \int_{-\infty}^\infty e^{\theta x}\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{(x-\mu)^2}{2\sigma^2}} dx \\
+						&= \frac{1}{\sigma\sqrt{2\pi}}\int_{-\infty}^\infty e^{-\frac{1}{2\sigma^2}\left\{ (x-\mu)^2 -2\sigma^2\theta x \right\}} dx
+				\end{align*}
+			\]
+			<p>$e$ の指数の{}内を変形すると，</p>
+			\[
+				\begin{align*}
+					(x - \mu )^2 - 2\sigma^2 \theta x &= x^2 - 2\mu x + \mu^2 - 2\sigma^2 \theta x \\
+						&= x^2 - 2(\mu + \sigma^2 \theta ) x + \mu^2 \\
+						&= \left\{ x - (\mu + \sigma^2\theta ) \right\}^2 - (\mu + \sigma^2\theta )^2 + \mu^2 \\
+						&= \left\{ x - (\mu + \sigma^2\theta ) \right\}^2 - 2\mu\sigma^2\theta - \sigma^4\theta^2
+				\end{align*}
+			\]
+			<p>となるから，</p>
+			\[
+				\begin{align*}
+					M_x (\theta ) &= \frac{1}{\sigma\sqrt{2\pi}} \int_{-\infty}^\infty e^{-\frac{1}{2\sigma^2}\left\{ x - (\mu + \sigma^2\theta ) \right\}^2} \cdot e^{\mu\theta + \frac{1}{2}\sigma^2\theta^2} dx \\
+						&= e^{\mu\theta + \frac{1}{2}\sigma^2\theta^2} \int_{-\infty}^\infty \frac{1}{\sigma\sqrt{2\pi}} e^{-\frac{1}{2\sigma^2}\left\{ x - (\mu + \sigma^2\theta ) \right\}^2} dx
+				\end{align*}
+			\]
+			<p>被積分項は，平均 $\mu +\sigma^2\theta$ で分散 $\sigma^2$ の正規分布関数であり，それを全範囲にわたって積分するから1である。よって，</p>
+			\[ M_x (\theta ) = e^{\mu\theta +\frac{1}{2}\sigma^2\theta^2} \]
+			<p>したがって，</p>
+			\[ \mu'_1 = \left. \frac{dM_x (\theta )}{dx} \right|_{\theta = 0} = \left. (\mu + \sigma^2\theta ) e^{\mu\theta +\frac{1}{2}\sigma^2\theta^2}\right|_{\theta = 0} = \mu \]
+			\[ \mu'_2 = \left. \frac{d^2 M_x (\theta )}{dx^2} \right|_{\theta = 0} = \left. \left\{ \sigma^2 + (\mu +\sigma^2\theta)^2 \right\} e^{\mu\theta +\frac{1}{2}\sigma^2\theta^2}\right|_{\theta = 0} = \sigma^2 + \mu^2 \]
+			<p>よって，分散は，</p>
+			\[ \mu_2 = \mu'_2 - \mu^2 = \sigma^2 + \mu^2 - \mu^2 = \sigma^2 \]
+			<p>となる。</p>
+			<p style="text-align: right">Last modified: August 11, 2015</p>
+		</div>
+		
+		<div class="main">
+			<h1 id="binom-dist">二項分布の平均と分散</h1>
+			\[ \mu = Np \]
+			\[ \sigma^2 = Npq \]
+			<p> 
+			<div class="proof">
+				<p>　期待値に基づく証明と<a href="#moment">積率母関数<a>を利用する証明を記載する。</p>
+				<h2>期待値に基づく証明</h2>
+				<p>　二項分布 $B (N, p)$ において，$N = 1$ の場合を考える。すなわち，</p>
+				\[ p(X) = p^X q^{1-X} \]
+				<p>である（これは特に，ベルヌーイ分布とか単位二項分布と呼ばれる）。$X$ は確率 $q$ で0，確率 $p$ で1という値をとる確率変数である。この平均値は簡単に，</p>
+				\[ E [X] = 0 \times q + 1 \times p = p \]
+				<p>であり，また，分散は，</p>
+				\[ 
+					\begin{align*}
+						V [X] &= E [X^2] - \left\{ E[X] \right\}^2 \\
+							&= ( 0^2 \times q + 1^2 \times p) - p^2 \\
+							&= p - p^2 \\
+							&= p(1 - p) \\
+							&= pq
+					\end{align*}
+				\]
+				<p>となる（<a href="#expected-value">期待値の公式</a>参照）。</p>
+				<p>　一般の二項分布は，同じパラメータ $p$ のベルヌーイ分布をする $N$ 個の独立な確率変数の和の分布であるから，その平均値と分散はそれぞれ，</p>
+				\[
+					\begin{align*}
+						\mu &= E[X] \\
+							&= E \left[X_1 + X_2 + \cdots + X_N \right] \\
+							&= E[X_1] + E[X_2] + \cdots + E[X_N] \\
+							&= Np
+					\end{align*}
+				\]
+				\[
+					\begin{align*}
+						\sigma^2 &= V[X] \\
+							&= V \left[X_1 + X_2 + \cdots + X_N \right] \\
+							&= V[X_1] + V[X_2] + \cdots + V[X_N] \\
+							&= Npq
+					\end{align*}
+				\]
+				<p>となる。</p>
+				<h2>積率母関数を利用する証明</h2>
+				<p>　二項分布の積率母関数は，</p>
+				\[
+					\begin{align*}
+						M_X (\theta) &= \sum_{X=0}^N e^{\theta X} p(X) \\
+							&= \sum_{X=0}^N e^{\theta X} \frac{N!}{X! \left( N - X \right)!} p^X q^{N-X} \\
+							&= \sum_{X=0}^N \frac{N!}{X! \left( N - X \right)!} \left( pe^\theta \right)^X q^{N-X}
+					\end{align*}
+				\]
+				<p>であるが，ここで二項展開式</p>
+				\[ (p + q)^N = \sum_{X=0}^N \frac{N!}{X! \left( N - X \right)!} p^X q^{N-X} \]
+				<p>を参照すると，$p$ の部分が $pe^\theta$ に変わっただけであるから，</p>
+				\[ M_X (\theta) = (pe^\theta + q)^N \]
+				<p>と書ける。平均値は1次の原点積率 $\mu'_1$ であるから，</p>
+				\[
+					\begin{align*}
+						\mu &= \mu'_1 \\
+							&= \left. \frac{dM_X (\theta)}{d\theta} \right|_{\theta = 0} \\
+							&= \left. N (pe^\theta + q)^{N-1} \cdot pe^\theta \right|_{\theta = 0} \\
+							&= Np(p+q)^{N-1} \\
+							&= Np
+					\end{align*}
+				\]
+				<p>また，</p>
+				\[
+					\begin{align*}
+						\mu'_2 &= E[X^2] \\
+							&= \left. \frac{d^2 M_X (\theta)}{d\theta^2} \right|_{\theta = 0} \\
+							&= \left. N(N - 1)(pe^\theta + q)^{N-2} p^2 e^{2\theta} + N(pe^\theta + q)^{N-1} pe^\theta \right|_{\theta = 0} \\
+							&= N(N - 1) (p + q)^{N-2} p^2 + N(p + q)^{N-1} p \\
+							&= N(N - 1) p^2 + Np
+					\end{align*}
+				\]
+				<p>であるから，</p>
+				\[
+					\begin{align*}
+						\sigma^2 &= E[X^2] - \left\{ E[X] \right\} \\
+							&= N(N - 1) p^2 + Np - N^2 p^2 \\
+							&= Np (1 - p) \\
+							&= Npq
+					\end{align*}
+				\]
+			</div>
+			<p style="text-align: right">Last modified: August 26, 2015</p>
+		</div>
+		
+		<div class="main">
+			<h1 id="binom2norm">二項分布の正規分布への近似</h1>
+			<p>　二項分布 $B(N, p)$ は，$N$ が大きくなる時，正規分布 $N(Np, Npq)$ に近づく。</p>
+			<br>
+			<p>　この証明のために，まずスターリング近似と呼ばれる近似式を示しておく。</p>
+			<h2>スターリング近似</h2>
+			\[ \ln N! \simeq N \ln N - N \]
+			<div class="proof">
+				\[ N! = N \times (N - 1) \times \cdots \times 2 \times 1 \]
+				<p>両辺対数をとると，</p>
+				\[ \ln N! = \ln N + \ln (N - 1) + \cdots + \ln 2 + \ln 1 \]
+				<p>この右辺は，$y = \ln x$ について区間 $1 \le x \le N$ で $x$ 軸と囲まれた面積を，幅が1，高さが $\ln k$（$k = 1, 2, \cdots, N$）の長方形の面積の総和で求めようとする区分求積法である。微積分の考え方からすれば，幅が1であるのは大きすぎるが，今 $N$ は十分大きいと想定するので，</p>
+				\[ \ln N! = \sum_{k=1}^N \ln k \simeq \int_1^N \ln x dx \]
+				<p>と積分で近似できる。部分積分法により，</p>
+				\[
+					\begin{align*}
+						\int_1^N \ln x dx &= \int_1^N (x)' \ln x dx \\
+							&= \left[ x \ln x \right]_1^N - \int_1^N dx \\
+							&= N \ln N - \left[ x \right]_1^N \\
+							&= N \ln N - N + 1
+					\end{align*}
+				\]
+				<p>$N$ が十分大きいので，最後の1は無視できて，結局，</p>
+				\[ \ln N! \simeq N \ln N - N \]
+				<p>という近似式が成り立つ。</p>
+			</div>
+			<p>　それでは本題。</p>
+			<h2>二項分布の正規分布への近似</h2>
+			<p>　二項分布 $B(N, p)$ は，$N$ が大きくなる時，正規分布 $N(Np, Npq)$ に近づく。</p>
+			<div class="proof">
+				<p>　二項分布</p>
+				\[ f(X) = p(X) = {}_N C_X p^X q^{N-X} \]
+				<p>の両辺で対数をとる。</p>
+				\[ \ln f(X) = \ln N! - \ln X! - \ln (N-X)! + X \ln p + (N-X) \ln q \]
+				<p>さらに，スターリング近似によって，次のように変形する。</p>
+				\[
+					\begin{align*}
+						\ln f(X) &= (N \ln N - N) - (X \ln X - X) - \left\{ (N-X) \ln (N-X) - (N-X) \right\} + X \ln p + (N-X) \ln q \\
+							&= (\ln p - \ln q) X - X \ln X - (N - X) \ln (N - X) + N \ln N + N \ln q
+					\end{align*}
+				\]
+				<p>　$\ln f(X) = g(X)$ とおくと，$g(X)$ の $X = \mu$ まわりのテイラー展開は，</p>
+				\[ g(\mu + h) = g(\mu) + g'(\mu) h + \frac{1}{2}g''(\mu) h^2 + \frac{1}{3!}g'''(\mu) h^3 + \cdots \]
+				<p>であり，以下，右辺の各係数 $g'(\mu)$，$g''(\mu)$，$g'''(\mu)$，$\cdots$ について吟味する。</p>	
+				<p>　また，1つの仮定として，$f(\mu)$ が極大値であるとする。すなわち，$f'(\mu) = 0$ と仮定する。この時，対数微分</p>
+				\[ \frac{d \ln f(X)}{dX} = \frac{f'(X)}{f(X)} = 0 \]
+				<p>となるから，</p>
+				\[
+					\begin{align*}
+						g'(\mu) &= \frac{d \ln f(\mu)}{dX} \\
+							&= (\ln p - \ln q) - \ln X - X \cdot \frac{1}{X} + \ln (N - X) + (N - X) \cdot \frac{1}{(N - X)} \\
+							&= (\ln p - \ln q) - \ln X + \ln (N - X) = 0
+					\end{align*}
+				\]
+				<p>これをまとめると，</p>
+				\[ \ln \left\{ \frac{p(N - \mu)}{q\mu} \right\} = 0 \]
+				<p>すなわち，</p>
+				\[
+					\begin{align*}
+						\frac{p(N - \mu)}{q\mu} &= 1 \\
+						p (N - \mu) &= q\mu \\
+						pN &= (p + q) \mu
+					\end{align*}
+				\]
+				<p>$p + q = 1$ だから，</p>
+				\[ \mu = Np \]
+				<p>これは，$X = \mu = Np$ の時，$f(X)$ が極大となることを示しており，$Np$ は二項分布の平均値である。</p>
+				<p>　次に，</p>
+				\[
+					\begin{align*}
+						g''(\mu) &= \frac{d^2 \ln f(\mu)}{dX^2} \\
+							&= -\frac{1}{\mu} - \frac{1}{N - \mu} \\
+							&= -\frac{1}{Np} - \frac{1}{N - Np} \\
+							&= -\frac{1}{Np} - \frac{1}{N(1 - p)} \\
+							&= -\frac{1}{N}\left( \frac{1}{p} + \frac{1}{q} \right) \\
+							&= -\frac{1}{N} \cdot \frac{p + q}{pq} \\
+							&= -\frac{1}{Npq} \\
+							&= -\frac{1}{\sigma^2}
+					\end{align*}
+				\]
+				<p>続けて，</p>
+				\[
+					\begin{align*}
+						g'''(\mu) &= \frac{d^3 \ln f(\mu)}{dX^3} \\
+							&= \frac{1}{\mu^2} - \frac{1}{(N - \mu)^2} \\
+							&= \frac{1}{N^2 p^2} - \frac{1}{(N - Np)^2} \\
+							&= \frac{1}{N^2 p^2} - \frac{1}{N^2 (1 - p)^2} \\
+							&= \frac{1}{N^2 p^2} - \frac{1}{N^2 q^2} \\
+							&= \frac{1}{N^2} \left( \frac{1}{p^2} - \frac{1}{q^2} \right)
+					\end{align*}
+				\]
+				<p>　以下同様にして順次，高次の係数を求めることができるが，$g'''(\mu)$ は分母のオーダーが $N^2$ となっている。したがって，$g'''(\mu)$ 以降の高次の項は無視できるほど小さいと考えることができる。よって，$N$ が十分大きいならば，</p>
+				\[
+					\begin{align*}
+						g(\mu + h) &\simeq g(\mu) + g'(\mu)h + \frac{1}{2}g''(\mu)h^2 \\
+							&= \ln f(\mu) + 0 \cdot h - \frac{1}{2} \cdot \frac{1}{\sigma^2}h^2 \\
+							&= \ln f(\mu) - \frac{1}{2\sigma^2}h^2
+					\end{align*}
+				\]
+				<p>したがって，</p>
+				\[ \ln f(\mu + h) = \ln f(\mu) - \frac{1}{2\sigma^2}h^2 \]
+				<p>　ここで，$X = \mu + h$ なので，</p>
+				\[ \ln f(X) = \ln f(\mu) - \frac{(X - \mu)^2}{2\sigma^2} \]
+				\[ f(X) = f(\mu) \cdot e^{-\frac{(X-\mu)^2}{2\sigma^2}} \]
+				<p>これが，$N \rightarrow \infty$ とした時の二項分布の確率密度関数であるが，確率密度関数の規格化条件</p>
+				\[ \int_{-\infty}^\infty f(X)dX = 1 \]
+				<p>から，係数 $f(\mu)$ を求めることができる。<a href="#gauss-int">ガウス積分</a>で示したように，</p>
+				\[ \int_{-\infty}^\infty e^{-\frac{(X-\mu)^2}{2\sigma^2}} dX = \sigma \sqrt{2\pi} \]
+				<p>であるから，</p>
+				\[ \int_{-\infty}^\infty f(\mu) \cdot e^{-\frac{(X-\mu)^2}{2\sigma^2}} dX = f(\mu) \cdot \sigma \sqrt{2\pi} = 1 \]
+				\[ \therefore f(\mu) = \frac{1}{\sigma \sqrt{2\pi}} \]
+				<p>結局，</p>
+				\[ f(X) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(X-\mu)^2}{2\sigma^2}} \]
+				<p>となる。これは，$N(\mu, \sigma^2) = N(Np, Npq)$ の確率密度関数である。</p>
+			</div>
+			<p style="text-align: right">Last modified: August 30, 2015</p>
+		</div>
+		
+		<div class="main">
+			<h1 id="taylor">テイラー展開</h1>
+			<p>　関数 $f(x)$ が無限級数</p>
+			\[
+				\begin{align*}
+					f(x) &= \sum_{k=0}^\infty \frac{1}{k!} f^{(k)}(0) x^k \\
+						&= f^{(0)}(0) + f^{(1)}(0)x + \frac{1}{2!}f^{(2)}(0)x^2 + \frac{1}{3!}f^{(3)}(0)x^3 + \cdots
+				\end{align*}
+			\]
+			<p>で表される時，これを $x = 0$ の周りにおけるテイラー（級数）展開，特にマクローリン（級数）展開という。また，$x = a$ の周りにおけるテイラー展開は，</p>
+			\[
+				\begin{align*}
+					f(x) &= \sum_{k=0}^\infty \frac{1}{k!} f^{(k)}(a) (x - a)^k \\
+						&= f^{(0)}(a) + f^{(1)}(a)(x - a) + \frac{1}{2!}f^{(2)}(a)(x - a)^2 + \frac{1}{3!}f^{(3)}(a)(x - a)^3 + \cdots
+				\end{align*}
+			\]
+			<p>となる。</p>
+			<div class="proof">
+				<p>　関数 $f(x)$ が定係数 $a_n$ を用いて次のように書けると仮定する。</p>
+				\[
+					\begin{align*}
+						f(x) &= \sum_{k=0}^\infty a_k x^k \\
+							&= a_0 + a_1 x + a_2 x^2 + a_3 x^3 + \cdots + a_n x^n + \cdots
+					\end{align*}
+				\]
+				<p>高階導関数を $n$ 階まで求めると，</p>
+				\[
+					\begin{align*}
+						f^{(0)}(x) &= a_0 + a_1 x + a_2 x^2 + a_3 x^3 + a_4 x^4 + a_5 x^5 + \cdots \\
+						f^{(1)}(x) &= a_1 + 2a_2 x + 3a_3 x^2 + 4a_4 x^3 + 5a_5 x^4 + \cdots \\
+						f^{(2)}(x) &= 2a_2 + 2\cdot 3a_3 x + 3\cdot 4a_4 x^2 + 4\cdot 5a_5 x^3 + \cdots \\
+						f^{(3)}(x) &= 2\cdot 3a_3 + 2\cdot 3\cdot 4a_4 x + 3\cdot 4\cdot 5a_5 x^2 + \cdots \\
+						f^{(4)}(x) &= 2\cdot 3\cdot 4a_4 + 2\cdot 3\cdot 4\cdot 5a_5 x + \cdots \\
+						\vdots & \\
+						f^{(n)}(x) &= 1\times 2\times \cdots \times na_n = n!a_n
+					\end{align*}
+				\]
+				<p>これらの導関数に $x = 0$ を代入すると，</p>
+				\[
+					\begin{align*}
+						f^{(0)}(0) &= a_0 \\
+						f^{(1)}(0) &= a_1 \\
+						f^{(2)}(0) &= 2a_2 = 2!a_2 \\
+						f^{(3)}(0) &= 2\cdot 3a_3 = 3!a_3 \\
+						f^{(4)}(0) &= 2\cdot 3\cdot 4a_4 = 4!a_4 \\
+						\vdots & \\
+						f^{(n)}(0) &= n!a_n
+					\end{align*}
+				\]
+				<p>したがって，</p>
+				\[
+					\begin{align*}
+						a_0 &= f^{(0)}(0) \\
+						a_1 &= f^{(1)}(0) \\
+						a_2 &= \frac{1}{2!}f^{(2)}(0) \\
+						a_3 &= \frac{1}{3!}f^{(3)}(0) \\
+						a_4 &= \frac{1}{4!}f^{(4)}(0) \\
+						\vdots & \\
+						a_n &= \frac{1}{n!}f^{(n)}(0)
+					\end{align*}
+				\]
+				<p>よって，</p>
+				\[
+					\begin{align*}
+						f(x) &= f^{(0)}(0) + f^{(1)}(0)x + \frac{1}{2!}f^{(2)}(0)x^2 + \frac{1}{3!}f^{(3)}(0)x^3 + \cdots \frac{1}{n!}f^{(n)}(0)x^n + R_{n+1} \\
+							&= \sum_{k=0}^n \frac{1}{k!} f^{(k)}(0) x^k + R_{n+1}
+					\end{align*}
+				\]
+				<p>$R_{n+1}$ は $(n+1)$ 次以降を合わせたものであり，剰余項という。</p>
+				\[ \lim_{n\rightarrow \infty} R_{n+1} = 0 \]
+				<p>が成り立つならば，$f(x)$ は収束するので，無限級数</p>
+				\[ f(x) = \sum_{k=0}^\infty \frac{1}{k!} f^{(k)}(0) x^k \]
+				<p>の形に書ける。一般に，剰余項の収束判定は難しいが，初等関数について収束が確認されているものは公式として利用されている。以下はその例である。</p>
+			</div>
+			\[ \sin x = x - \frac{1}{3!}x^3 + \frac{1}{5!}x^5 - \frac{1}{7!}x^7 + \cdots + (-1)^n \frac{1}{(2n+1)!}x^{2n+1} + \cdots \]
+			\[ \cos x = 1 - \frac{1}{2!}x^2 + \frac{1}{4!}x^4 - \frac{1}{6!}x^6 + \cdots + (-1)^n \frac{1}{(2n)!}x^{2n} + \cdots \]
+			\[ e^x = 1 + x +\frac{1}{2!}x^2 + \frac{1}{3!}x^3 + \frac{1}{4!}x^4 + \cdots + \frac{1}{n!}x^n + \cdots \]
+			<p>　これらは，テイラー展開の通りに計算をすれば導ける。これらの公式がスゴイのは，左辺の初等関数そのものに関してはどうやって値を求めれば良いか分からないのに，それを右辺によって解析的に計算できてしまう点である。</p>
+			<p>　ここではさらに，勢い余ってオイラーの公式を導く。</p>
+			<h2>オイラーの公式</h2>
+			\[ e^{ix} = \cos x + i\sin x \]
+			<div class="proof">
+				<p>　$e^x$ のテイラー展開において，$x$ を $ix$ に形式的に置き換えると，</p>
+				\[
+					\begin{align*}
+						e^{ix} &= 1 + ix - \frac{1}{2!}x^2 - i\frac{1}{3!}x^3 + \frac{1}{4!}x^4 + i\frac{1}{5!}x^5 - \frac{1}{6!}x^6 +\cdots \\
+							&= \left(  1 - \frac{1}{2!}x^2 + \frac{1}{4!}x^4 + \cdots \right) + i \left( x - \frac{1}{3!}x^3 + \frac{1}{5!}x^5 + \cdots \right) \\
+							&= \cos x + i\sin x
+					\end{align*}
+				 \]
+			</div>
+			<p>　オイラーの公式において，$x = \pi$ とすると，$\cos \pi = -1$，$\sin \pi = 0$ であるから，</p>
+			\[ e^{i\pi} = -1 \]
+			<p>を得る。左辺は小数点以下無限に続く数である $e$ と $\pi$ 虚数の $i$ でできたヤヤコシそうな式なのに，その値が $-1$ になるという非常に不思議な関係式である。</p>
+			\[ e^{i\pi} + 1 = 0 \]
+			<p>とすれば，虚数 $i$，超越数 $e$ と $\pi$，数の原点 $0$ と単位 $1$ という数学において非常に重要な数が勢揃いする。ファインマンが“我々の至宝”と評したのも頷ける。</p>
+			<p style="text-align: right">Last modified: September 2, 2015</p>
+		</div>
+		
+		<div class="main">
+			<h1 id="gamma">ガンマ関数</h1>
+			\[ \Gamma (\alpha) = \int_0^\infty x^{\alpha - 1} e^{-x} dx \]
+			<p>で定義される関数をガンマ関数という。但し，定義域は $\alpha > 0$ である。</p>
+			<p>　ガンマ関数には次のような性質がある。</p>
+			\[ \Gamma (\alpha + 1) = \alpha \Gamma (\alpha) \]
+			<p>特に，$\alpha$ が正の整数の時は，</p>
+			\[ \Gamma (n + 1) = n! \]
+			<div class="proof">
+				\[
+					\begin{align*}
+						\Gamma (\alpha + 1) &= \int_0^\infty x^\alpha e^{-x} dx \\
+							&= \left[ -x^\alpha e^{-x} \right]_0^\infty + \alpha \int_0^\infty x^{\alpha - 1} e^{-x} dx
+					\end{align*}
+				 \] 
+				<p>（右辺第1項において，$\alpha < 0$ であると，$x \rightarrow 0$ で $x^\alpha \rightarrow \infty$ と発散してしまい，$\Gamma (\alpha + 1)$ の値が定まらない。このため，ガンマ関数の定義域は $\alpha > 0$ になっている。）</p>
+				<p>　右辺第1項は0，第2項は定義より $\alpha \Gamma (\alpha)$ だから，</p>
+				\[ \Gamma (\alpha + 1) = \alpha \Gamma (\alpha) \]
+				<p>を得る。また，</p>
+				\[ \Gamma (1) = \int_0^\infty e^{-x} dx = \left[ -e^{-x} \right]_0^\infty = 1 \]
+				<p>だから，</p>
+				\[
+					\begin{align*}
+						\Gamma (n + 1) &= n\Gamma (n) \\
+							&= n(n - 1) \Gamma (n - 1) \\
+							&= \cdots \\
+							&= n! \Gamma (1) \\
+							&= n!
+					\end{align*}
+				 \]
+				 <p>となる。</p>
+			</div>
+			<p>　もう1つ，ガンマ関数の性質を示す。</p>
+			\[ \Gamma \left( \frac{1}{2} \right) = \sqrt{\pi} \]
+			<div class="proof">
+				<p>　定義から，</p>
+				\[ \Gamma \left( \frac{1}{2} \right) = \int_0^\infty x^{-\frac{1}{2}} e^{-x} dx \]
+				<p>ここで $x = u^2$ と変数変換すると，$dx = 2udu$，$x^{\frac{1}{2}} = u$ だから，</p>
+				\[
+					\begin{align*}
+						\Gamma \left( \frac{1}{2} \right) &= \int_0^\infty u^{-1} e^{-u^2} \cdot 2udu \\
+							&= 2\int_0^\infty e^{-u^2} du
+					\end{align*}
+				\]
+				<p>これはガウス積分であるから，</p>
+				\[ \Gamma \left( \frac{1}{2} \right) = 2\cdot \frac{\sqrt{\pi}}{2} = \sqrt{\pi} \]
+				<p>となる。</p>
+			</div>
+			<p>　ガンマ関数の何がスゴイのかというと，ガンマ関数の形をした積分が現れた場合には，積分を計算することなく，積分の解を漸化式を使って得られるという点である。例えば，$\displaystyle \Gamma \left( \frac{3}{2} \right)$ は定義に従えば，</p>
+			\[ \Gamma  \left( \frac{3}{2} \right) = \int_0^\infty x^{\frac{1}{2}} e^{-x} dx \]
+			<p>となるが，これを</p>
+			\[ \Gamma \left( \frac{3}{2} \right) = \Gamma \left( \frac{1}{2} + 1 \right) = \frac{1}{2} \Gamma  \left( \frac{1}{2} \right) = \frac{\sqrt{\pi}}{2} \]
+			<p>とすれば，容易に計算ができる。</p>
+			<p style="text-align: right">Last modified: September 3, 2015</p>
+		</div>
+		
+		<div class="main">
+			<h1 id="chi2-dist">$\chi^2$ 分布の平均と分散</h1>
+			<p>　$k$ を自由度とすると，</p>
+			\[ \mu = k \]
+			\[ \sigma^2 = 2k \]
+			<div class="proof">
+				<p>　期待値に基づく証明と<a href="#moment">積率母関数<a>を利用する証明を記載する。但し，いずれの証明でも，</p>
+				\[ L_k =  \frac{1}{\displaystyle 2^{\frac{k}{2}} \Gamma \left( \frac{k}{2} \right)} \]
+				<p>とする。</p>
+				<h2>期待値に基づく証明</h2>
+				<p>　$L_k$ を用いれば，$\chi^2$ 分布の確率密度関数は，</p>
+				\[ f_k(x) = L_k x^{\frac{k}{2}-1} e^{-\frac{x}{2}} \]
+				<p>と表される。</p>
+				<p>　平均 $\mu$ は，定義域が $x \ge 0$ であることに注意して，</p>
+				\[
+					\begin{align*}
+						E[x] &= \int_{-\infty}^\infty x f_k(x) dx \\
+							&= \int_0^\infty x L_k x^{\frac{k}{2}-1} e^{-\frac{x}{2}} dx \\
+							&= L_k \int_0^\infty x^{\frac{k}{2}} e^{-\frac{x}{2}} dx
+					\end{align*}
+				\]
+				<p>ここで，ガンマ関数</p>
+				\[ \Gamma (\alpha) = \int_0^\infty x^{\alpha - 1} e^{-x} dx \]
+				<p>に対して，$\displaystyle x = \frac{u}{2}$ とおくと，$\displaystyle dx = \frac{1}{2}du$ だから，</p>
+				\[
+					\begin{align*}
+						\Gamma (\alpha) &= \int_0^\infty \left( \frac{u}{2} \right)^{\alpha - 1} e^{-\frac{u}{2}} \cdot \frac{1}{2}du \\
+							&= \left( \frac{1}{2} \right)^\alpha \int_0^\infty u^{\alpha - 1} e^{-\frac{u}{2}} du
+					\end{align*}
+				\]
+				<p>$\displaystyle \alpha = \frac{k}{2} + 1$ を代入すると，</p>
+				\[ \Gamma \left( \frac{k}{2} + 1 \right) = \left( \frac{1}{2} \right)^{\frac{k}{2} + 1} \int_0^\infty u^{\frac{k}{2}} e^{-\frac{u}{2}} du \]
+				<p>となり，先の式の被積分関数と同じものが得られる。これにより，</p>
+				\[
+					\begin{align*}
+						E[x] &= L_k \int_0^\infty x^{\frac{k}{2}} e^{-\frac{x}{2}} dx \\
+							&= L_k \cdot 2^{\frac{k}{2} + 1} \cdot \Gamma \left( \frac{k}{2} + 1 \right) \\
+							&= 2^{\frac{k}{2} + 1} \cdot \frac{\displaystyle \Gamma \left( \frac{k}{2} + 1 \right)}{\displaystyle 2^{\frac{k}{2}}\Gamma \left( \frac{k}{2} \right)} \\
+							&= 2 \cdot \frac{\displaystyle \frac{k}{2} \Gamma \left( \frac{k}{2} \right)}{\displaystyle \Gamma \left( \frac{k}{2} \right)} \\
+							&= k \\
+						\therefore \mu &= k
+					\end{align*}
+				\]
+				<p>　次に，分散 $\sigma^2$ は，</p>
+				\[
+					\begin{align*}
+						E\left[ \left( x - \mu \right)^2 \right] &= \int_{-\infty}^\infty (x - \mu)^2 f_k(x) dx \\
+							&= \int_0^\infty (x - k)^2 L_k \cdot x^{\frac{k}{2} - 1} e^{-\frac{x}{2}} dx \\
+							&= \int_0^\infty (x^2 -2kx + k^2) x^{\frac{k}{2} - 1} e^{-\frac{x}{2}} dx \\
+							&= L_k \left( \int_0^\infty x^{\frac{k}{2} + 1} e^{-\frac{x}{2}} dx -2k \int_0^\infty x^{\frac{k}{2}} e^{-\frac{x}{2}} dx + k^2 \int_0^\infty x^{\frac{k}{2} - 1} e^{-\frac{x}{2}} dx \right)
+					\end{align*}
+				\]
+				<p>ここで，</p>
+				\[ \Gamma (\alpha) = \left( \frac{1}{2} \right)^\alpha \int_0^\infty x^{\alpha - 1} e^{-\frac{x}{2}} dx \]
+				<p>であったことを利用すれば，</p>
+				\[ 2^\alpha \Gamma (\alpha) = \int_0^\infty x^{\alpha - 1} e^{-\frac{x}{2}} dx \]
+				<p>であるから，</p>
+				\[ E\left[ \left( x - \mu \right)^2 \right] = L_k \left\{ 2^{\frac{k}{2} + 2} \Gamma \left( \frac{k}{2} + 2 \right) -2k \cdot 2^{\frac{k}{2} + 1} \Gamma \left( \frac{k}{2} + 1 \right) + k^2 \cdot 2^{\frac{k}{2}} \Gamma \left( \frac{k}{2} \right) \right\} \]
+				<p>　さらに，ガンマ関数の漸化式より，</p>
+				\[ \Gamma \left( \frac{k}{2} + 1 \right) = \frac{k}{2} \Gamma \left( \frac{k}{2} \right) \]
+				\[ \Gamma \left( \frac{k}{2} + 2 \right) = \left( \frac{k}{2} + 1 \right) \Gamma \left( \frac{k}{2} + 1 \right) = \left( \frac{k}{2} + 1 \right) \cdot \frac{k}{2} \Gamma \left( \frac{k}{2} \right) \]
+				<p>なので，</p>
+				\[
+					\begin{align*}
+						E\left[ \left( x - \mu \right)^2 \right] &= 2^{\frac{k}{2}} \cdot L_k \Gamma \left( \frac{k}{2} \right) \left\{ 4 \left( \frac{k}{2} + 1 \right) \cdot \frac{k}{2} -4k \cdot \frac{k}{2} + k^2 \right\} \\
+							&= 2k \cdot 2^{\frac{k}{2}} \cdot L_k \Gamma \left( \frac{k}{2} \right) \\
+							&= 2k \\
+							\therefore \sigma^2 &= 2k
+					\end{align*}
+				\]
+				<h2>積率母関数を利用する証明</h2>
+				<p>　$\chi^2$ 分布の確率密度関数</p>
+				\[ f_k(x) = L_k x^{\frac{k}{2}-1} e^{-\frac{x}{2}} \]
+				<p>に対し，積率母関数は，</p>
+				\[
+					\begin{align*}
+						M(\theta) &= \int_{-\infty}^\infty e^{\theta x} f_k(x) dx \\
+							&= \int_0^\infty e^{\theta x} \cdot L_k x^{\frac{k}{2}-1} e^{-\frac{x}{2}} dx \\
+							&= L_k \int_0^\infty x^{\frac{k}{2}-1} e^{\left( \theta - \frac{1}{2} \right) x} dx
+					\end{align*}
+				\]
+				<p>ここで，$\displaystyle -u = \left( \theta - \frac{1}{2} \right) x$ とおくと，$\displaystyle -du = \left( \theta - \frac{1}{2} \right) dx$ だから，</p>
+				\[
+					\begin{align*}
+						M(\theta) &= L_k \int_0^\infty \frac{1}{\displaystyle \left( \frac{1}{2} - \theta \right)^{\frac{k}{2} - 1}} u^{\frac{k}{2}-1} e^{-u} \cdot \frac{1}{\displaystyle \left( \frac{1}{2} - \theta \right)} du \\
+							&= \frac{L_k}{\displaystyle \left( \frac{1}{2} - \theta \right)^{\frac{k}{2}}} \int_0^\infty u^{\frac{k}{2}-1} e^{-u} du \\
+							&= \frac{L_k}{\displaystyle \left( \frac{1}{2} - \theta \right)^{\frac{k}{2}}} \cdot \Gamma \left( \frac{k}{2} \right) \\
+							&= \frac{1}{\displaystyle \left( \frac{1}{2} - \theta \right)^{\frac{k}{2}}} \cdot \frac{\displaystyle \Gamma \left( \frac{k}{2} \right)}{\displaystyle 2^{\frac{k}{2}} \Gamma \left( \frac{k}{2} \right)} \\
+							&= \frac{1}{\displaystyle \left( 1 - 2\theta \right)^{\frac{k}{2}}} \\
+							&= \left( 1 - 2\theta \right)^{-\frac{k}{2}}
+					\end{align*}
+				\]
+				<p>と，積率母関数はここまで簡単化できる。</p>
+				\[
+					\begin{align*}
+						M'(\theta) &= -\frac{k}{2} \left( 1 - 2\theta \right)^{-\frac{k}{2} - 1} \cdot (-2) \\
+							&= k(1 - 2\theta)^{-\frac{k}{2} - 1}
+					\end{align*}
+				\]
+				\[ \therefore \mu = M'(0) = k \]
+				<p>　さらに，</p>
+				\[
+					\begin{align*}
+						M''(\theta) &= k \left( -\frac{k}{2} - 1 \right) (1 - 2\theta)^{-\frac{k}{2} - 2} \cdot (-2) \\
+							&= k(k + 2) (1 - 2\theta)^{-\frac{k}{2} - 2} \\
+						M''(0) &= k(k + 2) \\
+						\therefore \sigma^2 &= E\left[ x^2 \right] - \mu^2 \\
+							&= M''(0) - k^2 \\
+							&= k(k + 2) - k^2 \\
+							&= 2k
+					\end{align*}
+				\]
+			</div>
+			<p style="text-align: right">Last modified: September 4, 2015</p>
+		</div>
+		
+		<div class="main">
+			<h1 id="hypergeometric-dist">超幾何分布の平均と分散</h1>
+			<p>　全体で $N$ 個あるうち $n$ 個を選び出す。$N$ 個の中である性質Aを持つものの割合が $p$ であるとする。したがって，全体で $Np$ 個が性質Aを持つ。選んだ $n$ 個のうち，性質Aを持つものが $X$ 個含まれているとする。この $X$ の確率分布</p>
+			\[ p(X) = \frac{{}_{Np}C_X \times {}_{N-Np}C_{n-X}}{{}_NC_n} \]
+			<p>を超幾何分布と言う。超幾何分布の平均値と分散はそれぞれ，</p>
+			\[ \mu = np \]
+			\[ \sigma^2 = \frac{N-n}{N-1}np(1-p) \]
+			<p>となる。</p>
+			<div class="proof">
+				\[
+					\begin{align*}
+						E[X] &= \sum_{X=0}^n X \cdot \frac{{}_{Np}C_X \times {}_{N-Np}C_{n-X}}{{}_NC_n} \\
+							&= \sum_{X=1}^n X \cdot \frac{Np!}{X!(Np-X)!} \cdot {}_{N-Np}C_{n-X} \cdot \frac{n!(N-n)!}{N!} \\
+							&= \sum_{X=1}^n \frac{Np(Np-1)!}{(X-1)!(Np-X)!} \cdot {}_{N-Np}C_{n-X} \cdot \frac{n(n-1)!(N-n)!}{N(N-1)!} \\
+					\end{align*}
+				\]
+				<p>ここで，$y = X - 1$ とすると，</p>
+				\[
+					\begin{align*}
+						E[X] &= np \sum_{y=0}^{n-1} \frac{(Np-1)!}{y!(Np-1-y)!} \cdot {}_{N-Np}C_{n-1-y} \cdot \frac{(n-1)!(N-n)!}{(N-1)!} \\
+							&= np \sum_{y=0}^{n-1} \frac{{}_{Np-1}C_y \times {}_{N-1-(Np-1)}C_{n-1-y}}{{}_{N-1}C_{n-1}}
+					\end{align*}
+				\]
+				<p>右辺の総和は，性質Aを持つものと持たないものがそれぞれ $(Np-1)$ 個と $(N-Np)$ 個で，合計 $(N-1)$ から $(n-1)$ 個を取り出す時，その中にAを持つものが $y$ 個含まれる確率を，$y$ の取り得る全ての値について加えたものだから当然1である。</p>
+				\[ \therefore \mu = np \]
+				<p>　次に，</p>
+				\[
+					\begin{align*}
+					\sigma^2 &= E[X^2] - \left\{ E[X] \right\}^2 \\
+						&= E[X(X-1)+X] - \mu^2 \\
+						&= E[X(X-1)] + \mu - \mu^2
+					\end{align*}
+				\]
+				<p>と変形できるから，右辺の第1項だけを考えれば良い。</p>
+				\[
+					\begin{align*}
+						E[X(X-1)] &= \sum_{X-0}^n X(X-1) \frac{{}_{Np}C_X \times {}_{N-Np}C_{n-X}}{{}_NC_n} \\
+							&= \sum_{X=2}^n X(X-1) \cdot \frac{Np!}{X!(Np-X)!} \cdot {}_{N-Np}C_{n-X} \cdot \frac{n!(N-n)!}{N!} \\
+							&= \sum_{X=2}^n \frac{Np(Np-1)(Np-2)!}{(X-2)!(Np-X)!} \cdot {}_{N-Np}C_{n-X} \cdot \frac{n(n-1)(n-2)!(N-n)!}{N(N-1)(N-2)!}
+					\end{align*}
+				\]
+				<p>ここで，$z = X - 2$ とすると，</p>
+				\[
+					\begin{align*}
+					E[X(X-1)] &= \frac{p(Np-1)n(n-1)}{N-1} \sum_{z=0}^{n-2} \frac{(Np-2)!}{z!(Np-2-z)!} \cdot {}_{N-Np}C_{n-2-z} \cdot \frac{(n-2)!(N-n)!}{(N-2)!} \\
+						&= \frac{p(Np-1)n(n-1)}{N-1} \sum_{z=0}^{n-2} \frac{{}_{Np-2}C_z \times {}_{N-2-(Np-2)}C_{n-2-z}}{{}_{N-2}C_{n-2}}
+					\end{align*}
+				\]
+				<p>右辺の総和は，先ほどと同じ理由で1となるから，</p>
+				\[
+					\begin{align*}
+						\sigma^2 &= \frac{p(Np-1)n(n-1)}{N-1} + np - (np)^2 \\
+							&= np \left\{ \frac{(Np-1)(n-1)}{N-1} + 1 - np \right\} \\
+							&= \frac{np}{N-1} (Npn - Np - n + 1 + N - 1 - Nnp + np) \\
+							&= \frac{np}{N-1} (N - Np - n + np) \\
+							&= \frac{np}{N-1} (N-n)(1-p) \\
+							&= \frac{N-n}{N-1}np(1-p)
+					\end{align*}
+				\]
+			</div>
+			<p>　二項分布の分散 $np(1-p)$ と比べると，超幾何分布の分散は，$\displaystyle \frac{N-n}{N-1}$ という係数がついていると言える。超幾何分布が“非復元抽出”，二項分布は“復元抽出”に対応する。非復元抽出であっても，$N$ が十分大きければ $\displaystyle \frac{N-n}{N-1} \rightarrow 1$ なので，超幾何分布は二項分布に近づくことが分かる。</p>
+			<p style="text-align: right">Last modified: September 18, 2015</p>
+		</div>
+		
+		<div class="main">
+		  <h1 id="risks-odds">オッズ比とリスク比の関係</h1>
+			<p>発生確率の低い事象の時，オッズ比はリスク比の優れた推定値である。</p>
+			<div class="proof">
+			<p>　$2\times 2$ 分割表のセル記号を以下のように定めることにする。</p>
+				<table>
+					<tbody>
+						<tr>
+							<td></td>
+							<td>$B+$</td>
+							<td>$B-$</td>
+							<td>合計</td>
+						</tr>
+						<tr>
+							<td>$A+$</td>
+							<td>$a$</td>
+							<td>$b$</td>
+							<td>$a+b$</td>
+						</tr>
+						<tr>
+							<td>$A-$</td>
+							<td>$c$</td>
+							<td>$d$</td>
+							<td>$c+d$</td>
+						</tr>
+						<tr>
+							<td>合計</td>
+							<td>$a+c$</td>
+							<td>$b+d$</td>
+							<td>$N$</td>
+						</tr>
+					</tbody>
+				</table>
+				<p>　この時，オッズ比 $OR$ とリスク比 $RR$ はそれぞれ，</p>
+				\[ OR = \frac{a/b}{c/d} = \frac{ad}{bc} \]
+				\[ RR = \frac{a/(a+b)}{c/(c+d)} = \frac{a(c+d)}{c(a+b)} \]
+				<p>となる。$B+$ が生じる確率が低い場合は，$a \ll b$，$c \ll d$ だから，$a+b\simeq b$，$c+d\simeq d$ である。ゆえに，</p>
+				\[ RR = \frac{a(c+d)}{c(a+b)} \simeq \frac{ad}{bc} = OR	\]
+			</div>
+			<p style="text-align: right">Last modified: September 25, 2015</p>
+		</div>
+		
+		<div class="main">
+		  <h1 id="compu-formula-correlation">相関係数の“計算式”</h1>
+		  \[ r = \frac{\displaystyle N\sum xy - \left( \sum x \right)\left( \sum y \right)}{\displaystyle \sqrt{N\sum x^2 - \left( \sum x \right)^2} \sqrt{N\sum y^2 - \left( \sum y^2 \right)^2}} \]
+			<div class="proof">
+				定義式から順を追って変形していけば良い。
+				\[ ［定義式］ = \frac{\displaystyle \sum (x-\bar{x})(y-\bar{y})}{\displaystyle \sqrt{\sum (x-\bar{x})^2} \sqrt{\sum (y-\bar{y})^2}} \]
+				\[
+					\begin{align*}
+						［分子］ &= \sum (xy - x\bar{y} - \bar{x}y + \bar{x}\bar{y}) \\
+							&= \sum xy - \bar{y}\sum x - \bar{x} \sum y + \sum \bar{x}\bar{y} \\
+							&= \sum xy - N\bar{x}\bar{y} - N\bar{x}\bar{y} + N\bar{x}\bar{y} \\
+							&= \sum xy - N\bar{x}\bar{y}
+					\end{align*}
+				\] 
+				<p>また，分母は<a href="#compu-formula-variance">偏差平方和の計算</a>から，次のようになることは明らか。</p>
+				\[ ［分母］ = \sqrt{\sum x^2 - N\bar{x}^2}\sqrt{\sum y^2 -N\bar{y}^2} \]
+				<p>よって，</p>
+				\[
+					\begin{align*}
+						r &= \frac{\displaystyle \sum xy - N\bar{x}\bar{y}}{\displaystyle \sqrt{\sum x^2 - N\bar{x}^2}\sqrt{\sum y^2 -N\bar{y}^2}} \\
+							&= \frac{\displaystyle N\sum xy - N^2\left( \frac{1}{N} \sum x) \right)\left( \frac{1}{N} \sum y) \right)}{\displaystyle \sqrt{N\sum x^2 - N^2\left( \frac{1}{N} \sum x) \right)^2}\sqrt{N\sum y^2 -N^2\left( \frac{1}{N} \sum y) \right)^2}} \\
+							&= \frac{\displaystyle N\sum xy - \left( \sum x \right)\left( \sum y \right)}{\displaystyle \sqrt{N\sum x^2 - \left( \sum x \right)^2} \sqrt{N\sum y^2 - \left( \sum y^2 \right)^2}}
+					\end{align*}
+				\]
+			</div>
+			<p style="text-align: right">Last modified: October 5, 2015</p>
+		</div>  
+		  
+		<div class="main">
+		  <h1 id="phi-chi-cor">$\phi$ 係数の求め方の同等性</h1>
+			<p>2つの水準に対して，便宜的に1と0を割り当てる。</p>
+			<table>
+				<tbody>
+					<thead>
+						<td></td>
+						<td colspan="2">$y$</td>
+						<td></td>
+					</thead>
+					<thead>
+						<td>$x$</td>
+						<td>$1$</td>
+						<td>$0$</td>
+						<td>合計</td>
+					</thead>
+					<tr>
+						<td>$1$</td>
+						<td>$a$</td>
+						<td>$b$</td>
+						<td>$e$</td>
+					</tr>
+					<tr>
+						<td>$0$</td>
+						<td>$c$</td>
+						<td>$d$</td>
+						<td>$f$</td>
+					</tr>
+					<tr>
+						<td>合計</td>
+						<td>$g$</td>
+						<td>$h$</td>
+						<td>$N$</td>
+					</tr>
+				</tbody>
+			</table>
+			<p>　この時，相関係数を求めると，</p>
+			\[ r = \frac{ad - bc}{efgh} \]
+			<p>で，これが $\phi$ 係数となる。また，</p>
+			\[ \frac{\chi^2}{N} = r^2  \]
+			<p>である。</p>
+			<div class="proof">
+				<p>　証明と言っても，ひたすら計算を進めれば良いだけである。<a href="#compu-formula-correlation">ピアソンの積率相関係数の計算式</a>，</p>
+				\[ r = \frac{\displaystyle N\sum xy - \left( \sum x \right)\left( \sum y \right)}{\displaystyle \sqrt{N\sum x^2 - \left( \sum x \right)^2} \sqrt{N\sum y^2 - \left( \sum y^2 \right)^2}} \]
+				<p>において，$1$ と $0$ の便宜的な値を用いた場合は，</p>
+				\[ \sum x = \sum x^2 = e \]
+				\[ \sum y = \sum y^2 = g \]
+				\[ \sum xy = a \]
+				<p>であるから，</p>
+				\[
+					\begin{align*}
+						r &= \frac{Na - eg}{\sqrt{Ne-e^2}\sqrt{Ng-g^2}} \\
+							&= \frac{(a+b+c+d)a-eg-(a+b)(a+c)}{\sqrt{e(N-e)}\sqrt{g(N-g)}} \\
+							&= \frac{a^2 +ab+ac+ad-(a^2+ab+ac+bc)}{\sqrt{ef}\sqrt{gh}} \\
+							&= \frac{ad-bc}{\sqrt{efgh}}
+					\end{align*}
+				\]
+				<p>　また，</p>
+				\[
+					\begin{align*}
+						\chi^2 &= \frac{\displaystyle \left( a-\frac{eg}{N}\right)^2}{\displaystyle \frac{eg}{N}} + \frac{\displaystyle \left( b-\frac{eh}{N}\right)^2}{\displaystyle \frac{eh}{N}} + \frac{\displaystyle \left( c-\frac{fg}{N}\right)^2}{\displaystyle \frac{fg}{N}} + \frac{\displaystyle \left( d-\frac{fh}{N}\right)^2}{\displaystyle \frac{fh}{N}}\\
+							&= \frac{(Na-eg)^2}{Neg} + \frac{(Nb-ehg)^2}{Neh} + \frac{(Nc-fg)^2}{Nfg} + \frac{(Nd-fh)^2}{Nfh} \\
+							&= \frac{fh(N^2a^2 - 2Naeg + e^2g^2) + fg(N^2b^2 -2Nbeh + e^2h^2) + eh(N^2c^2 -2Ncfg + f^2g^2) + eg(N^2d^2 -2Ndfh + f^2h^2)}{Nefgh}
+					\end{align*}
+				\]
+				\[
+					\begin{align*}
+						［分子］ &= N^2 (a^2fh + b^2fg + c^2eh + d^2eg) - 2Nefgh (a+b+c+d) + efgh (eg + eh + fg + fh) \\
+							&= N^2 (a^2fh + b^2fg + c^2eh + d^2eg) - 2N^2efgh + efgh(e+f)(g+h) \\
+							&= N^2 (a^2fh + b^2fg + c^2eh + d^2eg) - 2N^2efgh + N^2efgh \\
+							&= N^2 (a^2fh + b^2fg + c^2eh + d^2eg - efgh) 
+					\end{align*}
+				\]
+				<p>ここで，</p>
+				\[ a^2fh = a^2(c+d)(b+d) = a^2 (bc + cd + bd + d^2) \]
+				\[ b^2fg = b^2(c+d)(a+c) = b^2 (ac + c^2 + ad + cd) \]
+				\[ c^2eh = c^2(a+b)(b+d) = c^2 (ab + ad + \underline{b^2} + bd) \]
+				\[ d^2eg = d^2(a+b)(a+c) = d^2 (\underline{a^2} + ac + ab + bc) \]
+				\[
+					\begin{align*}
+						efgh &= (a+b)(c+d)(a+c)(b+d) \\
+							&= (ac+ad+bc+bd)(ab+ad+bc+cd) \\
+							&= a^2bc + a^2ed + abc^2 + ac^2d + a^2bd + a^2d^2 + \underline{abcd} + acd^2 + ab^2c + \underline{abcd} + b^2c^2 + bc^2d + ab^2d + abd^2 + b^2cd + bcd^2
+					\end{align*}
+				\]
+				<p>で［分子］の計算過程で，下線部以外は消えるので結局，</p>
+				\[
+					\begin{align*}
+						［分子］ &= N^2(a^2d^2 + b^2c^2-2abcd) \\
+							&= N^2 (ad-bc)^2
+					\end{align*}
+				\]
+				<p>したがって，</p>
+				\[
+					\begin{align*}
+						\chi^2 &= \frac{N^2(ad-bc)^2}{Nefgh} \\
+							&= \frac{N(ad-bc)^2}{efgh}
+					\end{align*}
+				\]
+				\[ \therefore \frac{\chi^2}{N} = \frac{(ad-bc)^2}{efgh} = r^2 \]
+			</div>
+			<p style="text-align: right">Last modified: October 5, 2015</p>
+		</div>
+		
+		<div class="main">
+		  <h1 id="CLT">中心極限定理</h1>
+			<p>　中心極限定理は色々な表現形があるが，次のものも1バージョンである。</p>
+			<p></p>
+			<div style="border-style:solid;border-width:1px;padding:10px;border-radius:10px;border-color:red;margin-left:auto;margin-right:auto;width:100%">
+				$x$ が 平均値 $\mu$, 標準偏差 $\sigma$ の分布に従う時，$n$ が十分大きければ，
+				\[ z = \frac{\bar{x}-\mu}{\sigma /\sqrt{n}} \]
+				は標準正規分布に近似する。
+			</div>
+			<p></p>
+			<p>　この証明の前に，単純な計算（の表記）法則を証明しておく。</p>
+			<p></p>
+			<div style="border-style:solid;border-width:1px;padding:10px;border-radius:10px;border-color:red;margin-left:auto;margin-right:auto;width:100%">
+				$g(x)$ に関する積率母関数を
+				\[ M_{g(x)} (\theta) = \int_{-\infty}^\infty e^{\theta g(x)}f(x) dx \]
+				とすると，以下の式が成り立つ（但し，$c$ は定数）。
+				<p></p>
+				<p>　(1) $M_{cg(x)} (\theta) = M_{g(x)} (c\theta)$</p>
+				<p>　(2) $M_{g(x)+c} (\theta) = e^{c\theta}M_{g(x)} (\theta)$</p>
+				<p>　(3) $M_{x_1 + \cdots + x_n} (\theta) = M_{x_1} (\theta) \cdots M_{x_n} (\theta)$（但し，$x_1$，$\cdots$，$x_n$ は独立）</p>
+				これらは離散型の場合でも成り立つ。
+			</div>
+			<p></p>
+			<div class="proof">
+				\[ M_{cg(x)} (\theta) = \int_{-\infty}^\infty e^{\theta cg(x)}f(x) dx = M_{g(x)} (c\theta) \]
+				\[ M_{g(x)+c} (\theta) = \int_{-\infty}^\infty e^{\theta \left\{ g(x)+c \right\}}f(x) dx = e^{c\theta} \int_{-\infty}^\infty e^{\theta g(x)}f(x) dx = e^{c\theta}M_{g(x)} (\theta) \]
+				　(1) と (2) はこれで終わりだが，(3) は少しややこしい。<a href="#moment">原点積率</a>は，
+				\[ E\left[ x^n \right] = \int_{-\infty}^\infty x^n f(x) dx \]
+				と定義されるが，積率母関数と見比べると，
+				\[ M_x (\theta) = \int_{-\infty}^\infty e^{\theta x} f(x) dx = E\left[ e^{\theta x} \right] \]
+				と書けることが分かる。このこと，及び，“$x$ と $y$ が独立ならば $E[xy] = E[x]E[y]$”という公式（証明略）を用いると，
+				\[ M_{x_1 + \cdots + x_n} (\theta) = E\left[ e^{\theta (x_1+\cdots+x_n)}\right] = E\left[ e^{\theta x_1}\cdots e^{\theta x_n} \right] = E\left[ e^{\theta x_1}\right] \cdots E\left[ e^{\theta x_n} \right] = M_{x_1} (\theta) \cdots M_{x_n} (\theta) \]
+			</div>
+			<p>　では，本題の中心極限定理の証明は以下の通り。</p>
+			<div class="proof">
+				準備中。
+			</div>
+			<p style="text-align: right">Last modified: October 20, 2015</p>
+		</div>
+		
+		<div class="main">
+			<h1 id="normal-equation">正規方程式</h1>
+			<div class="proof">
+				準備中。
+			</div>
+			<p style="text-align: right">Last modified: November 24, 2015</p>
+		</div>
+		
+		<div class="main">
+			<h1 id="coef-determination">推定値の標準誤差と相関係数の関係</h1>
+			<p></p>
+			<div style="border-style:solid;border-width:1px;padding:10px;border-radius:10px;border-color:red;margin-left:auto;margin-right:auto;width:100%">
+				\[ s_{Y\cdot X} = s_Y \sqrt{(1 - r^2)\frac{N - 1}{N - 2}} \]
+			</div>
+			<p></p>
+			<div class="proof">
+				　$Y$ の分散 $s^2_Y$ と誤差分散 $s^2_{Y\cdot X}$ の定義式は以下の通り。
+				\[ s^2_Y = \frac{\sum (Y - \bar{Y})^2}{N - 1} \]
+				\[ s^2_{Y\cdot X} = \frac{\sum (Y - \hat{Y})^2}{N - 2} \]
+			</div>
+			<p style="text-align: right">Last modified: November 26, 2015</p>
+		</div>
+		
+	</div>
+
+
+
+
+
+    
+<!-- ↓テンプレート
+	<div class="main">
+		  <h1 id=""></h1>
+			<p></p>
+			\[
+				\begin{align*}
+				a &= a \\
+					&= a
+				\end{align*}
+			\]
+		<p style="text-align: right">Last modified: July 30, 2015</p>
+	</div>
+-->
+
+
+ 
+	</body>
+</html>
