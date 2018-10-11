@@ -4,10 +4,10 @@
 		<meta charset="shift_jis" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>ЃwR‚ЕђS—ќ“ќЊv–@Ѓx‚Мђ”ЉwѓmЃ[ѓg</title>
-		<meta name="keywords" content="ЊЋЊіЃ@Њh Tsukimoto Takashi" />
-		<meta name="description" content="ЊЋЊіЃ@Њh‚МѓyЃ[ѓW" />
-		<link rel="stylesheet" href="css/mathnote.css">
+		<title>гЂЋRгЃ§еїѓзђ†зµ±иЁ€жі•гЂЏгЃ®ж•°е­¦гѓЋгѓјгѓ€</title>
+		<meta name="keywords" content="жњ€е…ѓгЂЂж•¬ Tsukimoto Takashi" />
+		<meta name="description" content="жњ€е…ѓгЂЂж•¬гЃ®гѓљгѓјг‚ё" />
+		<link rel="stylesheet" href="mathnote.css">
 
 		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
 			MathJax.Hub.Config({
@@ -23,9 +23,9 @@
 	</head>
 	
 	<body>
-		<p><img src="img/Rlogo.png" alt=""><font size="8">‚ЕђS—ќ“ќЊv–@‚Мђ”ЉwѓmЃ[ѓg<img src="img/eipi2.png" alt=""></font></p>
+		<p><img src="img/Rlogo.png" alt=""><font size="8">гЃ§еїѓзђ†зµ±иЁ€жі•гЃ®ж•°е­¦гѓЋгѓјгѓ€<img src="img/eipi2.png" alt=""></font></p>
 		<div class="main">
-			<h1 id="sum-of-deviation">•ОЌ·‚М‘Ќa‚Нѓ[ѓЌ</h1>
+			<h1 id="sum-of-deviation">еЃЏе·®гЃ®з·Џе’ЊгЃЇг‚јгѓ­</h1>
 			<div style="border-style:solid;border-width:1px;padding:10px;border-radius:10px;border-color:red;margin-left:auto;margin-right:auto;width:100%">
 				\[ \sum_{i=1}^N \left( X_i - \bar{X} \right) = 0 \]
 			</div>
@@ -44,69 +44,69 @@
 		</div>
 		
 		<div class="main">
-			<h1 id="outlier-to-variance">•ЄЋUЃi•WЏЂ•ОЌ·Ѓj‚Н‹Й’[‚И’l‚Й‰e‹ї‚рЋу‚Ї‚й</h1>
-			<p>Ѓ@—б‚¦‚ОЃC{0, 1, 2, ..., 9, 10} ‚Ж‚ў‚¤11ЊВ‚МѓfЃ[ѓ^‚МЏкЌ‡ЃC•Ѕ‹П’l‚Н5‚Е‚ ‚йЃB•ЄЋU‚М’и‹`Ћ®’К‚и‚ЙЊvЋZ‚·‚й‚Ж‚µ‚ДЃC•Ѕ‹П’l‚Ж“Ї‚¶ѓTѓ“ѓvѓ‹‚Е‚ ‚й5‚ЖЃC‚»‚к‚Й—ЧђЪ‚·‚йѓTѓ“ѓvѓ‹6‚ЖЌЕ‘е‚МѓTѓ“ѓvѓ‹10‚Й’…–Ъ‚·‚й‚ЖЃC</p>
+			<h1 id="outlier-to-variance">е€†ж•Јпј€жЁ™жє–еЃЏе·®пј‰гЃЇжҐµз«ЇгЃЄеЂ¤гЃ«еЅ±йџїг‚’еЏ—гЃ‘г‚‹</h1>
+			<p>гЂЂдѕ‹гЃ€гЃ°пјЊ{0, 1, 2, ..., 9, 10} гЃЁгЃ„гЃ†11еЂ‹гЃ®гѓ‡гѓјг‚їгЃ®е ґеђ€пјЊе№іеќ‡еЂ¤гЃЇ5гЃ§гЃ‚г‚‹гЂ‚е€†ж•ЈгЃ®е®љзѕ©ејЏйЂљг‚ЉгЃ«иЁ€з®—гЃ™г‚‹гЃЁгЃ—гЃ¦пјЊе№іеќ‡еЂ¤гЃЁеђЊгЃг‚µгѓігѓ—гѓ«гЃ§гЃ‚г‚‹5гЃЁпјЊгЃќг‚ЊгЃ«йљЈжЋҐгЃ™г‚‹г‚µгѓігѓ—гѓ«6гЃЁжњЂе¤§гЃ®г‚µгѓігѓ—гѓ«10гЃ«зќЂз›®гЃ™г‚‹гЃЁпјЊ</p>
 			\[
 				\begin{align*}
 				s^2 &= \frac{1}{11-1}\left\{\left( 0 - 5 \right)^2 + \cdots + \left( 5 - 5\right)^2 + \left( 6 - 5 \right)^2 + \cdots + \left( 10 - 5 \right)^2 \right\} \\
 					&= \frac{25}{10} + \cdots + \frac{0}{10} + \frac{1}{10} + \cdots + \frac{25}{10}
 				\end{align*}
 			\]
-			<p>‚В‚Ь‚иЃC6‚Ж10‚Н•Ѕ‹П’l‚©‚зЊ©‚к‚О‚»‚к‚ј‚к1’P€КЃC5’P€К‚Ж‚ў‚¤€б‚ў‚Е‚ ‚й‚ЄЃC•ЄЋU‚Ц‚МЌvЊЈ‚Н‘Љ‘О“I‚Й1:25‚Й‚И‚Б‚Д‚ў‚йЃB</p>
+			<p>гЃ¤гЃѕг‚ЉпјЊ6гЃЁ10гЃЇе№іеќ‡еЂ¤гЃ‹г‚‰и¦‹г‚ЊгЃ°гЃќг‚ЊгЃћг‚Њ1еЌдЅЌпјЊ5еЌдЅЌгЃЁгЃ„гЃ†йЃ•гЃ„гЃ§гЃ‚г‚‹гЃЊпјЊе€†ж•ЈгЃёгЃ®иІўзЊ®гЃЇз›ёеЇѕзљ„гЃ«1:25гЃ«гЃЄгЃЈгЃ¦гЃ„г‚‹гЂ‚</p>
 			<p style="text-align: right">Last modified: July 30, 2015</p>
 		</div>
 		
 		<div class="main">
-			<h1 id="expected-value">Љъ‘Т’l‚М’и‹`‚ЖЉо–{ЊцЋ®</h1>
-			<p>Ѓ@Љm—¦•Пђ”‚Є—ЈЋUЊ^‚МЏкЌ‡‚ЖA‘±Њ^‚МЏкЌ‡‚Є‚ ‚йЃB</p>
-			<h2>’и‹`Ѓi—ЈЋUЊ^Ѓj</h2>
-			<p>Ѓ@$x$ ‚Є—ЈЋUЉm—¦•Пђ”‚ЕЃC‚»‚МЉm—¦•Є•z‚Є $P(x)$ ‚Е‚ ‚йЋћЃC$x$ ‚МЉъ‘Т’l‚НЃC</p>
+			<h1 id="expected-value">жњџеѕ…еЂ¤гЃ®е®љзѕ©гЃЁеџєжњ¬е…¬ејЏ</h1>
+			<p>гЂЂзўєзЋ‡е¤‰ж•°гЃЊй›ўж•Јећ‹гЃ®е ґеђ€гЃЁйЂЈз¶љећ‹гЃ®е ґеђ€гЃЊгЃ‚г‚‹гЂ‚</p>
+			<h2>е®љзѕ©пј€й›ўж•Јећ‹пј‰</h2>
+			<p>гЂЂ$x$ гЃЊй›ўж•ЈзўєзЋ‡е¤‰ж•°гЃ§пјЊгЃќгЃ®зўєзЋ‡е€†еёѓгЃЊ $P(x)$ гЃ§гЃ‚г‚‹ж™‚пјЊ$x$ гЃ®жњџеѕ…еЂ¤гЃЇпјЊ</p>
 			 \[ E\left[ x \right] = \sum_x x P(x) \]
-			<p>‚Е’и‹`‚і‚к‚йЃBЃi—б‚¦‚ОЃC$x$ ‚рЏЬ‹аЃC$P(x)$ ‚р“–‘IЉm—¦‚Ж‚·‚к‚ОЃC1–‡‚М•у‚­‚¶‚Й‘О‚µ‚ДЃC‚а‚з‚¦‚й‰В”\ђ«‚Є‚ ‚й‹аЉz‚ЄЉъ‘Т’l‚Е‚ ‚йЃBЃj</p>
-			<h2>’и‹`ЃiA‘±Њ^Ѓj</h2>
-			<p>Ѓ@$x$ ‚ЄA‘±Љm—¦•Пђ”‚ЕЃC‚»‚МЉm—¦–§“xЉЦђ”‚Є $f(x)$ ‚Е‚ ‚йЋћЃC$x$ ‚МЉъ‘Т’l‚НЃi$x$‚М’и‹`€ж‚р $(-\infty, +\infty )$‚Ж‚µ‚ДЃjЃC</p>
+			<p>гЃ§е®љзѕ©гЃ•г‚Њг‚‹гЂ‚пј€дѕ‹гЃ€гЃ°пјЊ$x$ г‚’иіћй‡‘пјЊ$P(x)$ г‚’еЅ“йЃёзўєзЋ‡гЃЁгЃ™г‚ЊгЃ°пјЊ1жћљгЃ®е®ќгЃЏгЃгЃ«еЇѕгЃ—гЃ¦пјЊг‚‚г‚‰гЃ€г‚‹еЏЇиѓЅжЂ§гЃЊгЃ‚г‚‹й‡‘йЎЌгЃЊжњџеѕ…еЂ¤гЃ§гЃ‚г‚‹гЂ‚пј‰</p>
+			<h2>е®љзѕ©пј€йЂЈз¶љећ‹пј‰</h2>
+			<p>гЂЂ$x$ гЃЊйЂЈз¶љзўєзЋ‡е¤‰ж•°гЃ§пјЊгЃќгЃ®зўєзЋ‡еЇ†еє¦й–ўж•°гЃЊ $f(x)$ гЃ§гЃ‚г‚‹ж™‚пјЊ$x$ гЃ®жњџеѕ…еЂ¤гЃЇпј€$x$гЃ®е®љзѕ©еџџг‚’ $(-\infty, +\infty )$гЃЁгЃ—гЃ¦пј‰пјЊ</p>
 			 \[ E\left[ x \right] = \int_{-\infty}^{+\infty} x f(x) dx \]
-			<p>‚Е’и‹`‚і‚к‚йЃB</p>
-			<h2>Љо–{ЊцЋ®</h2>
-			<p>Ѓ@(1) $E\left[ c \right] = c$Ѓi$c$ ‚Н’иђ”Ѓj</p>
+			<p>гЃ§е®љзѕ©гЃ•г‚Њг‚‹гЂ‚</p>
+			<h2>еџєжњ¬е…¬ејЏ</h2>
+			<p>гЂЂ(1) $E\left[ c \right] = c$пј€$c$ гЃЇе®љж•°пј‰</p>
 			<div class="proof">
 				\[
 					\begin{align*}
-						Ѓy—ЈЋUЊ^ЃzЃ@E\left[ c \right] &= \sum_x c P(x) \\
+						гЂђй›ўж•Јећ‹гЂ‘гЂЂE\left[ c \right] &= \sum_x c P(x) \\
 						&= c\sum_x P(x) \\
 						&= c
 					\end{align*}
 				\]
 				\[
 					\begin{align*}
-						ЃyA‘±Њ^ЃzЃ@E\left[ c \right] &= \int_{-\infty}^{+\infty} c f(x) dx \\
+						гЂђйЂЈз¶љећ‹гЂ‘гЂЂE\left[ c \right] &= \int_{-\infty}^{+\infty} c f(x) dx \\
 						&= c\int_{-\infty}^{+\infty} f(x) dx \\
 						&= c
 					\end{align*}
 				\]
 			</div>
-			<p>Ѓ@(2) $E\left[ cx \right] = cE\left[ x \right]$Ѓi$c$ ‚Н’иђ”Ѓj</p>
+			<p>гЂЂ(2) $E\left[ cx \right] = cE\left[ x \right]$пј€$c$ гЃЇе®љж•°пј‰</p>
 			<div class="proof">
 				\[
 					\begin{align*}
-						Ѓy—ЈЋUЊ^ЃzЃ@E\left[ cx \right] &= \sum_x cx P(x) \\
+						гЂђй›ўж•Јећ‹гЂ‘гЂЂE\left[ cx \right] &= \sum_x cx P(x) \\
 						&= c\sum_x x P(x) \\
 						&= cE\left[ x \right]
 					\end{align*}
 				\]
 				\[
 					\begin{align*}
-						ЃyA‘±Њ^ЃzЃ@E\left[ cx \right] &= \int_{-\infty}^{+\infty} cx f(x) dx \\
+						гЂђйЂЈз¶љећ‹гЂ‘гЂЂE\left[ cx \right] &= \int_{-\infty}^{+\infty} cx f(x) dx \\
 						&= c\int_{-\infty}^{+\infty} x f(x) dx \\
 						&= cE\left[ x \right]
 					\end{align*}
 				\]
 			</div>			
-			<p>Ѓ@(3) $E\left[ x \pm y \right] = E\left[ x \right] \pm E\left[ y \right]$ЃiЉъ‘Т’l‚М‰Б–@ђ«ЃFa‚МЉъ‘Т’l‚НЉъ‘Т’l‚МaЃCЌ·‚МЉъ‘Т’l‚НЉъ‘Т’l‚МЌ·Ѓj</p>
+			<p>гЂЂ(3) $E\left[ x \pm y \right] = E\left[ x \right] \pm E\left[ y \right]$пј€жњџеѕ…еЂ¤гЃ®еЉ жі•жЂ§пјље’ЊгЃ®жњџеѕ…еЂ¤гЃЇжњџеѕ…еЂ¤гЃ®е’ЊпјЊе·®гЃ®жњџеѕ…еЂ¤гЃЇжњџеѕ…еЂ¤гЃ®е·®пј‰</p>
 			<div class="proof">
 				\[
 					\begin{align*}
-						Ѓy—ЈЋUЊ^ЃzЃ@E\left[ x \pm y \right] &= \sum_x \sum_y \left( x \pm y \right) P(x, y) \\
+						гЂђй›ўж•Јећ‹гЂ‘гЂЂE\left[ x \pm y \right] &= \sum_x \sum_y \left( x \pm y \right) P(x, y) \\
 						&= \sum_x \sum_y x P(x, y) \pm \sum_x \sum_y y P(x, y) \\
 						&= \sum_x x \sum_y P(x, y) \pm \sum_y y \sum_x P(x, y) \\
 						&= \sum_x x P(x) \pm \sum_y y P(y) \\
@@ -115,7 +115,7 @@
 				\]
 				\[
 					\begin{align*}
-						ЃyA‘±Њ^ЃzЃ@E\left[ x \pm y \right] &= \int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} \left( x \pm y \right) f(x, y) dx dy \\
+						гЂђйЂЈз¶љећ‹гЂ‘гЂЂE\left[ x \pm y \right] &= \int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} \left( x \pm y \right) f(x, y) dx dy \\
 						&= \int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} x f(x, y) dx dy \pm \int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} y f(x, y) dx dy \\
 						&= \int_{-\infty}^{+\infty} x \int_{-\infty}^{+\infty} f(x, y) dx dy \pm \int_{-\infty}^{+\infty} y \int_{-\infty}^{+\infty} f(x, y) dx dy \\
 						&= \int_{-\infty}^{+\infty} x f(x) dx \pm \int_{-\infty}^{+\infty} y f(y) dy \\
@@ -123,23 +123,23 @@
 					\end{align*}
 				\]
 			</div>
-			<p>Ѓ@€ИЏг‚М‚ж‚¤‚ЙЃC—ЈЋUЊ^‚ЖA‘±Њ^‚МЉъ‘Т’l‚НЃCЃg$\displaystyle \sum \leftrightarrow \int$Ѓh‚Ж‚ў‚¤‘О‰ћ‚рЋ¦‚·1—б‚Е‚ ‚йЃB</p>
-			<p>Ѓ@‚і‚з‚ЙЃC•ЄЋU‚ЙЉЦ‚·‚й’и‹`‚ЖЉо–{ЊцЋ®Ѓi“±Џo‚НЏИ—ЄЃj‚НЋџ‚М’К‚иЃB</p>
-			<h2>Љъ‘Т’l‚ЙЉо‚Г‚­•ЄЋU‚М’и‹`Ѓi—ЈЋUЊ^Ѓj</h2>
+			<p>гЂЂд»ҐдёЉгЃ®г‚€гЃ†гЃ«пјЊй›ўж•Јећ‹гЃЁйЂЈз¶љећ‹гЃ®жњџеѕ…еЂ¤гЃЇпјЊвЂњ$\displaystyle \sum \leftrightarrow \int$вЂќгЃЁгЃ„гЃ†еЇѕеїњг‚’з¤єгЃ™1дѕ‹гЃ§гЃ‚г‚‹гЂ‚</p>
+			<p>гЂЂгЃ•г‚‰гЃ«пјЊе€†ж•ЈгЃ«й–ўгЃ™г‚‹е®љзѕ©гЃЁеџєжњ¬е…¬ејЏпј€е°Ће‡єгЃЇзњЃз•Ґпј‰гЃЇж¬ЎгЃ®йЂљг‚ЉгЂ‚</p>
+			<h2>жњџеѕ…еЂ¤гЃ«еџєгЃҐгЃЏе€†ж•ЈгЃ®е®љзѕ©пј€й›ўж•Јећ‹пј‰</h2>
 			\[ V\left[ x \right] = E\left[ \left( x - \mu \right)^2 \right] \]
-			<p>Ѓ@‰E•У‚р“WЉJ‚µ‚Д‚ў‚­‚ЖЃCЋџ‚МЋ®‚Є“ѕ‚з‚к‚йЃB</p>
+			<p>гЂЂеЏіиѕєг‚’е±•й–‹гЃ—гЃ¦гЃ„гЃЏгЃЁпјЊж¬ЎгЃ®ејЏгЃЊеѕ—г‚‰г‚Њг‚‹гЂ‚</p>
 			\[ V\left[ x \right] = E\left[ x^2 \right] - \left( E[x]\right)^2 \]
-			<h2>Љо–{ЊцЋ®</h2>
-			<p>Ѓ@(1) $V\left[ cx \right] = c^2 V\left[ x \right]$Ѓi$c$ ‚Н’иђ”Ѓj</p>
-			<p>Ѓ@(2) $V\left[ x \pm y \right] = V\left[ x \right] + V\left[ y \right]$Ѓi’A‚µЃC$x$ ‚Ж $y$ ‚Є“Ж—§‚Е‚ ‚йЏкЌ‡ЃB‰E•У‚Є $\pm$ ‚Й‚И‚Б‚Д‚ў‚И‚ў‚±‚Ж‚Й’Ќ€УЃj</p>
+			<h2>еџєжњ¬е…¬ејЏ</h2>
+			<p>гЂЂ(1) $V\left[ cx \right] = c^2 V\left[ x \right]$пј€$c$ гЃЇе®љж•°пј‰</p>
+			<p>гЂЂ(2) $V\left[ x \pm y \right] = V\left[ x \right] + V\left[ y \right]$пј€дЅ†гЃ—пјЊ$x$ гЃЁ $y$ гЃЊз‹¬з«‹гЃ§гЃ‚г‚‹е ґеђ€гЂ‚еЏіиѕєгЃЊ $\pm$ гЃ«гЃЄгЃЈгЃ¦гЃ„гЃЄгЃ„гЃ“гЃЁгЃ«жіЁж„Џпј‰</p>
 			<p style="text-align: right">Last modified: July 30, 2015</p>
 		</div>
 		
 		<div class="main">
-			<h1 id="sample-distribution">•W–{•Є•z‚М•Ѕ‹П’l‚Ж•ЄЋU</h1>
-			<p>Ѓ@•Ѕ‹П’l $\mu$ЃC•ЄЋU $\sigma^2$ ‚М•кЏW’c‚©‚зѓTѓ“ѓvѓЉѓ“ѓO‚і‚к‚ЅѓTѓCѓY $N$ ‚МѓTѓ“ѓvѓ‹‚М•Ѕ‹П’l $\bar{X}$ ‚М•Ѕ‹П’l‚Н $\mu$ЃC•ЄЋU‚Н $\sigma^2 / N$ ‚Е‚ ‚йЃB</p>
+			<h1 id="sample-distribution">жЁ™жњ¬е€†еёѓгЃ®е№іеќ‡еЂ¤гЃЁе€†ж•Ј</h1>
+			<p>гЂЂе№іеќ‡еЂ¤ $\mu$пјЊе€†ж•Ј $\sigma^2$ гЃ®жЇЌй›†е›ЈгЃ‹г‚‰г‚µгѓігѓ—гѓЄгѓіг‚°гЃ•г‚ЊгЃџг‚µг‚¤г‚є $N$ гЃ®г‚µгѓігѓ—гѓ«гЃ®е№іеќ‡еЂ¤ $\bar{X}$ гЃ®е№іеќ‡еЂ¤гЃЇ $\mu$пјЊе€†ж•ЈгЃЇ $\sigma^2 / N$ гЃ§гЃ‚г‚‹гЂ‚</p>
 			<div class="proof">
-				<p>Ѓ@$N$ ЊВ‚МѓTѓ“ѓvѓ‹‚НѓTѓ“ѓvѓЉѓ“ѓO‚І‚Ж‚Й•П‚н‚й‚М‚ЕЃC‚»‚М•Ѕ‹П’l $\bar{X}$ ‚аѓoѓ‰‚В‚«ЃC•W–{•Є•z‚ЖЊД‚О‚к‚й•Є•z‚рЌ\ђ¬‚·‚йЃB‚±‚М•Є•z‚М•Ѕ‹П’l‚НЃg$\bar{X}$‚МЉъ‘Т’lЃh‚Е‚ ‚й‚©‚зЃC<a href="#expected-value">Љъ‘Т’l‚МЊцЋ®</a>‚рЋg‚¦‚ОЃC</p>
+				<p>гЂЂ$N$ еЂ‹гЃ®г‚µгѓігѓ—гѓ«гЃЇг‚µгѓігѓ—гѓЄгѓіг‚°гЃ”гЃЁгЃ«е¤‰г‚Џг‚‹гЃ®гЃ§пјЊгЃќгЃ®е№іеќ‡еЂ¤ $\bar{X}$ г‚‚гѓђгѓ©гЃ¤гЃЌпјЊжЁ™жњ¬е€†еёѓгЃЁе‘јгЃ°г‚Њг‚‹е€†еёѓг‚’ж§‹ж€ђгЃ™г‚‹гЂ‚гЃ“гЃ®е€†еёѓгЃ®е№іеќ‡еЂ¤гЃЇвЂњ$\bar{X}$гЃ®жњџеѕ…еЂ¤вЂќгЃ§гЃ‚г‚‹гЃ‹г‚‰пјЊ<a href="#expected-value">жњџеѕ…еЂ¤гЃ®е…¬ејЏ</a>г‚’дЅїгЃ€гЃ°пјЊ</p>
 				\[
 					\begin{align*}
 						E\left[ \bar{X} \right] &= E\left[\frac{1}{N}\left( X_1 + X_2 + \cdots + X_N \right) \right] \\
@@ -150,33 +150,33 @@
 						&= \mu
 					\end{align*}
 				\]
-				<p>‚Ж‚И‚иЃC$\mu$‚Е‚ ‚й‚±‚Ж‚Є•Є‚©‚йЃB</p>
-				<p>Ѓ@‚Ь‚ЅЃC•W–{•Є•z‚М•ЄЋU‚р‹Ѓ‚Я‚й‚ЖЃC</p>
+				<p>гЃЁгЃЄг‚ЉпјЊ$\mu$гЃ§гЃ‚г‚‹гЃ“гЃЁгЃЊе€†гЃ‹г‚‹гЂ‚</p>
+				<p>гЂЂгЃѕгЃџпјЊжЁ™жњ¬е€†еёѓгЃ®е€†ж•Јг‚’ж±‚г‚Ѓг‚‹гЃЁпјЊ</p>
 				\[
 					\begin{align*}
 						V\left[ \bar{X} \right] &= V\left[\frac{1}{N}\left( X_1 + X_2 + \cdots + X_N \right) \right] \\
 						&= \frac{1}{N^2} V\left[ X_1 + X_2 + \cdots + X_N \right] 
 					\end{align*}
 				\]
-				<p>Ѓ@‚±‚±‚ЕЃC$N$ ЊВ‚МѓTѓ“ѓvѓ‹‚Нѓ‰ѓ“ѓ_ѓЂѓTѓ“ѓvѓЉѓ“ѓO‚і‚к‚Ѕ‚а‚М‚Е‚ ‚й‚©‚зЃCЊЭ‚ў‚Й“Ж—§‚µ‚Д‚ў‚йЃB‚µ‚Ѕ‚Є‚Б‚ДЃCЌЕ‰E•У‚М•ЄЋU‚М•”•Є‚НЃC</p>
+				<p>гЂЂгЃ“гЃ“гЃ§пјЊ$N$ еЂ‹гЃ®г‚µгѓігѓ—гѓ«гЃЇгѓ©гѓігѓЂгѓ г‚µгѓігѓ—гѓЄгѓіг‚°гЃ•г‚ЊгЃџг‚‚гЃ®гЃ§гЃ‚г‚‹гЃ‹г‚‰пјЊдє’гЃ„гЃ«з‹¬з«‹гЃ—гЃ¦гЃ„г‚‹гЂ‚гЃ—гЃџгЃЊгЃЈгЃ¦пјЊжњЂеЏіиѕєгЃ®е€†ж•ЈгЃ®йѓЁе€†гЃЇпјЊ</p>
 				\[ V[X_1] + V[X_2] + \cdots + V[X_N] \]
-				<p>‚Е‚ ‚йЃB‚і‚з‚ЙЃCЉeѓTѓ“ѓvѓ‹‚Н“Ї€к•кЏW’cЏoђg‚ѕ‚©‚зЃC$V[X_1] = V[X_2] = \cdots = V[X_N] = \sigma^2$ ‚Е‚ ‚йЃB‚ж‚Б‚ДЃC</p>
+				<p>гЃ§гЃ‚г‚‹гЂ‚гЃ•г‚‰гЃ«пјЊеђ„г‚µгѓігѓ—гѓ«гЃЇеђЊдёЂжЇЌй›†е›Је‡єиє«гЃ гЃ‹г‚‰пјЊ$V[X_1] = V[X_2] = \cdots = V[X_N] = \sigma^2$ гЃ§гЃ‚г‚‹гЂ‚г‚€гЃЈгЃ¦пјЊ</p>
 				\[
 					\begin{align*}
 						V\left[ \bar{X} \right] &= \frac{1}{N^2} N\sigma^2 \\
 						&= \frac{\sigma^2}{N} 
 					\end{align*}
 				\]
-				<p>‚Ж‚И‚йЃB</p>
+				<p>гЃЁгЃЄг‚‹гЂ‚</p>
 			</div>
 			<p style="text-align: right">Last modified: July 30, 2015</p>
 		</div>
 		
 		<div class="main">
-			<h1 id="compu-formula-variance">•ЄЋU‚МЃgЊvЋZЋ®Ѓh</h1>
+			<h1 id="compu-formula-variance">е€†ж•ЈгЃ®вЂњиЁ€з®—ејЏвЂќ</h1>
 			\[ s^2 = \frac{1}{N-1}\left\{ \sum X^2 - \frac{1}{N}\left( \sum X \right)^2 \right\} \]
 			<div class="proof">
-				<p>Ѓ@’и‹`Ћ®‚Й‚Ё‚Ї‚й•ОЌ·•Ѕ•ыa $\sum \left( X - \bar{X} \right)^2$ ‚р•ПЊ`‚µ‚Д‚ў‚Ї‚О‚ж‚ўЃB</p>
+				<p>гЂЂе®љзѕ©ејЏгЃ«гЃЉгЃ‘г‚‹еЃЏе·®е№іж–№е’Њ $\sum \left( X - \bar{X} \right)^2$ г‚’е¤‰еЅўгЃ—гЃ¦гЃ„гЃ‘гЃ°г‚€гЃ„гЂ‚</p>
 				\[
 					\begin{align*}
 					\sum \left( X - \bar{X} \right)^2 &= \sum \left( X^2 - 2\bar{X}X + \bar{X}^2 \right) \\
@@ -187,7 +187,7 @@
 						&= \sum X^2 - \frac{1}{N}\left( \sum X \right)^2
 					\end{align*}
 				\]
-				<p>‚µ‚Ѕ‚Є‚Б‚ДЃC</p>
+				<p>гЃ—гЃџгЃЊгЃЈгЃ¦пјЊ</p>
 				\[ 
 					\begin{align*}
 					s^2 &= \frac{1}{N-1}\sum \left( X - \bar{X} \right)^2 \\
@@ -199,14 +199,14 @@
 		</div>
 
 		<div class="main">
-			<h1 id="unbiased-estimator">•s•Ођ„’и—К</h1>
-			<p>Ѓ@ђ„’и—К $\hat{\theta}$ ‚Є•Ѕ‹П“I‚Йѓpѓ‰ѓЃЃ[ѓ^ $\theta$ ‚Й€к’v‚·‚йЋћЃC‚·‚И‚н‚їЃC</p>
+			<h1 id="unbiased-estimator">дёЌеЃЏжЋЁе®љй‡Џ</h1>
+			<p>гЂЂжЋЁе®љй‡Џ $\hat{\theta}$ гЃЊе№іеќ‡зљ„гЃ«гѓ‘гѓ©гѓЎгѓјг‚ї $\theta$ гЃ«дёЂи‡ґгЃ™г‚‹ж™‚пјЊгЃ™гЃЄг‚ЏгЃЎпјЊ</p>
 			\[ E \left[ \hat{\theta} \right] = \theta \]
-			<p>‚Е‚ ‚йЋћЃC$\hat{\theta}$ ‚р $\theta$ ‚М•s•Ођ„’и—К‚Ж‚ў‚¤ЃB•Ѕ‹П’l‚Ж•ЄЋU‚ЙЉЦ‚µ‚ДЃC</p>
+			<p>гЃ§гЃ‚г‚‹ж™‚пјЊ$\hat{\theta}$ г‚’ $\theta$ гЃ®дёЌеЃЏжЋЁе®љй‡ЏгЃЁгЃ„гЃ†гЂ‚е№іеќ‡еЂ¤гЃЁе€†ж•ЈгЃ«й–ўгЃ—гЃ¦пјЊ</p>
 			\[ E \left[ \bar{X} \right] = \mu \]
 			\[ E \left[ s^2 \right] = \sigma^2 \]
-			<p>‚Єђ¬‚и—§‚ВЃB‚В‚Ь‚иЃC$\bar{X}$ ‚Н $\mu$ ‚М•s•Ођ„’и—К‚Е‚ ‚иЃC$s^2$ ‚Н $\sigma^2$ ‚М•s•Ођ„’и—К‚Е‚ ‚йЃB</p>
-			<p>Ѓ@•к•Ѕ‹П $\mu$ ‚М•s•Ођ„’и—К‚Н<a href="#sample-distribution">ѓRѓR</a>‚ЕЏШ–ѕЌП‚Э‚И‚М‚ЕЃC•к•ЄЋU $\sigma^2$ ‚М•s•Ођ„’и—К‚р“±Џo‚·‚йЃB</p>
+			<p>гЃЊж€ђг‚Љз«‹гЃ¤гЂ‚гЃ¤гЃѕг‚ЉпјЊ$\bar{X}$ гЃЇ $\mu$ гЃ®дёЌеЃЏжЋЁе®љй‡ЏгЃ§гЃ‚г‚ЉпјЊ$s^2$ гЃЇ $\sigma^2$ гЃ®дёЌеЃЏжЋЁе®љй‡ЏгЃ§гЃ‚г‚‹гЂ‚</p>
+			<p>гЂЂжЇЌе№іеќ‡ $\mu$ гЃ®дёЌеЃЏжЋЁе®љй‡ЏгЃЇ<a href="#sample-distribution">г‚іг‚і</a>гЃ§иЁјжЋжё€гЃїгЃЄгЃ®гЃ§пјЊжЇЌе€†ж•Ј $\sigma^2$ гЃ®дёЌеЃЏжЋЁе®љй‡Џг‚’е°Ће‡єгЃ™г‚‹гЂ‚</p>
 			<div class="proof">
 				\[
 					\begin{align*}
@@ -215,10 +215,10 @@
 							&= \sum E \left[ \left( X_i - \mu \right)^2 \right] + \sum E \left[ \left( \bar{X} - \mu \right)^2 \right] -2\sum E \left[ \left( X_i - \mu \right) \left( \bar{X} - \mu \right) \right]
 					\end{align*}
 				\]
-				<p>‚±‚±‚ЕЃC‘ж1ЌЂ‚Ж‘ж2ЌЂ‚Н‚»‚к‚ј‚кЃC</p>
+				<p>гЃ“гЃ“гЃ§пјЊз¬¬1й …гЃЁз¬¬2й …гЃЇгЃќг‚ЊгЃћг‚ЊпјЊ</p>
 				\[ \sum E \left[ \left( X_i - \mu \right)^2 \right] = \sum V \left[ X \right] = N\sigma^2 \]
 				\[ \sum E \left[ \left( \bar{X} - \mu \right)^2 \right] = \sum V \left[ \bar{X} \right] = N\frac{\sigma^2}{N} = \sigma^2 \]
-				<p>‚Е‚ ‚иЃi‘ж2ЌЂ‚М $V[\bar{X}]$ ‚Н<a href="#sample-distribution">ѓRѓR</a>‚ЕЏШ–ѕЌП‚ЭЃjЃC‘ж3ЌЂ‚НЃC</p>
+				<p>гЃ§гЃ‚г‚Љпј€з¬¬2й …гЃ® $V[\bar{X}]$ гЃЇ<a href="#sample-distribution">г‚іг‚і</a>гЃ§иЁјжЋжё€гЃїпј‰пјЊз¬¬3й …гЃЇпјЊ</p>
 				\[
 					\begin{align*}
 						2\sum E \left[ \left( X_i - \mu \right) \left( \bar{X} - \mu \right) \right] &= 2E \left[ \sum \left( X_i - \mu \right) \left( \bar{X} - \mu \right) \right] \\
@@ -228,29 +228,29 @@
 							&= 2\sigma^2
 					\end{align*}
 				\]
-				<p>‚Ж‚И‚й‚©‚зЃCЊ‹‹ЗЃC</p>
+				<p>гЃЁгЃЄг‚‹гЃ‹г‚‰пјЊзµђе±ЂпјЊ</p>
 				\[ E \left[ \sum \left( X_i - \bar{X} \right)^2 \right] = N\sigma^2 + \sigma^2 - 2\sigma^2 = (N - 1)\sigma^2 \]
-				<p>—ј•У‚р $N - 1$ ‚ЕЉ„‚Б‚ДЃC</p>
+				<p>дёЎиѕєг‚’ $N - 1$ гЃ§е‰ІгЃЈгЃ¦пјЊ</p>
 				\[ \frac{1}{N - 1} E \left[ \sum \left( X_i - \bar{X} \right)^2 \right] = \sigma^2 \]
-				<p>‚·‚И‚н‚їЃC</p>
+				<p>гЃ™гЃЄг‚ЏгЃЎпјЊ</p>
 				\[ E \left[ s^2 \right] = \sigma^2 \]
-				<p>‚Е‚ ‚иЃC$s^2$ ‚Є $\sigma^2$ ‚М•s•Ођ„’и—К‚Е‚ ‚й‚±‚Ж‚ЄЋ¦‚і‚к‚ЅЃB</p>
-				<p>Ѓ@‚ї‚И‚Э‚ЙЃC•ЄЋU‚р$N-1$ ‚Е‚Н‚И‚­ $N$ ‚Е•ОЌ·•Ѕ•ыa‚рЉ„‚й‚±‚Ж‚Й‚ж‚Б‚Д’и‹`‚µ‚Д‚ў‚к‚ОЃC</p>
+				<p>гЃ§гЃ‚г‚ЉпјЊ$s^2$ гЃЊ $\sigma^2$ гЃ®дёЌеЃЏжЋЁе®љй‡ЏгЃ§гЃ‚г‚‹гЃ“гЃЁгЃЊз¤єгЃ•г‚ЊгЃџгЂ‚</p>
+				<p>гЂЂгЃЎгЃЄгЃїгЃ«пјЊе€†ж•Јг‚’$N-1$ гЃ§гЃЇгЃЄгЃЏ $N$ гЃ§еЃЏе·®е№іж–№е’Њг‚’е‰Іг‚‹гЃ“гЃЁгЃ«г‚€гЃЈгЃ¦е®љзѕ©гЃ—гЃ¦гЃ„г‚ЊгЃ°пјЊ</p>
 				\[ E \left[ \frac{1}{N}\sum \left( X_i - \bar{X} \right)^2 \right] = E \left[ \frac{N-1}{N} s^2 \right] = \frac{N-1}{N}\sigma^2 < \sigma^2 \]
-				<p>‚Е‚ ‚й‚©‚зЃC$N$ ‚ЕЉ„‚йЏкЌ‡‚НЃC$\sigma^2$ ‚р•Ѕ‹П“I‚Й‰ЯЏ¬•]‰ї‚µ‚Д‚ў‚й‚±‚Ж‚Й‚И‚йЃB</p>
+				<p>гЃ§гЃ‚г‚‹гЃ‹г‚‰пјЊ$N$ гЃ§е‰Іг‚‹е ґеђ€гЃЇпјЊ$\sigma^2$ г‚’е№іеќ‡зљ„гЃ«йЃЋе°Џи©•дѕЎгЃ—гЃ¦гЃ„г‚‹гЃ“гЃЁгЃ«гЃЄг‚‹гЂ‚</p>
 			</div>
 			<p style="text-align: right">Last modified: August 1, 2015</p>
 		</div>
 
 		<div class="main">
-			<h1 id="linear-transform">ѓfЃ[ѓ^‚МђьЊ^•ПЉ·</h1>
-			<p>Ѓ@Њі‚МѓfЃ[ѓ^ $X_{old}$ ‚Й‘О‚µ‚ДЃCђьЊ^•ПЉ·</p>
+			<h1 id="linear-transform">гѓ‡гѓјг‚їгЃ®з·љећ‹е¤‰жЏ›</h1>
+			<p>гЂЂе…ѓгЃ®гѓ‡гѓјг‚ї $X_{old}$ гЃ«еЇѕгЃ—гЃ¦пјЊз·љећ‹е¤‰жЏ›</p>
 			\[ X_{new} = bX_{old} + a \]
-			<p>‚рЌs‚Б‚Д“ѕ‚з‚к‚й $X_{new}$ ‚М•Ѕ‹П’l‚Ж•ЄЋU‚НЋџ‚М‚ж‚¤‚Й‚И‚йЃB</p>
+			<p>г‚’иЎЊгЃЈгЃ¦еѕ—г‚‰г‚Њг‚‹ $X_{new}$ гЃ®е№іеќ‡еЂ¤гЃЁе€†ж•ЈгЃЇж¬ЎгЃ®г‚€гЃ†гЃ«гЃЄг‚‹гЂ‚</p>
 			\[ \bar{X}_{new} = b\bar{X}_{old} + a \]
 			\[ s^2_{new} = b^2s^2_{old} \]
 			<div class="proof">
-				<p>Ѓ@’и‹`Ћ®‚Й‚Ё‚Ї‚й•ОЌ·•Ѕ•ыa $\sum \left( X - \bar{X} \right)^2$ ‚р•ПЊ`‚µ‚Д‚ў‚Ї‚О‚ж‚ўЃB</p>
+				<p>гЂЂе®љзѕ©ејЏгЃ«гЃЉгЃ‘г‚‹еЃЏе·®е№іж–№е’Њ $\sum \left( X - \bar{X} \right)^2$ г‚’е¤‰еЅўгЃ—гЃ¦гЃ„гЃ‘гЃ°г‚€гЃ„гЂ‚</p>
 				\[
 					\begin{align*}
 						\bar{X}_{new} &= \frac{1}{N}\sum X_{new} \\
@@ -269,19 +269,19 @@
 							&= b^2 s^2_{old}
 					\end{align*}
 				\]
-				<p>Ѓ@‚±‚М‚ж‚¤‚ЙЃC•ЄЋU‚НђьЊ^•ПЉ·‚р•ЫЋќ‚µ‚И‚ўЃB‚±‚к‚Н•WЏЂ•ОЌ·‚а“Ї—l‚Е‚ ‚йЃB</p>
+				<p>гЂЂгЃ“гЃ®г‚€гЃ†гЃ«пјЊе€†ж•ЈгЃЇз·љећ‹е¤‰жЏ›г‚’дїќжЊЃгЃ—гЃЄгЃ„гЂ‚гЃ“г‚ЊгЃЇжЁ™жє–еЃЏе·®г‚‚еђЊж§гЃ§гЃ‚г‚‹гЂ‚</p>
 				\[ s_{new} = |b| s_{old} \]
 			</div>
 			<p style="text-align: right">Last modified: August 3, 2015</p>
 		</div>
 
 		<div class="main">
-			<h1 id="standardization">•WЏЂ‰»</h1>
-			<p>Ѓ@•WЏЂ‰»‚Й‚ж‚Б‚ДЃC•Ѕ‹П’l0ЃC•ЄЋU1‚МѓfЃ[ѓ^‚Ж‚И‚йЃB’КЏнЃC•WЏЂ‰»‚М‹c_‚Нђі‹K•Є•z‚Е‚И‚і‚к‚й‚ЄЃC•WЏЂ‰»‚»‚М‚а‚М‚Й‚Н•Є•z‚МЊ^‚НЉЦЊW‚И‚ўЃB</p>
+			<h1 id="standardization">жЁ™жє–еЊ–</h1>
+			<p>гЂЂжЁ™жє–еЊ–гЃ«г‚€гЃЈгЃ¦пјЊе№іеќ‡еЂ¤0пјЊе€†ж•Ј1гЃ®гѓ‡гѓјг‚їгЃЁгЃЄг‚‹гЂ‚йЂљеёёпјЊжЁ™жє–еЊ–гЃ®и­°и«–гЃЇж­Ји¦Џе€†еёѓгЃ§гЃЄгЃ•г‚Њг‚‹гЃЊпјЊжЁ™жє–еЊ–гЃќгЃ®г‚‚гЃ®гЃ«гЃЇе€†еёѓгЃ®ећ‹гЃЇй–ўдї‚гЃЄгЃ„гЂ‚</p>
 			<div class="proof">
-				<p>Ѓ@•WЏЂ‰»‚МЋ®‚НЃC</p>
+				<p>гЂЂжЁ™жє–еЊ–гЃ®ејЏгЃЇпјЊ</p>
 				\[ \frac{X - \bar{X}}{s} = \frac{1}{s}X - \frac{1}{s}\bar{X} \]
-				<p>‚Е‚ ‚й‚М‚ЕЃC•WЏЂ‰»‚Н<a href="#linear-transform">ђьЊ`•ПЉ·</a>‚Е‚ ‚йЃB‚µ‚Ѕ‚Є‚Б‚ДЃC•WЏЂ‰»‘OЊг‚М•Пђ”‚р‚»‚к‚ј‚к $X_{new}$ЃC$X_{old}$ ‚Ж‚·‚й‚ЖЃC</p>
+				<p>гЃ§гЃ‚г‚‹гЃ®гЃ§пјЊжЁ™жє–еЊ–гЃЇ<a href="#linear-transform">з·љеЅўе¤‰жЏ›</a>гЃ§гЃ‚г‚‹гЂ‚гЃ—гЃџгЃЊгЃЈгЃ¦пјЊжЁ™жє–еЊ–е‰ЌеѕЊгЃ®е¤‰ж•°г‚’гЃќг‚ЊгЃћг‚Њ $X_{new}$пјЊ$X_{old}$ гЃЁгЃ™г‚‹гЃЁпјЊ</p>
 				\[ \bar{X}_{new} = \frac{1}{s_{old}}\bar{X}_{old} - \frac{1}{s_{old}}\bar{X}_{old} = 0 \]
 				\[ s^2_{new} = \frac{1}{s^2_{old}} \cdot s^2_{old} = 1 \]
 			</div>
@@ -289,15 +289,15 @@
 		</div>
         
 		<div class="main">
-			<h1 id="gauss-int">ѓKѓEѓXђП•Є</h1>
-			<p>Ѓ@ђі‹K•Є•zЉЦђ”‚Ж‰ЎЋІ‚Е€Н‚Ь‚к‚Ѕ–КђП‚Є1‚Й‚И‚й‚±‚ЖЃC‚·‚И‚н‚їЃC</p>
+			<h1 id="gauss-int">г‚¬г‚¦г‚№з©Ќе€†</h1>
+			<p>гЂЂж­Ји¦Џе€†еёѓй–ўж•°гЃЁжЁЄи»ёгЃ§е›ІгЃѕг‚ЊгЃџйќўз©ЌгЃЊ1гЃ«гЃЄг‚‹гЃ“гЃЁпјЊгЃ™гЃЄг‚ЏгЃЎпјЊ</p>
 			\[ \int_{-\infty}^{+\infty} \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(X-\mu)^2}{2\sigma^2}} dX = 1 \]
-			<p>‚рЋ¦‚·‘O‚ЙЃCѓKѓEѓXђП•Є</p>
+			<p>г‚’з¤єгЃ™е‰ЌгЃ«пјЊг‚¬г‚¦г‚№з©Ќе€†</p>
 			\[ I = \int_{-\infty}^{+\infty} e^{-ax^2}dx = \sqrt{\frac{\pi}{a}} \]
-			<p>‚Ж‚И‚й‚±‚Ж‚рЋ¦‚µЃC‚±‚к‚р——p‚µ‚ДЌЕЏ‰‚МЋ®‚Єђ¬—§‚·‚й‚±‚Ж‚рЉm”F‚·‚йЃB</p>
+			<p>гЃЁгЃЄг‚‹гЃ“гЃЁг‚’з¤єгЃ—пјЊгЃ“г‚Њг‚’е€©з”ЁгЃ—гЃ¦жњЂе€ќгЃ®ејЏгЃЊж€ђз«‹гЃ™г‚‹гЃ“гЃЁг‚’зўєиЄЌгЃ™г‚‹гЂ‚</p>
 				
 			<div class="proof">
-				<p>Ѓ@”нђП•ЄЉЦђ”‚НЏн‚Йђі‚Ж‚И‚йЉЦђ”‚Е‚ ‚й‚©‚зЃC$I>0$‚Е‚ ‚й‚±‚Ж‚Н–ѕ‚з‚©ЃB</p>
+				<p>гЂЂиў«з©Ќе€†й–ўж•°гЃЇеёёгЃ«ж­ЈгЃЁгЃЄг‚‹й–ўж•°гЃ§гЃ‚г‚‹гЃ‹г‚‰пјЊ$I>0$гЃ§гЃ‚г‚‹гЃ“гЃЁгЃЇжЋг‚‰гЃ‹гЂ‚</p>
 				\[
 					\begin{align*}
 						I^2 &= \left( \int_{-\infty}^{+\infty} e^{-ax^2}dx \right)^2 \\
@@ -305,7 +305,7 @@
 							&= \int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} e^{-a(x^2 + y^2)} dx dy
 					\end{align*}
 				\]
-				<p>Ѓ@‚±‚±‚ЕЃC‹ЙЌА•W•ПЉ· $x = r\cos\theta$ЃC$y = r\sin\theta$‚рЌs‚¤‚ЖЃC</p>
+				<p>гЂЂгЃ“гЃ“гЃ§пјЊжҐµеє§жЁ™е¤‰жЏ› $x = r\cos\theta$пјЊ$y = r\sin\theta$г‚’иЎЊгЃ†гЃЁпјЊ</p>
 				\[
 					\begin{align*}
 						I^2 &= \int_0^{2\pi} \int_0^{+\infty} e^{-ar^2} rdrd\theta \\
@@ -313,7 +313,7 @@
 							&= 2\pi \int_0^{+\infty} e^{-ar^2} rdr
 					\end{align*}
 				\]
-				<p>‚і‚з‚Й $t = r^2$ ‚Е’uЉ·‚·‚й‚ЖЃC$dt = 2rdr$ ‚Ж‚И‚й‚©‚зЃC</p>
+				<p>гЃ•г‚‰гЃ« $t = r^2$ гЃ§зЅ®жЏ›гЃ™г‚‹гЃЁпјЊ$dt = 2rdr$ гЃЁгЃЄг‚‹гЃ‹г‚‰пјЊ</p>
 				\[
 					\begin{align*}
 						I^2 &= \pi \int_0^{+\infty} e^{-at} dt \\
@@ -321,13 +321,13 @@
 							&= \frac{\pi}{a}
 					\end{align*}
 				\]
-				<p>‚µ‚Ѕ‚Є‚Б‚ДЃC</p>
+				<p>гЃ—гЃџгЃЊгЃЈгЃ¦пјЊ</p>
 				\[ I = \sqrt{\frac{\pi}{a}} \]
-				<p>‚Е‚ ‚йЃB</p>
-				<p>Ѓ@ђі‹K•Є•zЉЦђ”‚МђП•Є‚ЖѓKѓEѓXђП•Є‚р”дЉr‚·‚й‚ЖЃC</p>
+				<p>гЃ§гЃ‚г‚‹гЂ‚</p>
+				<p>гЂЂж­Ји¦Џе€†еёѓй–ўж•°гЃ®з©Ќе€†гЃЁг‚¬г‚¦г‚№з©Ќе€†г‚’жЇ”ијѓгЃ™г‚‹гЃЁпјЊ</p>
 				\[ a = \frac{1}{2\sigma^2} \]
 				\[ x = X - \mu \]
-				<p>‚Ж‚Э‚И‚№‚О‚ж‚ў‚±‚Ж‚Є•Є‚©‚й‚М‚ЕЃC</p>
+				<p>гЃЁгЃїгЃЄгЃ›гЃ°г‚€гЃ„гЃ“гЃЁгЃЊе€†гЃ‹г‚‹гЃ®гЃ§пјЊ</p>
 				\[
 					\begin{align*}
 						\int_{-\infty}^{+\infty} \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(X-\mu)^2}{2\sigma^2}} dX &= \frac{1}{\sigma \sqrt{2\pi}} \int_{-\infty}^{+\infty} e^{-\frac{1}{2\sigma^2}x^2} dx \\
@@ -341,76 +341,76 @@
 		</div>
 		
 		<div class="main">
-			<h1 id="shapiro">ѓVѓѓѓsѓЌ-ѓEѓBѓ‹ѓNЊџ’и</h1>
-			<p>Ѓ@ѓVѓѓѓsѓЌ-ѓEѓBѓ‹ѓNЊџ’иЃiShapiro-Wilk testЃj‚НЃCѓfЃ[ѓ^‚Єђі‹K•Є•z‚ЙЏ]‚¤‚а‚М‚©”Ы‚©‚р’І‚Ч‚йЊџ’и–@‚Е‚ ‚йЃB‘Ѕ‚­‚Мѓpѓ‰ѓЃѓgѓЉѓbѓNЊџ’и‚Й‚Ё‚ў‚ДЃCЊџ’и‘ОЏЫ‚МѓfЃ[ѓ^‚Нђі‹K•Є•z‚ЙЏ]‚¤‚±‚Ж‚Є‘O’с‚Ж‚И‚Б‚Д‚ў‚й“_‚ЕЃCђі‹Kђ«‚МЊџ’и‚Н–{—€“I‚Й‚НЏd—v‚Е‚ ‚йЃi‚ЄЃC‚ ‚Ь‚и—p‚ў‚з‚к‚Д‚ў‚И‚ўЃjЃB‹A–і‰јђа‚НЃgѓTѓ“ѓvѓ‹‚Нђі‹K•кЏW’c‚©ѓTѓ“ѓvѓЉѓ“ѓO‚і‚к‚Ѕ‚а‚М‚Е‚ ‚йЃh‚Ж‚И‚йЃBѓVѓѓѓsѓЌ-ѓEѓBѓ‹ѓNЊџ’и‚Н€И‰є‚М‚ж‚¤‚ЙЌs‚¤ЃB</p>
+			<h1 id="shapiro">г‚·гѓЈгѓ”гѓ­-г‚¦г‚Јгѓ«г‚Їж¤ње®љ</h1>
+			<p>гЂЂг‚·гѓЈгѓ”гѓ­-г‚¦г‚Јгѓ«г‚Їж¤ње®љпј€Shapiro-Wilk testпј‰гЃЇпјЊгѓ‡гѓјг‚їгЃЊж­Ји¦Џе€†еёѓгЃ«еѕ“гЃ†г‚‚гЃ®гЃ‹еђ¦гЃ‹г‚’иЄїгЃ№г‚‹ж¤ње®љжі•гЃ§гЃ‚г‚‹гЂ‚е¤љгЃЏгЃ®гѓ‘гѓ©гѓЎгѓ€гѓЄгѓѓг‚Їж¤ње®љгЃ«гЃЉгЃ„гЃ¦пјЊж¤ње®љеЇѕи±ЎгЃ®гѓ‡гѓјг‚їгЃЇж­Ји¦Џе€†еёѓгЃ«еѕ“гЃ†гЃ“гЃЁгЃЊе‰ЌжЏђгЃЁгЃЄгЃЈгЃ¦гЃ„г‚‹з‚№гЃ§пјЊж­Ји¦ЏжЂ§гЃ®ж¤ње®љгЃЇжњ¬жќҐзљ„гЃ«гЃЇй‡Ќи¦ЃгЃ§гЃ‚г‚‹пј€гЃЊпјЊгЃ‚гЃѕг‚Љз”ЁгЃ„г‚‰г‚ЊгЃ¦гЃ„гЃЄгЃ„пј‰гЂ‚её°з„Ўд»®иЄ¬гЃЇвЂњг‚µгѓігѓ—гѓ«гЃЇж­Ји¦ЏжЇЌй›†е›ЈгЃ‹г‚µгѓігѓ—гѓЄгѓіг‚°гЃ•г‚ЊгЃџг‚‚гЃ®гЃ§гЃ‚г‚‹вЂќгЃЁгЃЄг‚‹гЂ‚г‚·гѓЈгѓ”гѓ­-г‚¦г‚Јгѓ«г‚Їж¤ње®љгЃЇд»Ґдё‹гЃ®г‚€гЃ†гЃ«иЎЊгЃ†гЂ‚</p>
 			<ol>
-				<li>ѓfЃ[ѓ^‚рЏёЏ‡‚Й•А‚С‘Ц‚¦‚йЃB‚·‚И‚н‚їЃC$X_1 \le \cdots \le X_N$ЃB</li>
-				<li>•Ѕ•ыa $SS$ ‚рЊvЋZ‚·‚йЃB</li>
+				<li>гѓ‡гѓјг‚їг‚’ж‡й †гЃ«дё¦гЃіж›їгЃ€г‚‹гЂ‚гЃ™гЃЄг‚ЏгЃЎпјЊ$X_1 \le \cdots \le X_N$гЂ‚</li>
+				<li>е№іж–№е’Њ $SS$ г‚’иЁ€з®—гЃ™г‚‹гЂ‚</li>
 				\[ SS = \sum_{i=1}^N (X_i - \bar{X})^2 \]
-				<li>$N$ ‚Є‹фђ”‚И‚з $m=N/2$ЃCЉпђ”‚И‚з $m=(N-1)/2$ ‚Ж‚·‚йЃB</li>
-				<li>Ћџ‚МЋ®‚Й‚ж‚и $b$ ‚рЊvЋZ‚·‚йЃB‚И‚ЁЃC$a_i$ ‚Н <a href="https://www.google.co.jp/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0CCIQFjAAahUKEwiJnbLUzJ3HAhVGnJQKHSBdCKc&url=http%3A%2F%2Fsci2s.ugr.es%2Fkeel%2Fpdf%2Falgorithm%2Farticulo%2Fshapiro1965.pdf&ei=6x3IVcn7Jca40gSguqG4Cg&usg=AFQjCNFyIS9W0N7izQDvtORA1zmO_-W40A&sig2=8wfvAn12ikY83-RyUykDMQ" target="blank">Shapiro & Wilk (1965) ‚МTable 5 (pp. 603-604)</a> ‚рЋQЏЖЃB</li>
+				<li>$N$ гЃЊеЃ¶ж•°гЃЄг‚‰ $m=N/2$пјЊеҐ‡ж•°гЃЄг‚‰ $m=(N-1)/2$ гЃЁгЃ™г‚‹гЂ‚</li>
+				<li>ж¬ЎгЃ®ејЏгЃ«г‚€г‚Љ $b$ г‚’иЁ€з®—гЃ™г‚‹гЂ‚гЃЄгЃЉпјЊ$a_i$ гЃЇ <a href="https://www.google.co.jp/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0CCIQFjAAahUKEwiJnbLUzJ3HAhVGnJQKHSBdCKc&url=http%3A%2F%2Fsci2s.ugr.es%2Fkeel%2Fpdf%2Falgorithm%2Farticulo%2Fshapiro1965.pdf&ei=6x3IVcn7Jca40gSguqG4Cg&usg=AFQjCNFyIS9W0N7izQDvtORA1zmO_-W40A&sig2=8wfvAn12ikY83-RyUykDMQ" target="blank">Shapiro & Wilk (1965) гЃ®Table 5 (pp. 603-604)</a> г‚’еЏ‚з…§гЂ‚</li>
 				\[ b = \sum_{i=1}^m a_i (X_{N+1-i} - X_i) \]
-				<li>Њџ’и“ќЊv—К $W$ ‚рЊvЋZ‚·‚йЃB</li>
+				<li>ж¤ње®љзµ±иЁ€й‡Џ $W$ г‚’иЁ€з®—гЃ™г‚‹гЂ‚</li>
 				\[ W = \frac{b^2}{SS} \]
-				<li>$W$ •\Ѓi<a href="https://www.google.co.jp/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0CCIQFjAAahUKEwiJnbLUzJ3HAhVGnJQKHSBdCKc&url=http%3A%2F%2Fsci2s.ugr.es%2Fkeel%2Fpdf%2Falgorithm%2Farticulo%2Fshapiro1965.pdf&ei=6x3IVcn7Jca40gSguqG4Cg&usg=AFQjCNFyIS9W0N7izQDvtORA1zmO_-W40A&sig2=8wfvAn12ikY83-RyUykDMQ" target="blank">Shapiro & Wilk (1965) ‚МTable 6 (p. 605)</a>Ѓj‚©‚з $p$ ’l‚рЊ©‚В‚Ї‚йЃB</li>
+				<li>$W$ иЎЁпј€<a href="https://www.google.co.jp/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0CCIQFjAAahUKEwiJnbLUzJ3HAhVGnJQKHSBdCKc&url=http%3A%2F%2Fsci2s.ugr.es%2Fkeel%2Fpdf%2Falgorithm%2Farticulo%2Fshapiro1965.pdf&ei=6x3IVcn7Jca40gSguqG4Cg&usg=AFQjCNFyIS9W0N7izQDvtORA1zmO_-W40A&sig2=8wfvAn12ikY83-RyUykDMQ" target="blank">Shapiro & Wilk (1965) гЃ®Table 6 (p. 605)</a>пј‰гЃ‹г‚‰ $p$ еЂ¤г‚’и¦‹гЃ¤гЃ‘г‚‹гЂ‚</li>
 			</ol>
-			<p>Ѓ@€ИЏг‚М•ы–@‚Е‚НЃCѓfЃ[ѓ^‚Є50ЊВ‚Ь‚Е‚µ‚©‘О‰ћ‚Е‚«‚И‚ўЃB‚±‚МЊАЉE‚р’ґ‚¦‚й‚Ѕ‚Я‚Й’с€Д‚і‚к‚ЅЉg’Ј”Е‚Е‚НЃC12ЊВ‚©‚з5000ЊВ‚МѓfЃ[ѓ^‚Й‘О‰ћ‚Е‚«‚йЃiЌЕ’б‚Е‚а20ЊВ‚МѓfЃ[ѓ^‚Єђ„Џ§‚і‚к‚йЃjЃB</p>
+			<p>гЂЂд»ҐдёЉгЃ®ж–№жі•гЃ§гЃЇпјЊгѓ‡гѓјг‚їгЃЊ50еЂ‹гЃѕгЃ§гЃ—гЃ‹еЇѕеїњгЃ§гЃЌгЃЄгЃ„гЂ‚гЃ“гЃ®й™ђз•Њг‚’и¶…гЃ€г‚‹гЃџг‚ЃгЃ«жЏђжЎ€гЃ•г‚ЊгЃџж‹Ўејµз‰€гЃ§гЃЇпјЊ12еЂ‹гЃ‹г‚‰5000еЂ‹гЃ®гѓ‡гѓјг‚їгЃ«еЇѕеїњгЃ§гЃЌг‚‹пј€жњЂдЅЋгЃ§г‚‚20еЂ‹гЃ®гѓ‡гѓјг‚їгЃЊжЋЁеҐЁгЃ•г‚Њг‚‹пј‰гЂ‚</p>
 			<ol>
-				<li>ѓfЃ[ѓ^‚рЏёЏ‡‚Й•А‚С‘Ц‚¦‚йЃB‚·‚И‚н‚їЃC$X_1 \le \cdots \le X_N$ЃB</li>
-				<li>•WЏЂђі‹K•Є•z‚М—ЭђП•Є•zЉЦђ”</li>
+				<li>гѓ‡гѓјг‚їг‚’ж‡й †гЃ«дё¦гЃіж›їгЃ€г‚‹гЂ‚гЃ™гЃЄг‚ЏгЃЎпјЊ$X_1 \le \cdots \le X_N$гЂ‚</li>
+				<li>жЁ™жє–ж­Ји¦Џе€†еёѓгЃ®зґЇз©Ќе€†еёѓй–ўж•°</li>
 				\[ F(x) = \int_{-\infty}^x \frac{1}{\sqrt{2\pi}} e^{-\frac{1}{2}z^2} dz \]
-				‚М‹tЉЦђ”‚Й‚ж‚иЃC$m_1, \cdots, m_N$ ‚рЋџ‚М‚ж‚¤‚Й’и‹`‚·‚йЃB
+				гЃ®йЂ†й–ўж•°гЃ«г‚€г‚ЉпјЊ$m_1, \cdots, m_N$ г‚’ж¬ЎгЃ®г‚€гЃ†гЃ«е®љзѕ©гЃ™г‚‹гЂ‚
 				\[ m_i = F^{-1}\left( \frac{i - .375}{N + .25} \right) \]
-				<li>$mi$ ‚р—v‘f‚Ж‚·‚й—сѓxѓNѓgѓ‹‚р $\boldsymbol{M}$ ‚Ж‚µЃC‚»‚М“ађП‚р $m$ ‚Ж‚·‚йЃB</li>
+				<li>$mi$ г‚’и¦Ѓзґ гЃЁгЃ™г‚‹е€—гѓ™г‚Їгѓ€гѓ«г‚’ $\boldsymbol{M}$ гЃЁгЃ—пјЊгЃќгЃ®е†…з©Ќг‚’ $m$ гЃЁгЃ™г‚‹гЂ‚</li>
 				\[ m = \boldsymbol{M}\cdot\boldsymbol{M} = \sum_{i=1}^N m_i^2 \]
-				<li>$\displaystyle u = \frac{1}{\sqrt{N}}$ ‚Ж‚µЃCЊWђ” $a_1, \cdots, a_N$ ‚рЋџ‚М‚ж‚¤‚ЙЏ‡Ћџ’и‹`‚·‚йЃB</li>
+				<li>$\displaystyle u = \frac{1}{\sqrt{N}}$ гЃЁгЃ—пјЊдї‚ж•° $a_1, \cdots, a_N$ г‚’ж¬ЎгЃ®г‚€гЃ†гЃ«й †ж¬Ўе®љзѕ©гЃ™г‚‹гЂ‚</li>
 				\[ a_N = -2.706056u^5 + 4.434685u^4 -2.071190u^3 - 0.147981u^2 + 0.221157u + m_N m^{-0.5} \]
 				\[ a_{N-1} = -3.582633u^5 + 5.682633u^4 - 1.752461u^3 - 0.293762u^2 + 0.042981u + m_{N-1} m^{-0.5} \]
-				$2 < i < N-1$ ‚Й‘О‚µ‚ДЃC
-				\[ a_i = \frac{m_i}{\sqrt{\epsilon}} \ \ \ \mbox{’A‚µЃC} \epsilon = \frac{m - 2m_N^2 - 2m_{N-1^2}}{1 - 2a_N^2 - 2a_{N-1}^2} \]
+				$2 < i < N-1$ гЃ«еЇѕгЃ—гЃ¦пјЊ
+				\[ a_i = \frac{m_i}{\sqrt{\epsilon}} \ \ \ \mbox{дЅ†гЃ—пјЊ} \epsilon = \frac{m - 2m_N^2 - 2m_{N-1^2}}{1 - 2a_N^2 - 2a_{N-1}^2} \]
 				\[a_2 = -a_{N-1} \]
 				\[a_1 = -a_N \]
-				€ИЏг‚М $a_i$ ‚НЃC‘S‚Д‚М $i$ ‚Й‚В‚ў‚Д $a_i = -a_{N-i+1}$ ‚Ж‚И‚Б‚Д‚ў‚ДЃi‚В‚Ь‚иЃC$\sum a_i = 0$ ‚Е‚ ‚й‚©‚з $\bar{a} = 0$ЃjЃC‚і‚з‚ЙЃC
+				д»ҐдёЉгЃ® $a_i$ гЃЇпјЊе…ЁгЃ¦гЃ® $i$ гЃ«гЃ¤гЃ„гЃ¦ $a_i = -a_{N-i+1}$ гЃЁгЃЄгЃЈгЃ¦гЃ„гЃ¦пј€гЃ¤гЃѕг‚ЉпјЊ$\sum a_i = 0$ гЃ§гЃ‚г‚‹гЃ‹г‚‰ $\bar{a} = 0$пј‰пјЊгЃ•г‚‰гЃ«пјЊ
 				\[ \sum_{i=1}^N a_i^2 = 1 \]
-				‚Й‚И‚й‚ж‚¤‚Й’и‚Я‚з‚к‚Д‚ў‚йЃB
-				<li>Њџ’и“ќЊv—К $W$ ‚рЋџЋ®‚ЕЊvЋZ‚·‚йЃB</li>
+				гЃ«гЃЄг‚‹г‚€гЃ†гЃ«е®љг‚Ѓг‚‰г‚ЊгЃ¦гЃ„г‚‹гЂ‚
+				<li>ж¤ње®љзµ±иЁ€й‡Џ $W$ г‚’ж¬ЎејЏгЃ§иЁ€з®—гЃ™г‚‹гЂ‚</li>
 				\[ W = \frac{\displaystyle \left( \sum_{i=1}^N a_i X_i \right)^2}{\displaystyle \sum_{i=1}^N \left( X_i - \bar{X} \right)^2} \]
-				$W$ ‚Н $a_i$ ‚Ж $X_i$ ‚М‘ЉЉЦЊWђ”‚М2Џж‚Е‚ ‚йЃB‚µ‚Ѕ‚Є‚Б‚ДЃC$W$ ‚Н0‚©‚з1‚МЉФ‚М’l‚р‚Ж‚йЃB‚Ь‚ЅЃC“ќЊv—К $\ln (1 - W)$ ‚Н12‚©‚з5000‚Ь‚Е‚М $N$ ‚ЕЃCЋџ‚М•Ѕ‹П’l‚Ж•WЏЂ•ОЌ·‚рЋќ‚Вђі‹K•Є•z‚Й‹ЯЋ—‚Е‚«‚й‚±‚Ж‚Є’m‚з‚к‚Д‚ў‚йЃB
+				$W$ гЃЇ $a_i$ гЃЁ $X_i$ гЃ®з›ёй–ўдї‚ж•°гЃ®2д№—гЃ§гЃ‚г‚‹гЂ‚гЃ—гЃџгЃЊгЃЈгЃ¦пјЊ$W$ гЃЇ0гЃ‹г‚‰1гЃ®й–“гЃ®еЂ¤г‚’гЃЁг‚‹гЂ‚гЃѕгЃџпјЊзµ±иЁ€й‡Џ $\ln (1 - W)$ гЃЇ12гЃ‹г‚‰5000гЃѕгЃ§гЃ® $N$ гЃ§пјЊж¬ЎгЃ®е№іеќ‡еЂ¤гЃЁжЁ™жє–еЃЏе·®г‚’жЊЃгЃ¤ж­Ји¦Џе€†еёѓгЃ«иї‘дјјгЃ§гЃЌг‚‹гЃ“гЃЁгЃЊзџҐг‚‰г‚ЊгЃ¦гЃ„г‚‹гЂ‚
 				\[ \mu = 0.0038915 (\ln N)^3 - 0.083751 (\ln N)^2 - 0.31082 \ln N - 1.5861 \]
 				\[ \sigma = e^{0.0030302 (\ln N)^2 - 0.082676 \ln N - 0.4803} \]
-				<li>‚µ‚Ѕ‚Є‚Б‚ДЃC€И‰є‚М“ќЊv—К</li>
+				<li>гЃ—гЃџгЃЊгЃЈгЃ¦пјЊд»Ґдё‹гЃ®зµ±иЁ€й‡Џ</li>
 				\[ z = \frac{\ln (1 - W) - \mu}{\sigma} \]
-				‚Й‚В‚ў‚ДЃC•WЏЂђі‹K•Є•z‚Й‚ж‚иЊџ’и‚Е‚«‚йЃB
+				гЃ«гЃ¤гЃ„гЃ¦пјЊжЁ™жє–ж­Ји¦Џе€†еёѓгЃ«г‚€г‚Љж¤ње®љгЃ§гЃЌг‚‹гЂ‚
 			</ol>
 			<p style="text-align: right">Last modified: August 11, 2015</p>
 		</div>
 		
 		<div class="main">
-			<h1 id="moment">ђП—¦‚ЖђП—¦•кЉЦђ”</h1>
-			<p>Ѓ@•Ѕ‹ПЃC•ЄЋUЃCc“xЃCђл“x‚НЉm—¦•Є•z‚Мђ«Ћї‚р•\‚·Ћw•W‚ѕ‚ЄЃC‚±‚к‚з‚р‚ж‚и€к”К“I‚ЙЋж‚и€µ‚¤ЉT”O‚ЄђП—¦‚Е‚ ‚йЃB</p>
-			<h2>’и‹`Ѓi—ЈЋUЊ^‚МђП—¦Ѓj</h2>
-			<p>Ѓ@$x$ ‚МЉm—¦•Є•z‚р $P(x)$ ‚Е•\‚·ЃB‚±‚МЋћЃC$x^n$ ‚МЉъ‘Т’l</p>
+			<h1 id="moment">з©ЌзЋ‡гЃЁз©ЌзЋ‡жЇЌй–ўж•°</h1>
+			<p>гЂЂе№іеќ‡пјЊе€†ж•ЈпјЊж­Єеє¦пјЊе°–еє¦гЃЇзўєзЋ‡е€†еёѓгЃ®жЂ§иіЄг‚’иЎЁгЃ™жЊ‡жЁ™гЃ гЃЊпјЊгЃ“г‚Њг‚‰г‚’г‚€г‚ЉдёЂи€¬зљ„гЃ«еЏ–г‚Љж‰±гЃ†ж¦‚еїµгЃЊз©ЌзЋ‡гЃ§гЃ‚г‚‹гЂ‚</p>
+			<h2>е®љзѕ©пј€й›ўж•Јећ‹гЃ®з©ЌзЋ‡пј‰</h2>
+			<p>гЂЂ$x$ гЃ®зўєзЋ‡е€†еёѓг‚’ $P(x)$ гЃ§иЎЁгЃ™гЂ‚гЃ“гЃ®ж™‚пјЊ$x^n$ гЃ®жњџеѕ…еЂ¤</p>
 			\[ \mu'_n = E\left[ x^n \right] \]
-			<p>‚р $n$ Ћџ‚МЊґ“_ђП—¦‚Ж‚ў‚¤ЃB“Б‚Й $n = 1$ ‚МЋћЃC‚·‚И‚н‚ї1Ћџ‚МЊґ“_ђП—¦ $\mu'_1$ ‚Н•Ѕ‹П’l $\mu$ ‚М‚±‚Ж‚Е‚ ‚йЃB‚В‚Ь‚иЃC</p>
+			<p>г‚’ $n$ ж¬ЎгЃ®еЋџз‚№з©ЌзЋ‡гЃЁгЃ„гЃ†гЂ‚з‰№гЃ« $n = 1$ гЃ®ж™‚пјЊгЃ™гЃЄг‚ЏгЃЎ1ж¬ЎгЃ®еЋџз‚№з©ЌзЋ‡ $\mu'_1$ гЃЇе№іеќ‡еЂ¤ $\mu$ гЃ®гЃ“гЃЁгЃ§гЃ‚г‚‹гЂ‚гЃ¤гЃѕг‚ЉпјЊ</p>
 			\[ \mu = \mu'_1 = E[x] \]
-			<p>Ѓ@‚ж‚­—p‚ў‚з‚к‚й‚М‚НЃC•Ѕ‹П’l‚МЋь‚и‚М $n$ Ћџ‚МђП—¦Ѓi’†ђSђП—¦Ѓj‚Е‚ ‚йЃB‚·‚И‚н‚їЃC</p>
+			<p>гЂЂг‚€гЃЏз”ЁгЃ„г‚‰г‚Њг‚‹гЃ®гЃЇпјЊе№іеќ‡еЂ¤гЃ®е‘Ёг‚ЉгЃ® $n$ ж¬ЎгЃ®з©ЌзЋ‡пј€дё­еїѓз©ЌзЋ‡пј‰гЃ§гЃ‚г‚‹гЂ‚гЃ™гЃЄг‚ЏгЃЎпјЊ</p>
 			\[ \mu_n = E\left[ (x - \mu )^n \right] = \sum_x (x - \mu )^n P(x) \]
-			<p>$n = 1$ ‚МЋћЃC</p>
+			<p>$n = 1$ гЃ®ж™‚пјЊ</p>
 			\[ \mu_1 = M_1 (\mu ) = E\left[ (x - \mu ) \right] = \sum_x (x - \mu ) P(x) = \sum_x x P(x) - \mu \sum_x P(x) = \mu - \mu = 0 \]
-			<p>$n = 2$ ‚МЋћЃC‚·‚И‚н‚ї2Ћџ‚М’†ђSђП—¦ $\mu_2$ ‚Н•ЄЋU‚М‚±‚Ж‚Е‚ ‚иЃC$\sigma^2$ ‚Ж•\‚·ЃB‚µ‚Ѕ‚Є‚Б‚ДЃC</p>
+			<p>$n = 2$ гЃ®ж™‚пјЊгЃ™гЃЄг‚ЏгЃЎ2ж¬ЎгЃ®дё­еїѓз©ЌзЋ‡ $\mu_2$ гЃЇе€†ж•ЈгЃ®гЃ“гЃЁгЃ§гЃ‚г‚ЉпјЊ$\sigma^2$ гЃЁиЎЁгЃ™гЂ‚гЃ—гЃџгЃЊгЃЈгЃ¦пјЊ</p>
 			\[ \sigma^2 = \mu_2 = E\left[ (x - \mu )^2 \right] = E\left[ x^2 \right] - \left( E[x]\right)^2 = \mu'_2 - \mu^2 \]
-			<h2>’и‹`ЃiA‘±Њ^‚МђП—¦Ѓj</h2>
-			<p>Ѓ@$x$ ‚МЉm—¦•Є•z‚р $f(x)$ ‚Е•\‚·ЃB‚±‚МЋћЃCЊґ“_ђП—¦‚Ж’†ђSђП—¦‚Н‚»‚к‚ј‚кЃC</p>
+			<h2>е®љзѕ©пј€йЂЈз¶љећ‹гЃ®з©ЌзЋ‡пј‰</h2>
+			<p>гЂЂ$x$ гЃ®зўєзЋ‡е€†еёѓг‚’ $f(x)$ гЃ§иЎЁгЃ™гЂ‚гЃ“гЃ®ж™‚пјЊеЋџз‚№з©ЌзЋ‡гЃЁдё­еїѓз©ЌзЋ‡гЃЇгЃќг‚ЊгЃћг‚ЊпјЊ</p>
 			\[ \mu'_n = \int_{-\infty}^\infty x^n f(x) dx \]
 			\[ \mu_n = \int_{-\infty}^\infty (x - \mu )^n f(x) dx \]
-			<p><br>Ѓ@ђП—¦‚НЃC’и‹`Ћ®‚Й‰€‚Б‚Д’јђЪЊvЋZ‚·‚й‚±‚Ж‚Е‚а‹Ѓ‚Я‚з‚к‚й‚ЄЃCђП—¦•кЉЦђ”‚р—p‚ў‚й‚±‚Ж‚Й‚ж‚Б‚Д‰рђН“I‚Й‹Ѓ‚Я‚й‚±‚Ж‚Є‚Е‚«‚й‚ж‚¤‚Й‚И‚йЃB</p>
-			<h2>’и‹`Ѓi—ЈЋUЊ^‚МђП—¦•кЉЦђ”Ѓj</h2>
-			<p>Ѓ@$\theta$ ‚рѓ_ѓ~Ѓ[•Пђ”‚Ж‚µ‚ЅЃCЋы‘©‚Є‰ј’и‚і‚к‚йЉЦђ”</p>
+			<p><br>гЂЂз©ЌзЋ‡гЃЇпјЊе®љзѕ©ејЏгЃ«жІїгЃЈгЃ¦з›ґжЋҐиЁ€з®—гЃ™г‚‹гЃ“гЃЁгЃ§г‚‚ж±‚г‚Ѓг‚‰г‚Њг‚‹гЃЊпјЊз©ЌзЋ‡жЇЌй–ўж•°г‚’з”ЁгЃ„г‚‹гЃ“гЃЁгЃ«г‚€гЃЈгЃ¦и§Јжћђзљ„гЃ«ж±‚г‚Ѓг‚‹гЃ“гЃЁгЃЊгЃ§гЃЌг‚‹г‚€гЃ†гЃ«гЃЄг‚‹гЂ‚</p>
+			<h2>е®љзѕ©пј€й›ўж•Јећ‹гЃ®з©ЌзЋ‡жЇЌй–ўж•°пј‰</h2>
+			<p>гЂЂ$\theta$ г‚’гѓЂгѓџгѓје¤‰ж•°гЃЁгЃ—гЃџпјЊеЏЋжќџгЃЊд»®е®љгЃ•г‚Њг‚‹й–ўж•°</p>
 			\[ M_x (\theta ) = \sum_x e^{\theta x} P(x) \]
-			<p>‚рђП—¦•кЉЦђ”‚Ж‚ў‚¤ЃB</p>
-			<p>Ѓ@$e^z$ ‚Мѓ}ѓNѓЌЃ[ѓЉѓ““WЉJ‚Н</p>
+			<p>г‚’з©ЌзЋ‡жЇЌй–ўж•°гЃЁгЃ„гЃ†гЂ‚</p>
+			<p>гЂЂ$e^z$ гЃ®гѓћг‚Їгѓ­гѓјгѓЄгѓіе±•й–‹гЃЇ</p>
 			\[ e^z = 1 + z + \frac{1}{2!}z^2 + \frac{1}{3!}z^3 + \cdots \]
-			<p>‚Е‚ ‚й‚©‚зЃC</p>
+			<p>гЃ§гЃ‚г‚‹гЃ‹г‚‰пјЊ</p>
 			\[
 				\begin{align*}
 					M_x (\theta ) &= \sum_x \left( 1 + \theta x + \frac{1}{2!}\theta^2 x^2 + \frac{1}{3!}\theta^3 x^3 + \cdots \right) P(x) \\
@@ -418,19 +418,19 @@
 						&= 1 + \theta\mu'_1 + \frac{\theta^2}{2!} \mu'_2 + \frac{\theta^3}{3!} \mu'_3 + \cdots
 				\end{align*}
 			\]
-			<p>$\theta$ ‚Й‚В‚ў‚Д”ч•Є‚·‚й‚ЖЃC</p>
+			<p>$\theta$ гЃ«гЃ¤гЃ„гЃ¦еѕ®е€†гЃ™г‚‹гЃЁпјЊ</p>
 			\[ \frac{dM_x (\theta )}{d\theta} = \mu'_1 + \theta\mu'_2 + \frac{\theta^2}{2!}\mu'_3 + \cdots \]
-			<p>$\theta = 0$ ‚Ж‚µ‚ДЃC</p>
+			<p>$\theta = 0$ гЃЁгЃ—гЃ¦пјЊ</p>
 			\[ \left. \frac{dM_x (\theta )}{d\theta} \right|_{\theta = 0} = \mu'_1 \]
-			<p>‚а‚¤1“x”ч•Є‚µЃC$\theta = 0$ ‚Ж‚·‚к‚ОЃC</p>
+			<p>г‚‚гЃ†1еє¦еѕ®е€†гЃ—пјЊ$\theta = 0$ гЃЁгЃ™г‚ЊгЃ°пјЊ</p>
 			\[ \left. \frac{d^2 M_x (\theta )}{d\theta^2} \right|_{\theta = 0} = \mu'_2 \]
-			<p>€к”К‚ЙЃC</p>
+			<p>дёЂи€¬гЃ«пјЊ</p>
 			\[ \left. \frac{d^n M_x (\theta )}{d\theta^n} \right|_{\theta = 0} = \mu'_n \]
-			<h2>’и‹`ЃiA‘±Њ^‚МђП—¦•кЉЦђ”Ѓj</h2>
-			<p>Ѓ@$\theta$ ‚рѓ_ѓ~Ѓ[•Пђ”‚Ж‚µ‚ЅЃCЋы‘©‚Є‰ј’и‚і‚к‚йЉЦђ”</p>
+			<h2>е®љзѕ©пј€йЂЈз¶љећ‹гЃ®з©ЌзЋ‡жЇЌй–ўж•°пј‰</h2>
+			<p>гЂЂ$\theta$ г‚’гѓЂгѓџгѓје¤‰ж•°гЃЁгЃ—гЃџпјЊеЏЋжќџгЃЊд»®е®љгЃ•г‚Њг‚‹й–ўж•°</p>
 			\[ M_x (\theta ) = \int_{-\infty}^\infty e^{\theta x} f(x) dx \]
-			<p>‚рђП—¦•кЉЦђ”‚Ж‚ў‚¤ЃB</p>
-			<p>Ѓ@—ЈЋUЊ^‚МЏкЌ‡‚Ж“Ї—l‚Й‚·‚к‚ОЃC</p>
+			<p>г‚’з©ЌзЋ‡жЇЌй–ўж•°гЃЁгЃ„гЃ†гЂ‚</p>
+			<p>гЂЂй›ўж•Јећ‹гЃ®е ґеђ€гЃЁеђЊж§гЃ«гЃ™г‚ЊгЃ°пјЊ</p>
 			\[
 				\begin{align*}
 					 M_x (\theta ) &= \int_{-\infty}^\infty \left\{ 1 + \theta x + \frac{\theta^2}{2!}x^2 + \frac{\theta^3}{3!}x^3 + \cdots \right\} f(x) dx \\
@@ -438,17 +438,17 @@
 						&= 1 + \theta \mu'_1 + \frac{\theta^2}{2!}\mu'_2 + \frac{\theta^3}{3!}\mu'_3 + \cdots  
 				\end{align*}
 			\]
-			<p>‚ж‚Б‚ДЃC€к”К‚ЙЃC</p>
+			<p>г‚€гЃЈгЃ¦пјЊдёЂи€¬гЃ«пјЊ</p>
 			\[ \left. \frac{d^n M_x (\theta )}{d\theta^n} \right|_{\theta = 0} = \mu'_n \]
-			<h2>ЊvЋZ—бЃiђі‹K•Є•zЃj</h2>
-			<p>ђі‹K•Є•z $N(\mu, \sigma^2)$ ‚М•Ѕ‹П’l‚Ж•ЄЋU‚Н“–‘R $\mu$ ‚Ж $\sigma^2$ ‚Е‚ ‚йЃB‚±‚к‚рђП—¦•кЉЦђ”‚р—p‚ў‚ДЉm”F‚·‚йЃB</p>
+			<h2>иЁ€з®—дѕ‹пј€ж­Ји¦Џе€†еёѓпј‰</h2>
+			<p>ж­Ји¦Џе€†еёѓ $N(\mu, \sigma^2)$ гЃ®е№іеќ‡еЂ¤гЃЁе€†ж•ЈгЃЇеЅ“з„¶ $\mu$ гЃЁ $\sigma^2$ гЃ§гЃ‚г‚‹гЂ‚гЃ“г‚Њг‚’з©ЌзЋ‡жЇЌй–ўж•°г‚’з”ЁгЃ„гЃ¦зўєиЄЌгЃ™г‚‹гЂ‚</p>
 			\[
 				\begin{align*}
 					M_x (\theta ) &= \int_{-\infty}^\infty e^{\theta x}\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{(x-\mu)^2}{2\sigma^2}} dx \\
 						&= \frac{1}{\sigma\sqrt{2\pi}}\int_{-\infty}^\infty e^{-\frac{1}{2\sigma^2}\left\{ (x-\mu)^2 -2\sigma^2\theta x \right\}} dx
 				\end{align*}
 			\]
-			<p>$e$ ‚МЋwђ”‚М{}“а‚р•ПЊ`‚·‚й‚ЖЃC</p>
+			<p>$e$ гЃ®жЊ‡ж•°гЃ®{}е†…г‚’е¤‰еЅўгЃ™г‚‹гЃЁпјЊ</p>
 			\[
 				\begin{align*}
 					(x - \mu )^2 - 2\sigma^2 \theta x &= x^2 - 2\mu x + \mu^2 - 2\sigma^2 \theta x \\
@@ -457,37 +457,37 @@
 						&= \left\{ x - (\mu + \sigma^2\theta ) \right\}^2 - 2\mu\sigma^2\theta - \sigma^4\theta^2
 				\end{align*}
 			\]
-			<p>‚Ж‚И‚й‚©‚зЃC</p>
+			<p>гЃЁгЃЄг‚‹гЃ‹г‚‰пјЊ</p>
 			\[
 				\begin{align*}
 					M_x (\theta ) &= \frac{1}{\sigma\sqrt{2\pi}} \int_{-\infty}^\infty e^{-\frac{1}{2\sigma^2}\left\{ x - (\mu + \sigma^2\theta ) \right\}^2} \cdot e^{\mu\theta + \frac{1}{2}\sigma^2\theta^2} dx \\
 						&= e^{\mu\theta + \frac{1}{2}\sigma^2\theta^2} \int_{-\infty}^\infty \frac{1}{\sigma\sqrt{2\pi}} e^{-\frac{1}{2\sigma^2}\left\{ x - (\mu + \sigma^2\theta ) \right\}^2} dx
 				\end{align*}
 			\]
-			<p>”нђП•ЄЌЂ‚НЃC•Ѕ‹П $\mu +\sigma^2\theta$ ‚Е•ЄЋU $\sigma^2$ ‚Мђі‹K•Є•zЉЦђ”‚Е‚ ‚иЃC‚»‚к‚р‘S”Н€Н‚Й‚н‚Ѕ‚Б‚ДђП•Є‚·‚й‚©‚з1‚Е‚ ‚йЃB‚ж‚Б‚ДЃC</p>
+			<p>иў«з©Ќе€†й …гЃЇпјЊе№іеќ‡ $\mu +\sigma^2\theta$ гЃ§е€†ж•Ј $\sigma^2$ гЃ®ж­Ји¦Џе€†еёѓй–ўж•°гЃ§гЃ‚г‚ЉпјЊгЃќг‚Њг‚’е…ЁзЇ„е›ІгЃ«г‚ЏгЃџгЃЈгЃ¦з©Ќе€†гЃ™г‚‹гЃ‹г‚‰1гЃ§гЃ‚г‚‹гЂ‚г‚€гЃЈгЃ¦пјЊ</p>
 			\[ M_x (\theta ) = e^{\mu\theta +\frac{1}{2}\sigma^2\theta^2} \]
-			<p>‚µ‚Ѕ‚Є‚Б‚ДЃC</p>
+			<p>гЃ—гЃџгЃЊгЃЈгЃ¦пјЊ</p>
 			\[ \mu'_1 = \left. \frac{dM_x (\theta )}{dx} \right|_{\theta = 0} = \left. (\mu + \sigma^2\theta ) e^{\mu\theta +\frac{1}{2}\sigma^2\theta^2}\right|_{\theta = 0} = \mu \]
 			\[ \mu'_2 = \left. \frac{d^2 M_x (\theta )}{dx^2} \right|_{\theta = 0} = \left. \left\{ \sigma^2 + (\mu +\sigma^2\theta)^2 \right\} e^{\mu\theta +\frac{1}{2}\sigma^2\theta^2}\right|_{\theta = 0} = \sigma^2 + \mu^2 \]
-			<p>‚ж‚Б‚ДЃC•ЄЋU‚НЃC</p>
+			<p>г‚€гЃЈгЃ¦пјЊе€†ж•ЈгЃЇпјЊ</p>
 			\[ \mu_2 = \mu'_2 - \mu^2 = \sigma^2 + \mu^2 - \mu^2 = \sigma^2 \]
-			<p>‚Ж‚И‚йЃB</p>
+			<p>гЃЁгЃЄг‚‹гЂ‚</p>
 			<p style="text-align: right">Last modified: August 11, 2015</p>
 		</div>
 		
 		<div class="main">
-			<h1 id="binom-dist">“сЌЂ•Є•z‚М•Ѕ‹П‚Ж•ЄЋU</h1>
+			<h1 id="binom-dist">дєЊй …е€†еёѓгЃ®е№іеќ‡гЃЁе€†ж•Ј</h1>
 			\[ \mu = Np \]
 			\[ \sigma^2 = Npq \]
 			<p> 
 			<div class="proof">
-				<p>Ѓ@Љъ‘Т’l‚ЙЉо‚Г‚­ЏШ–ѕ‚Ж<a href="#moment">ђП—¦•кЉЦђ”<a>‚р——p‚·‚йЏШ–ѕ‚р‹LЌЪ‚·‚йЃB</p>
-				<h2>Љъ‘Т’l‚ЙЉо‚Г‚­ЏШ–ѕ</h2>
-				<p>Ѓ@“сЌЂ•Є•z $B (N, p)$ ‚Й‚Ё‚ў‚ДЃC$N = 1$ ‚МЏкЌ‡‚рЌl‚¦‚йЃB‚·‚И‚н‚їЃC</p>
+				<p>гЂЂжњџеѕ…еЂ¤гЃ«еџєгЃҐгЃЏиЁјжЋгЃЁ<a href="#moment">з©ЌзЋ‡жЇЌй–ўж•°<a>г‚’е€©з”ЁгЃ™г‚‹иЁјжЋг‚’иЁиј‰гЃ™г‚‹гЂ‚</p>
+				<h2>жњџеѕ…еЂ¤гЃ«еџєгЃҐгЃЏиЁјжЋ</h2>
+				<p>гЂЂдєЊй …е€†еёѓ $B (N, p)$ гЃ«гЃЉгЃ„гЃ¦пјЊ$N = 1$ гЃ®е ґеђ€г‚’иЂѓгЃ€г‚‹гЂ‚гЃ™гЃЄг‚ЏгЃЎпјЊ</p>
 				\[ p(X) = p^X q^{1-X} \]
-				<p>‚Е‚ ‚йЃi‚±‚к‚Н“Б‚ЙЃCѓxѓ‹ѓkЃ[ѓC•Є•z‚Ж‚©’P€К“сЌЂ•Є•z‚ЖЊД‚О‚к‚йЃjЃB$X$ ‚НЉm—¦ $q$ ‚Е0ЃCЉm—¦ $p$ ‚Е1‚Ж‚ў‚¤’l‚р‚Ж‚йЉm—¦•Пђ”‚Е‚ ‚йЃB‚±‚М•Ѕ‹П’l‚НЉИ’P‚ЙЃC</p>
+				<p>гЃ§гЃ‚г‚‹пј€гЃ“г‚ЊгЃЇз‰№гЃ«пјЊгѓ™гѓ«гѓЊгѓјг‚¤е€†еёѓгЃЁгЃ‹еЌдЅЌдєЊй …е€†еёѓгЃЁе‘јгЃ°г‚Њг‚‹пј‰гЂ‚$X$ гЃЇзўєзЋ‡ $q$ гЃ§0пјЊзўєзЋ‡ $p$ гЃ§1гЃЁгЃ„гЃ†еЂ¤г‚’гЃЁг‚‹зўєзЋ‡е¤‰ж•°гЃ§гЃ‚г‚‹гЂ‚гЃ“гЃ®е№іеќ‡еЂ¤гЃЇз°ЎеЌгЃ«пјЊ</p>
 				\[ E [X] = 0 \times q + 1 \times p = p \]
-				<p>‚Е‚ ‚иЃC‚Ь‚ЅЃC•ЄЋU‚НЃC</p>
+				<p>гЃ§гЃ‚г‚ЉпјЊгЃѕгЃџпјЊе€†ж•ЈгЃЇпјЊ</p>
 				\[ 
 					\begin{align*}
 						V [X] &= E [X^2] - \left\{ E[X] \right\}^2 \\
@@ -497,8 +497,8 @@
 							&= pq
 					\end{align*}
 				\]
-				<p>‚Ж‚И‚йЃi<a href="#expected-value">Љъ‘Т’l‚МЊцЋ®</a>ЋQЏЖЃjЃB</p>
-				<p>Ѓ@€к”К‚М“сЌЂ•Є•z‚НЃC“Ї‚¶ѓpѓ‰ѓЃЃ[ѓ^ $p$ ‚Мѓxѓ‹ѓkЃ[ѓC•Є•z‚р‚·‚й $N$ ЊВ‚М“Ж—§‚ИЉm—¦•Пђ”‚Мa‚М•Є•z‚Е‚ ‚й‚©‚зЃC‚»‚М•Ѕ‹П’l‚Ж•ЄЋU‚Н‚»‚к‚ј‚кЃC</p>
+				<p>гЃЁгЃЄг‚‹пј€<a href="#expected-value">жњџеѕ…еЂ¤гЃ®е…¬ејЏ</a>еЏ‚з…§пј‰гЂ‚</p>
+				<p>гЂЂдёЂи€¬гЃ®дєЊй …е€†еёѓгЃЇпјЊеђЊгЃгѓ‘гѓ©гѓЎгѓјг‚ї $p$ гЃ®гѓ™гѓ«гѓЊгѓјг‚¤е€†еёѓг‚’гЃ™г‚‹ $N$ еЂ‹гЃ®з‹¬з«‹гЃЄзўєзЋ‡е¤‰ж•°гЃ®е’ЊгЃ®е€†еёѓгЃ§гЃ‚г‚‹гЃ‹г‚‰пјЊгЃќгЃ®е№іеќ‡еЂ¤гЃЁе€†ж•ЈгЃЇгЃќг‚ЊгЃћг‚ЊпјЊ</p>
 				\[
 					\begin{align*}
 						\mu &= E[X] \\
@@ -515,9 +515,9 @@
 							&= Npq
 					\end{align*}
 				\]
-				<p>‚Ж‚И‚йЃB</p>
-				<h2>ђП—¦•кЉЦђ”‚р——p‚·‚йЏШ–ѕ</h2>
-				<p>Ѓ@“сЌЂ•Є•z‚МђП—¦•кЉЦђ”‚НЃC</p>
+				<p>гЃЁгЃЄг‚‹гЂ‚</p>
+				<h2>з©ЌзЋ‡жЇЌй–ўж•°г‚’е€©з”ЁгЃ™г‚‹иЁјжЋ</h2>
+				<p>гЂЂдєЊй …е€†еёѓгЃ®з©ЌзЋ‡жЇЌй–ўж•°гЃЇпјЊ</p>
 				\[
 					\begin{align*}
 						M_X (\theta) &= \sum_{X=0}^N e^{\theta X} p(X) \\
@@ -525,11 +525,11 @@
 							&= \sum_{X=0}^N \frac{N!}{X! \left( N - X \right)!} \left( pe^\theta \right)^X q^{N-X}
 					\end{align*}
 				\]
-				<p>‚Е‚ ‚й‚ЄЃC‚±‚±‚Е“сЌЂ“WЉJЋ®</p>
+				<p>гЃ§гЃ‚г‚‹гЃЊпјЊгЃ“гЃ“гЃ§дєЊй …е±•й–‹ејЏ</p>
 				\[ (p + q)^N = \sum_{X=0}^N \frac{N!}{X! \left( N - X \right)!} p^X q^{N-X} \]
-				<p>‚рЋQЏЖ‚·‚й‚ЖЃC$p$ ‚М•”•Є‚Є $pe^\theta$ ‚Й•П‚н‚Б‚Ѕ‚ѕ‚Ї‚Е‚ ‚й‚©‚зЃC</p>
+				<p>г‚’еЏ‚з…§гЃ™г‚‹гЃЁпјЊ$p$ гЃ®йѓЁе€†гЃЊ $pe^\theta$ гЃ«е¤‰г‚ЏгЃЈгЃџгЃ гЃ‘гЃ§гЃ‚г‚‹гЃ‹г‚‰пјЊ</p>
 				\[ M_X (\theta) = (pe^\theta + q)^N \]
-				<p>‚ЖЏ‘‚Ї‚йЃB•Ѕ‹П’l‚Н1Ћџ‚МЊґ“_ђП—¦ $\mu'_1$ ‚Е‚ ‚й‚©‚зЃC</p>
+				<p>гЃЁж›ёгЃ‘г‚‹гЂ‚е№іеќ‡еЂ¤гЃЇ1ж¬ЎгЃ®еЋџз‚№з©ЌзЋ‡ $\mu'_1$ гЃ§гЃ‚г‚‹гЃ‹г‚‰пјЊ</p>
 				\[
 					\begin{align*}
 						\mu &= \mu'_1 \\
@@ -539,7 +539,7 @@
 							&= Np
 					\end{align*}
 				\]
-				<p>‚Ь‚ЅЃC</p>
+				<p>гЃѕгЃџпјЊ</p>
 				\[
 					\begin{align*}
 						\mu'_2 &= E[X^2] \\
@@ -549,7 +549,7 @@
 							&= N(N - 1) p^2 + Np
 					\end{align*}
 				\]
-				<p>‚Е‚ ‚й‚©‚зЃC</p>
+				<p>гЃ§гЃ‚г‚‹гЃ‹г‚‰пјЊ</p>
 				\[
 					\begin{align*}
 						\sigma^2 &= E[X^2] - \left\{ E[X] \right\} \\
@@ -563,19 +563,19 @@
 		</div>
 		
 		<div class="main">
-			<h1 id="binom2norm">“сЌЂ•Є•z‚Мђі‹K•Є•z‚Ц‚М‹ЯЋ—</h1>
-			<p>Ѓ@“сЌЂ•Є•z $B(N, p)$ ‚НЃC$N$ ‚Є‘е‚«‚­‚И‚йЋћЃCђі‹K•Є•z $N(Np, Npq)$ ‚Й‹Я‚Г‚­ЃB</p>
+			<h1 id="binom2norm">дєЊй …е€†еёѓгЃ®ж­Ји¦Џе€†еёѓгЃёгЃ®иї‘дјј</h1>
+			<p>гЂЂдєЊй …е€†еёѓ $B(N, p)$ гЃЇпјЊ$N$ гЃЊе¤§гЃЌгЃЏгЃЄг‚‹ж™‚пјЊж­Ји¦Џе€†еёѓ $N(Np, Npq)$ гЃ«иї‘гЃҐгЃЏгЂ‚</p>
 			<br>
-			<p>Ѓ@‚±‚МЏШ–ѕ‚М‚Ѕ‚Я‚ЙЃC‚Ь‚ёѓXѓ^Ѓ[ѓЉѓ“ѓO‹ЯЋ—‚ЖЊД‚О‚к‚й‹ЯЋ—Ћ®‚рЋ¦‚µ‚Д‚Ё‚­ЃB</p>
-			<h2>ѓXѓ^Ѓ[ѓЉѓ“ѓO‹ЯЋ—</h2>
+			<p>гЂЂгЃ“гЃ®иЁјжЋгЃ®гЃџг‚ЃгЃ«пјЊгЃѕгЃљг‚№г‚їгѓјгѓЄгѓіг‚°иї‘дјјгЃЁе‘јгЃ°г‚Њг‚‹иї‘дјјејЏг‚’з¤єгЃ—гЃ¦гЃЉгЃЏгЂ‚</p>
+			<h2>г‚№г‚їгѓјгѓЄгѓіг‚°иї‘дјј</h2>
 			\[ \ln N! \simeq N \ln N - N \]
 			<div class="proof">
 				\[ N! = N \times (N - 1) \times \cdots \times 2 \times 1 \]
-				<p>—ј•У‘Ођ”‚р‚Ж‚й‚ЖЃC</p>
+				<p>дёЎиѕєеЇѕж•°г‚’гЃЁг‚‹гЃЁпјЊ</p>
 				\[ \ln N! = \ln N + \ln (N - 1) + \cdots + \ln 2 + \ln 1 \]
-				<p>‚±‚М‰E•У‚НЃC$y = \ln x$ ‚Й‚В‚ў‚Д‹жЉФ $1 \le x \le N$ ‚Е $x$ ЋІ‚Ж€Н‚Ь‚к‚Ѕ–КђП‚рЃC•ќ‚Є1ЃCЌ‚‚і‚Є $\ln k$Ѓi$k = 1, 2, \cdots, N$Ѓj‚М’·•ыЊ`‚М–КђП‚М‘Ќa‚Е‹Ѓ‚Я‚ж‚¤‚Ж‚·‚й‹ж•Є‹ЃђП–@‚Е‚ ‚йЃB”чђП•Є‚МЌl‚¦•ы‚©‚з‚·‚к‚ОЃC•ќ‚Є1‚Е‚ ‚й‚М‚Н‘е‚«‚·‚¬‚й‚ЄЃCЌЎ $N$ ‚НЏ\•Є‘е‚«‚ў‚Ж‘z’и‚·‚й‚М‚ЕЃC</p>
+				<p>гЃ“гЃ®еЏіиѕєгЃЇпјЊ$y = \ln x$ гЃ«гЃ¤гЃ„гЃ¦еЊєй–“ $1 \le x \le N$ гЃ§ $x$ и»ёгЃЁе›ІгЃѕг‚ЊгЃџйќўз©Ќг‚’пјЊе№…гЃЊ1пјЊй«гЃ•гЃЊ $\ln k$пј€$k = 1, 2, \cdots, N$пј‰гЃ®й•·ж–№еЅўгЃ®йќўз©ЌгЃ®з·Џе’ЊгЃ§ж±‚г‚Ѓг‚€гЃ†гЃЁгЃ™г‚‹еЊєе€†ж±‚з©Ќжі•гЃ§гЃ‚г‚‹гЂ‚еѕ®з©Ќе€†гЃ®иЂѓгЃ€ж–№гЃ‹г‚‰гЃ™г‚ЊгЃ°пјЊе№…гЃЊ1гЃ§гЃ‚г‚‹гЃ®гЃЇе¤§гЃЌгЃ™гЃЋг‚‹гЃЊпјЊд»Љ $N$ гЃЇеЌЃе€†е¤§гЃЌгЃ„гЃЁжѓіе®љгЃ™г‚‹гЃ®гЃ§пјЊ</p>
 				\[ \ln N! = \sum_{k=1}^N \ln k \simeq \int_1^N \ln x dx \]
-				<p>‚ЖђП•Є‚Е‹ЯЋ—‚Е‚«‚йЃB•”•ЄђП•Є–@‚Й‚ж‚иЃC</p>
+				<p>гЃЁз©Ќе€†гЃ§иї‘дјјгЃ§гЃЌг‚‹гЂ‚йѓЁе€†з©Ќе€†жі•гЃ«г‚€г‚ЉпјЊ</p>
 				\[
 					\begin{align*}
 						\int_1^N \ln x dx &= \int_1^N (x)' \ln x dx \\
@@ -584,31 +584,31 @@
 							&= N \ln N - N + 1
 					\end{align*}
 				\]
-				<p>$N$ ‚ЄЏ\•Є‘е‚«‚ў‚М‚ЕЃCЌЕЊг‚М1‚Н–іЋ‹‚Е‚«‚ДЃCЊ‹‹ЗЃC</p>
+				<p>$N$ гЃЊеЌЃе€†е¤§гЃЌгЃ„гЃ®гЃ§пјЊжњЂеѕЊгЃ®1гЃЇз„Ўи¦–гЃ§гЃЌгЃ¦пјЊзµђе±ЂпјЊ</p>
 				\[ \ln N! \simeq N \ln N - N \]
-				<p>‚Ж‚ў‚¤‹ЯЋ—Ћ®‚Єђ¬‚и—§‚ВЃB</p>
+				<p>гЃЁгЃ„гЃ†иї‘дјјејЏгЃЊж€ђг‚Љз«‹гЃ¤гЂ‚</p>
 			</div>
-			<p>Ѓ@‚»‚к‚Е‚Н–{‘иЃB</p>
-			<h2>“сЌЂ•Є•z‚Мђі‹K•Є•z‚Ц‚М‹ЯЋ—</h2>
-			<p>Ѓ@“сЌЂ•Є•z $B(N, p)$ ‚НЃC$N$ ‚Є‘е‚«‚­‚И‚йЋћЃCђі‹K•Є•z $N(Np, Npq)$ ‚Й‹Я‚Г‚­ЃB</p>
+			<p>гЂЂгЃќг‚ЊгЃ§гЃЇжњ¬йЎЊгЂ‚</p>
+			<h2>дєЊй …е€†еёѓгЃ®ж­Ји¦Џе€†еёѓгЃёгЃ®иї‘дјј</h2>
+			<p>гЂЂдєЊй …е€†еёѓ $B(N, p)$ гЃЇпјЊ$N$ гЃЊе¤§гЃЌгЃЏгЃЄг‚‹ж™‚пјЊж­Ји¦Џе€†еёѓ $N(Np, Npq)$ гЃ«иї‘гЃҐгЃЏгЂ‚</p>
 			<div class="proof">
-				<p>Ѓ@“сЌЂ•Є•z</p>
+				<p>гЂЂдєЊй …е€†еёѓ</p>
 				\[ f(X) = p(X) = {}_N C_X p^X q^{N-X} \]
-				<p>‚М—ј•У‚Е‘Ођ”‚р‚Ж‚йЃB</p>
+				<p>гЃ®дёЎиѕєгЃ§еЇѕж•°г‚’гЃЁг‚‹гЂ‚</p>
 				\[ \ln f(X) = \ln N! - \ln X! - \ln (N-X)! + X \ln p + (N-X) \ln q \]
-				<p>‚і‚з‚ЙЃCѓXѓ^Ѓ[ѓЉѓ“ѓO‹ЯЋ—‚Й‚ж‚Б‚ДЃCЋџ‚М‚ж‚¤‚Й•ПЊ`‚·‚йЃB</p>
+				<p>гЃ•г‚‰гЃ«пјЊг‚№г‚їгѓјгѓЄгѓіг‚°иї‘дјјгЃ«г‚€гЃЈгЃ¦пјЊж¬ЎгЃ®г‚€гЃ†гЃ«е¤‰еЅўгЃ™г‚‹гЂ‚</p>
 				\[
 					\begin{align*}
 						\ln f(X) &= (N \ln N - N) - (X \ln X - X) - \left\{ (N-X) \ln (N-X) - (N-X) \right\} + X \ln p + (N-X) \ln q \\
 							&= (\ln p - \ln q) X - X \ln X - (N - X) \ln (N - X) + N \ln N + N \ln q
 					\end{align*}
 				\]
-				<p>Ѓ@$\ln f(X) = g(X)$ ‚Ж‚Ё‚­‚ЖЃC$g(X)$ ‚М $X = \mu$ ‚Ь‚н‚и‚МѓeѓCѓ‰Ѓ[“WЉJ‚НЃC</p>
+				<p>гЂЂ$\ln f(X) = g(X)$ гЃЁгЃЉгЃЏгЃЁпјЊ$g(X)$ гЃ® $X = \mu$ гЃѕг‚Џг‚ЉгЃ®гѓ†г‚¤гѓ©гѓје±•й–‹гЃЇпјЊ</p>
 				\[ g(\mu + h) = g(\mu) + g'(\mu) h + \frac{1}{2}g''(\mu) h^2 + \frac{1}{3!}g'''(\mu) h^3 + \cdots \]
-				<p>‚Е‚ ‚иЃC€И‰єЃC‰E•У‚МЉeЊWђ” $g'(\mu)$ЃC$g''(\mu)$ЃC$g'''(\mu)$ЃC$\cdots$ ‚Й‚В‚ў‚Д‹б–Ў‚·‚йЃB</p>	
-				<p>Ѓ@‚Ь‚ЅЃC1‚В‚М‰ј’и‚Ж‚µ‚ДЃC$f(\mu)$ ‚Є‹Й‘е’l‚Е‚ ‚й‚Ж‚·‚йЃB‚·‚И‚н‚їЃC$f'(\mu) = 0$ ‚Ж‰ј’и‚·‚йЃB‚±‚МЋћЃC‘Ођ””ч•Є</p>
+				<p>гЃ§гЃ‚г‚ЉпјЊд»Ґдё‹пјЊеЏіиѕєгЃ®еђ„дї‚ж•° $g'(\mu)$пјЊ$g''(\mu)$пјЊ$g'''(\mu)$пјЊ$\cdots$ гЃ«гЃ¤гЃ„гЃ¦еђџе‘ігЃ™г‚‹гЂ‚</p>	
+				<p>гЂЂгЃѕгЃџпјЊ1гЃ¤гЃ®д»®е®љгЃЁгЃ—гЃ¦пјЊ$f(\mu)$ гЃЊжҐµе¤§еЂ¤гЃ§гЃ‚г‚‹гЃЁгЃ™г‚‹гЂ‚гЃ™гЃЄг‚ЏгЃЎпјЊ$f'(\mu) = 0$ гЃЁд»®е®љгЃ™г‚‹гЂ‚гЃ“гЃ®ж™‚пјЊеЇѕж•°еѕ®е€†</p>
 				\[ \frac{d \ln f(X)}{dX} = \frac{f'(X)}{f(X)} = 0 \]
-				<p>‚Ж‚И‚й‚©‚зЃC</p>
+				<p>гЃЁгЃЄг‚‹гЃ‹г‚‰пјЊ</p>
 				\[
 					\begin{align*}
 						g'(\mu) &= \frac{d \ln f(\mu)}{dX} \\
@@ -616,9 +616,9 @@
 							&= (\ln p - \ln q) - \ln X + \ln (N - X) = 0
 					\end{align*}
 				\]
-				<p>‚±‚к‚р‚Ь‚Ж‚Я‚й‚ЖЃC</p>
+				<p>гЃ“г‚Њг‚’гЃѕгЃЁг‚Ѓг‚‹гЃЁпјЊ</p>
 				\[ \ln \left\{ \frac{p(N - \mu)}{q\mu} \right\} = 0 \]
-				<p>‚·‚И‚н‚їЃC</p>
+				<p>гЃ™гЃЄг‚ЏгЃЎпјЊ</p>
 				\[
 					\begin{align*}
 						\frac{p(N - \mu)}{q\mu} &= 1 \\
@@ -626,10 +626,10 @@
 						pN &= (p + q) \mu
 					\end{align*}
 				\]
-				<p>$p + q = 1$ ‚ѕ‚©‚зЃC</p>
+				<p>$p + q = 1$ гЃ гЃ‹г‚‰пјЊ</p>
 				\[ \mu = Np \]
-				<p>‚±‚к‚НЃC$X = \mu = Np$ ‚МЋћЃC$f(X)$ ‚Є‹Й‘е‚Ж‚И‚й‚±‚Ж‚рЋ¦‚µ‚Д‚Ё‚иЃC$Np$ ‚Н“сЌЂ•Є•z‚М•Ѕ‹П’l‚Е‚ ‚йЃB</p>
-				<p>Ѓ@Ћџ‚ЙЃC</p>
+				<p>гЃ“г‚ЊгЃЇпјЊ$X = \mu = Np$ гЃ®ж™‚пјЊ$f(X)$ гЃЊжҐµе¤§гЃЁгЃЄг‚‹гЃ“гЃЁг‚’з¤єгЃ—гЃ¦гЃЉг‚ЉпјЊ$Np$ гЃЇдєЊй …е€†еёѓгЃ®е№іеќ‡еЂ¤гЃ§гЃ‚г‚‹гЂ‚</p>
+				<p>гЂЂж¬ЎгЃ«пјЊ</p>
 				\[
 					\begin{align*}
 						g''(\mu) &= \frac{d^2 \ln f(\mu)}{dX^2} \\
@@ -642,7 +642,7 @@
 							&= -\frac{1}{\sigma^2}
 					\end{align*}
 				\]
-				<p>‘±‚Ї‚ДЃC</p>
+				<p>з¶љгЃ‘гЃ¦пјЊ</p>
 				\[
 					\begin{align*}
 						g'''(\mu) &= \frac{d^3 \ln f(\mu)}{dX^3} \\
@@ -653,7 +653,7 @@
 							&= \frac{1}{N^2} \left( \frac{1}{p^2} - \frac{1}{q^2} \right)
 					\end{align*}
 				\]
-				<p>Ѓ@€И‰є“Ї—l‚Й‚µ‚ДЏ‡ЋџЃCЌ‚Ћџ‚МЊWђ”‚р‹Ѓ‚Я‚й‚±‚Ж‚Є‚Е‚«‚й‚ЄЃC$g'''(\mu)$ ‚Н•Є•к‚МѓIЃ[ѓ_Ѓ[‚Є $N^2$ ‚Ж‚И‚Б‚Д‚ў‚йЃB‚µ‚Ѕ‚Є‚Б‚ДЃC$g'''(\mu)$ €ИЌ~‚МЌ‚Ћџ‚МЌЂ‚Н–іЋ‹‚Е‚«‚й‚Щ‚ЗЏ¬‚і‚ў‚ЖЌl‚¦‚й‚±‚Ж‚Є‚Е‚«‚йЃB‚ж‚Б‚ДЃC$N$ ‚ЄЏ\•Є‘е‚«‚ў‚И‚з‚ОЃC</p>
+				<p>гЂЂд»Ґдё‹еђЊж§гЃ«гЃ—гЃ¦й †ж¬ЎпјЊй«ж¬ЎгЃ®дї‚ж•°г‚’ж±‚г‚Ѓг‚‹гЃ“гЃЁгЃЊгЃ§гЃЌг‚‹гЃЊпјЊ$g'''(\mu)$ гЃЇе€†жЇЌгЃ®г‚ЄгѓјгѓЂгѓјгЃЊ $N^2$ гЃЁгЃЄгЃЈгЃ¦гЃ„г‚‹гЂ‚гЃ—гЃџгЃЊгЃЈгЃ¦пјЊ$g'''(\mu)$ д»Ґй™ЌгЃ®й«ж¬ЎгЃ®й …гЃЇз„Ўи¦–гЃ§гЃЌг‚‹гЃ»гЃ©е°ЏгЃ•гЃ„гЃЁиЂѓгЃ€г‚‹гЃ“гЃЁгЃЊгЃ§гЃЌг‚‹гЂ‚г‚€гЃЈгЃ¦пјЊ$N$ гЃЊеЌЃе€†е¤§гЃЌгЃ„гЃЄг‚‰гЃ°пјЊ</p>
 				\[
 					\begin{align*}
 						g(\mu + h) &\simeq g(\mu) + g'(\mu)h + \frac{1}{2}g''(\mu)h^2 \\
@@ -661,51 +661,51 @@
 							&= \ln f(\mu) - \frac{1}{2\sigma^2}h^2
 					\end{align*}
 				\]
-				<p>‚µ‚Ѕ‚Є‚Б‚ДЃC</p>
+				<p>гЃ—гЃџгЃЊгЃЈгЃ¦пјЊ</p>
 				\[ \ln f(\mu + h) = \ln f(\mu) - \frac{1}{2\sigma^2}h^2 \]
-				<p>Ѓ@‚±‚±‚ЕЃC$X = \mu + h$ ‚И‚М‚ЕЃC</p>
+				<p>гЂЂгЃ“гЃ“гЃ§пјЊ$X = \mu + h$ гЃЄгЃ®гЃ§пјЊ</p>
 				\[ \ln f(X) = \ln f(\mu) - \frac{(X - \mu)^2}{2\sigma^2} \]
 				\[ f(X) = f(\mu) \cdot e^{-\frac{(X-\mu)^2}{2\sigma^2}} \]
-				<p>‚±‚к‚ЄЃC$N \rightarrow \infty$ ‚Ж‚µ‚ЅЋћ‚М“сЌЂ•Є•z‚МЉm—¦–§“xЉЦђ”‚Е‚ ‚й‚ЄЃCЉm—¦–§“xЉЦђ”‚М‹KЉi‰»ЏрЊЏ</p>
+				<p>гЃ“г‚ЊгЃЊпјЊ$N \rightarrow \infty$ гЃЁгЃ—гЃџж™‚гЃ®дєЊй …е€†еёѓгЃ®зўєзЋ‡еЇ†еє¦й–ўж•°гЃ§гЃ‚г‚‹гЃЊпјЊзўєзЋ‡еЇ†еє¦й–ўж•°гЃ®и¦Џж јеЊ–жќЎд»¶</p>
 				\[ \int_{-\infty}^\infty f(X)dX = 1 \]
-				<p>‚©‚зЃCЊWђ” $f(\mu)$ ‚р‹Ѓ‚Я‚й‚±‚Ж‚Є‚Е‚«‚йЃB<a href="#gauss-int">ѓKѓEѓXђП•Є</a>‚ЕЋ¦‚µ‚Ѕ‚ж‚¤‚ЙЃC</p>
+				<p>гЃ‹г‚‰пјЊдї‚ж•° $f(\mu)$ г‚’ж±‚г‚Ѓг‚‹гЃ“гЃЁгЃЊгЃ§гЃЌг‚‹гЂ‚<a href="#gauss-int">г‚¬г‚¦г‚№з©Ќе€†</a>гЃ§з¤єгЃ—гЃџг‚€гЃ†гЃ«пјЊ</p>
 				\[ \int_{-\infty}^\infty e^{-\frac{(X-\mu)^2}{2\sigma^2}} dX = \sigma \sqrt{2\pi} \]
-				<p>‚Е‚ ‚й‚©‚зЃC</p>
+				<p>гЃ§гЃ‚г‚‹гЃ‹г‚‰пјЊ</p>
 				\[ \int_{-\infty}^\infty f(\mu) \cdot e^{-\frac{(X-\mu)^2}{2\sigma^2}} dX = f(\mu) \cdot \sigma \sqrt{2\pi} = 1 \]
 				\[ \therefore f(\mu) = \frac{1}{\sigma \sqrt{2\pi}} \]
-				<p>Њ‹‹ЗЃC</p>
+				<p>зµђе±ЂпјЊ</p>
 				\[ f(X) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(X-\mu)^2}{2\sigma^2}} \]
-				<p>‚Ж‚И‚йЃB‚±‚к‚НЃC$N(\mu, \sigma^2) = N(Np, Npq)$ ‚МЉm—¦–§“xЉЦђ”‚Е‚ ‚йЃB</p>
+				<p>гЃЁгЃЄг‚‹гЂ‚гЃ“г‚ЊгЃЇпјЊ$N(\mu, \sigma^2) = N(Np, Npq)$ гЃ®зўєзЋ‡еЇ†еє¦й–ўж•°гЃ§гЃ‚г‚‹гЂ‚</p>
 			</div>
 			<p style="text-align: right">Last modified: August 30, 2015</p>
 		</div>
 		
 		<div class="main">
-			<h1 id="taylor">ѓeѓCѓ‰Ѓ[“WЉJ</h1>
-			<p>Ѓ@ЉЦђ” $f(x)$ ‚Є–іЊА‹‰ђ”</p>
+			<h1 id="taylor">гѓ†г‚¤гѓ©гѓје±•й–‹</h1>
+			<p>гЂЂй–ўж•° $f(x)$ гЃЊз„Ўй™ђзґљж•°</p>
 			\[
 				\begin{align*}
 					f(x) &= \sum_{k=0}^\infty \frac{1}{k!} f^{(k)}(0) x^k \\
 						&= f^{(0)}(0) + f^{(1)}(0)x + \frac{1}{2!}f^{(2)}(0)x^2 + \frac{1}{3!}f^{(3)}(0)x^3 + \cdots
 				\end{align*}
 			\]
-			<p>‚Е•\‚і‚к‚йЋћЃC‚±‚к‚р $x = 0$ ‚МЋь‚и‚Й‚Ё‚Ї‚йѓeѓCѓ‰Ѓ[Ѓi‹‰ђ”Ѓj“WЉJЃC“Б‚Йѓ}ѓNѓЌЃ[ѓЉѓ“Ѓi‹‰ђ”Ѓj“WЉJ‚Ж‚ў‚¤ЃB‚Ь‚ЅЃC$x = a$ ‚МЋь‚и‚Й‚Ё‚Ї‚йѓeѓCѓ‰Ѓ[“WЉJ‚НЃC</p>
+			<p>гЃ§иЎЁгЃ•г‚Њг‚‹ж™‚пјЊгЃ“г‚Њг‚’ $x = 0$ гЃ®е‘Ёг‚ЉгЃ«гЃЉгЃ‘г‚‹гѓ†г‚¤гѓ©гѓјпј€зґљж•°пј‰е±•й–‹пјЊз‰№гЃ«гѓћг‚Їгѓ­гѓјгѓЄгѓіпј€зґљж•°пј‰е±•й–‹гЃЁгЃ„гЃ†гЂ‚гЃѕгЃџпјЊ$x = a$ гЃ®е‘Ёг‚ЉгЃ«гЃЉгЃ‘г‚‹гѓ†г‚¤гѓ©гѓје±•й–‹гЃЇпјЊ</p>
 			\[
 				\begin{align*}
 					f(x) &= \sum_{k=0}^\infty \frac{1}{k!} f^{(k)}(a) (x - a)^k \\
 						&= f^{(0)}(a) + f^{(1)}(a)(x - a) + \frac{1}{2!}f^{(2)}(a)(x - a)^2 + \frac{1}{3!}f^{(3)}(a)(x - a)^3 + \cdots
 				\end{align*}
 			\]
-			<p>‚Ж‚И‚йЃB</p>
+			<p>гЃЁгЃЄг‚‹гЂ‚</p>
 			<div class="proof">
-				<p>Ѓ@ЉЦђ” $f(x)$ ‚Є’иЊWђ” $a_n$ ‚р—p‚ў‚ДЋџ‚М‚ж‚¤‚ЙЏ‘‚Ї‚й‚Ж‰ј’и‚·‚йЃB</p>
+				<p>гЂЂй–ўж•° $f(x)$ гЃЊе®љдї‚ж•° $a_n$ г‚’з”ЁгЃ„гЃ¦ж¬ЎгЃ®г‚€гЃ†гЃ«ж›ёгЃ‘г‚‹гЃЁд»®е®љгЃ™г‚‹гЂ‚</p>
 				\[
 					\begin{align*}
 						f(x) &= \sum_{k=0}^\infty a_k x^k \\
 							&= a_0 + a_1 x + a_2 x^2 + a_3 x^3 + \cdots + a_n x^n + \cdots
 					\end{align*}
 				\]
-				<p>Ќ‚ЉK“±ЉЦђ”‚р $n$ ЉK‚Ь‚Е‹Ѓ‚Я‚й‚ЖЃC</p>
+				<p>й«йљЋе°Ћй–ўж•°г‚’ $n$ йљЋгЃѕгЃ§ж±‚г‚Ѓг‚‹гЃЁпјЊ</p>
 				\[
 					\begin{align*}
 						f^{(0)}(x) &= a_0 + a_1 x + a_2 x^2 + a_3 x^3 + a_4 x^4 + a_5 x^5 + \cdots \\
@@ -717,7 +717,7 @@
 						f^{(n)}(x) &= 1\times 2\times \cdots \times na_n = n!a_n
 					\end{align*}
 				\]
-				<p>‚±‚к‚з‚М“±ЉЦђ”‚Й $x = 0$ ‚р‘г“ь‚·‚й‚ЖЃC</p>
+				<p>гЃ“г‚Њг‚‰гЃ®е°Ћй–ўж•°гЃ« $x = 0$ г‚’д»Је…ҐгЃ™г‚‹гЃЁпјЊ</p>
 				\[
 					\begin{align*}
 						f^{(0)}(0) &= a_0 \\
@@ -729,7 +729,7 @@
 						f^{(n)}(0) &= n!a_n
 					\end{align*}
 				\]
-				<p>‚µ‚Ѕ‚Є‚Б‚ДЃC</p>
+				<p>гЃ—гЃџгЃЊгЃЈгЃ¦пјЊ</p>
 				\[
 					\begin{align*}
 						a_0 &= f^{(0)}(0) \\
@@ -741,28 +741,28 @@
 						a_n &= \frac{1}{n!}f^{(n)}(0)
 					\end{align*}
 				\]
-				<p>‚ж‚Б‚ДЃC</p>
+				<p>г‚€гЃЈгЃ¦пјЊ</p>
 				\[
 					\begin{align*}
 						f(x) &= f^{(0)}(0) + f^{(1)}(0)x + \frac{1}{2!}f^{(2)}(0)x^2 + \frac{1}{3!}f^{(3)}(0)x^3 + \cdots \frac{1}{n!}f^{(n)}(0)x^n + R_{n+1} \\
 							&= \sum_{k=0}^n \frac{1}{k!} f^{(k)}(0) x^k + R_{n+1}
 					\end{align*}
 				\]
-				<p>$R_{n+1}$ ‚Н $(n+1)$ Ћџ€ИЌ~‚рЌ‡‚н‚№‚Ѕ‚а‚М‚Е‚ ‚иЃCЏи—]ЌЂ‚Ж‚ў‚¤ЃB</p>
+				<p>$R_{n+1}$ гЃЇ $(n+1)$ ж¬Ўд»Ґй™Ќг‚’еђ€г‚ЏгЃ›гЃџг‚‚гЃ®гЃ§гЃ‚г‚ЉпјЊе‰°дЅ™й …гЃЁгЃ„гЃ†гЂ‚</p>
 				\[ \lim_{n\rightarrow \infty} R_{n+1} = 0 \]
-				<p>‚Єђ¬‚и—§‚В‚И‚з‚ОЃC$f(x)$ ‚НЋы‘©‚·‚й‚М‚ЕЃC–іЊА‹‰ђ”</p>
+				<p>гЃЊж€ђг‚Љз«‹гЃ¤гЃЄг‚‰гЃ°пјЊ$f(x)$ гЃЇеЏЋжќџгЃ™г‚‹гЃ®гЃ§пјЊз„Ўй™ђзґљж•°</p>
 				\[ f(x) = \sum_{k=0}^\infty \frac{1}{k!} f^{(k)}(0) x^k \]
-				<p>‚МЊ`‚ЙЏ‘‚Ї‚йЃB€к”К‚ЙЃCЏи—]ЌЂ‚МЋы‘©”»’и‚Н“п‚µ‚ў‚ЄЃCЏ‰“™ЉЦђ”‚Й‚В‚ў‚ДЋы‘©‚ЄЉm”F‚і‚к‚Д‚ў‚й‚а‚М‚НЊцЋ®‚Ж‚µ‚Д——p‚і‚к‚Д‚ў‚йЃB€И‰є‚Н‚»‚М—б‚Е‚ ‚йЃB</p>
+				<p>гЃ®еЅўгЃ«ж›ёгЃ‘г‚‹гЂ‚дёЂи€¬гЃ«пјЊе‰°дЅ™й …гЃ®еЏЋжќџе€¤е®љгЃЇй›ЈгЃ—гЃ„гЃЊпјЊе€ќз­‰й–ўж•°гЃ«гЃ¤гЃ„гЃ¦еЏЋжќџгЃЊзўєиЄЌгЃ•г‚ЊгЃ¦гЃ„г‚‹г‚‚гЃ®гЃЇе…¬ејЏгЃЁгЃ—гЃ¦е€©з”ЁгЃ•г‚ЊгЃ¦гЃ„г‚‹гЂ‚д»Ґдё‹гЃЇгЃќгЃ®дѕ‹гЃ§гЃ‚г‚‹гЂ‚</p>
 			</div>
 			\[ \sin x = x - \frac{1}{3!}x^3 + \frac{1}{5!}x^5 - \frac{1}{7!}x^7 + \cdots + (-1)^n \frac{1}{(2n+1)!}x^{2n+1} + \cdots \]
 			\[ \cos x = 1 - \frac{1}{2!}x^2 + \frac{1}{4!}x^4 - \frac{1}{6!}x^6 + \cdots + (-1)^n \frac{1}{(2n)!}x^{2n} + \cdots \]
 			\[ e^x = 1 + x +\frac{1}{2!}x^2 + \frac{1}{3!}x^3 + \frac{1}{4!}x^4 + \cdots + \frac{1}{n!}x^n + \cdots \]
-			<p>Ѓ@‚±‚к‚з‚НЃCѓeѓCѓ‰Ѓ[“WЉJ‚М’К‚и‚ЙЊvЋZ‚р‚·‚к‚О“±‚Ї‚йЃB‚±‚к‚з‚МЊцЋ®‚ЄѓXѓSѓC‚М‚НЃCЌ¶•У‚МЏ‰“™ЉЦђ”‚»‚М‚а‚М‚ЙЉЦ‚µ‚Д‚Н‚З‚¤‚в‚Б‚Д’l‚р‹Ѓ‚Я‚к‚О—З‚ў‚©•Є‚©‚з‚И‚ў‚М‚ЙЃC‚»‚к‚р‰E•У‚Й‚ж‚Б‚Д‰рђН“I‚ЙЊvЋZ‚Е‚«‚Д‚µ‚Ь‚¤“_‚Е‚ ‚йЃB</p>
-			<p>Ѓ@‚±‚±‚Е‚Н‚і‚з‚ЙЃCђЁ‚ў—]‚Б‚ДѓIѓCѓ‰Ѓ[‚МЊцЋ®‚р“±‚­ЃB</p>
-			<h2>ѓIѓCѓ‰Ѓ[‚МЊцЋ®</h2>
+			<p>гЂЂгЃ“г‚Њг‚‰гЃЇпјЊгѓ†г‚¤гѓ©гѓје±•й–‹гЃ®йЂљг‚ЉгЃ«иЁ€з®—г‚’гЃ™г‚ЊгЃ°е°ЋгЃ‘г‚‹гЂ‚гЃ“г‚Њг‚‰гЃ®е…¬ејЏгЃЊг‚№г‚ґг‚¤гЃ®гЃЇпјЊе·¦иѕєгЃ®е€ќз­‰й–ўж•°гЃќгЃ®г‚‚гЃ®гЃ«й–ўгЃ—гЃ¦гЃЇгЃ©гЃ†г‚„гЃЈгЃ¦еЂ¤г‚’ж±‚г‚Ѓг‚ЊгЃ°и‰ЇгЃ„гЃ‹е€†гЃ‹г‚‰гЃЄгЃ„гЃ®гЃ«пјЊгЃќг‚Њг‚’еЏіиѕєгЃ«г‚€гЃЈгЃ¦и§Јжћђзљ„гЃ«иЁ€з®—гЃ§гЃЌгЃ¦гЃ—гЃѕгЃ†з‚№гЃ§гЃ‚г‚‹гЂ‚</p>
+			<p>гЂЂгЃ“гЃ“гЃ§гЃЇгЃ•г‚‰гЃ«пјЊе‹ўгЃ„дЅ™гЃЈгЃ¦г‚Єг‚¤гѓ©гѓјгЃ®е…¬ејЏг‚’е°ЋгЃЏгЂ‚</p>
+			<h2>г‚Єг‚¤гѓ©гѓјгЃ®е…¬ејЏ</h2>
 			\[ e^{ix} = \cos x + i\sin x \]
 			<div class="proof">
-				<p>Ѓ@$e^x$ ‚МѓeѓCѓ‰Ѓ[“WЉJ‚Й‚Ё‚ў‚ДЃC$x$ ‚р $ix$ ‚ЙЊ`Ћ®“I‚Й’u‚«Љ·‚¦‚й‚ЖЃC</p>
+				<p>гЂЂ$e^x$ гЃ®гѓ†г‚¤гѓ©гѓје±•й–‹гЃ«гЃЉгЃ„гЃ¦пјЊ$x$ г‚’ $ix$ гЃ«еЅўејЏзљ„гЃ«зЅ®гЃЌжЏ›гЃ€г‚‹гЃЁпјЊ</p>
 				\[
 					\begin{align*}
 						e^{ix} &= 1 + ix - \frac{1}{2!}x^2 - i\frac{1}{3!}x^3 + \frac{1}{4!}x^4 + i\frac{1}{5!}x^5 - \frac{1}{6!}x^6 +\cdots \\
@@ -771,21 +771,21 @@
 					\end{align*}
 				 \]
 			</div>
-			<p>Ѓ@ѓIѓCѓ‰Ѓ[‚МЊцЋ®‚Й‚Ё‚ў‚ДЃC$x = \pi$ ‚Ж‚·‚й‚ЖЃC$\cos \pi = -1$ЃC$\sin \pi = 0$ ‚Е‚ ‚й‚©‚зЃC</p>
+			<p>гЂЂг‚Єг‚¤гѓ©гѓјгЃ®е…¬ејЏгЃ«гЃЉгЃ„гЃ¦пјЊ$x = \pi$ гЃЁгЃ™г‚‹гЃЁпјЊ$\cos \pi = -1$пјЊ$\sin \pi = 0$ гЃ§гЃ‚г‚‹гЃ‹г‚‰пјЊ</p>
 			\[ e^{i\pi} = -1 \]
-			<p>‚р“ѕ‚йЃBЌ¶•У‚НЏ¬ђ”“_€И‰є–іЊА‚Й‘±‚­ђ”‚Е‚ ‚й $e$ ‚Ж $\pi$ ‹•ђ”‚М $i$ ‚Е‚Е‚«‚Ѕѓ„ѓ„ѓRѓV‚»‚¤‚ИЋ®‚И‚М‚ЙЃC‚»‚М’l‚Є $-1$ ‚Й‚И‚й‚Ж‚ў‚¤”сЏн‚Й•sЋv‹c‚ИЉЦЊWЋ®‚Е‚ ‚йЃB</p>
+			<p>г‚’еѕ—г‚‹гЂ‚е·¦иѕєгЃЇе°Џж•°з‚№д»Ґдё‹з„Ўй™ђгЃ«з¶љгЃЏж•°гЃ§гЃ‚г‚‹ $e$ гЃЁ $\pi$ и™љж•°гЃ® $i$ гЃ§гЃ§гЃЌгЃџгѓ¤гѓ¤г‚іг‚·гЃќгЃ†гЃЄејЏгЃЄгЃ®гЃ«пјЊгЃќгЃ®еЂ¤гЃЊ $-1$ гЃ«гЃЄг‚‹гЃЁгЃ„гЃ†йќћеёёгЃ«дёЌжЂќи­°гЃЄй–ўдї‚ејЏгЃ§гЃ‚г‚‹гЂ‚</p>
 			\[ e^{i\pi} + 1 = 0 \]
-			<p>‚Ж‚·‚к‚ОЃC‹•ђ” $i$ЃC’ґ‰zђ” $e$ ‚Ж $\pi$ЃCђ”‚МЊґ“_ $0$ ‚Ж’P€К $1$ ‚Ж‚ў‚¤ђ”Љw‚Й‚Ё‚ў‚Д”сЏн‚ЙЏd—v‚Иђ”‚ЄђЁ‘µ‚ў‚·‚йЃBѓtѓ@ѓCѓ“ѓ}ѓ“‚ЄЃg‰дЃX‚МЋЉ•уЃh‚Ж•]‚µ‚Ѕ‚М‚аих‚Ї‚йЃB</p>
+			<p>гЃЁгЃ™г‚ЊгЃ°пјЊи™љж•° $i$пјЊи¶…и¶Љж•° $e$ гЃЁ $\pi$пјЊж•°гЃ®еЋџз‚№ $0$ гЃЁеЌдЅЌ $1$ гЃЁгЃ„гЃ†ж•°е­¦гЃ«гЃЉгЃ„гЃ¦йќћеёёгЃ«й‡Ќи¦ЃгЃЄж•°гЃЊе‹ўжЏѓгЃ„гЃ™г‚‹гЂ‚гѓ•г‚Ўг‚¤гѓігѓћгѓігЃЊвЂњж€‘гЂ…гЃ®и‡іе®ќвЂќгЃЁи©•гЃ—гЃџгЃ®г‚‚й ·гЃ‘г‚‹гЂ‚</p>
 			<p style="text-align: right">Last modified: September 2, 2015</p>
 		</div>
 		
 		<div class="main">
-			<h1 id="gamma">ѓKѓ“ѓ}ЉЦђ”</h1>
+			<h1 id="gamma">г‚¬гѓігѓћй–ўж•°</h1>
 			\[ \Gamma (\alpha) = \int_0^\infty x^{\alpha - 1} e^{-x} dx \]
-			<p>‚Е’и‹`‚і‚к‚йЉЦђ”‚рѓKѓ“ѓ}ЉЦђ”‚Ж‚ў‚¤ЃB’A‚µЃC’и‹`€ж‚Н $\alpha > 0$ ‚Е‚ ‚йЃB</p>
-			<p>Ѓ@ѓKѓ“ѓ}ЉЦђ”‚Й‚НЋџ‚М‚ж‚¤‚Иђ«Ћї‚Є‚ ‚йЃB</p>
+			<p>гЃ§е®љзѕ©гЃ•г‚Њг‚‹й–ўж•°г‚’г‚¬гѓігѓћй–ўж•°гЃЁгЃ„гЃ†гЂ‚дЅ†гЃ—пјЊе®љзѕ©еџџгЃЇ $\alpha > 0$ гЃ§гЃ‚г‚‹гЂ‚</p>
+			<p>гЂЂг‚¬гѓігѓћй–ўж•°гЃ«гЃЇж¬ЎгЃ®г‚€гЃ†гЃЄжЂ§иіЄгЃЊгЃ‚г‚‹гЂ‚</p>
 			\[ \Gamma (\alpha + 1) = \alpha \Gamma (\alpha) \]
-			<p>“Б‚ЙЃC$\alpha$ ‚Єђі‚Мђ®ђ”‚МЋћ‚НЃC</p>
+			<p>з‰№гЃ«пјЊ$\alpha$ гЃЊж­ЈгЃ®ж•ґж•°гЃ®ж™‚гЃЇпјЊ</p>
 			\[ \Gamma (n + 1) = n! \]
 			<div class="proof">
 				\[
@@ -794,12 +794,12 @@
 							&= \left[ -x^\alpha e^{-x} \right]_0^\infty + \alpha \int_0^\infty x^{\alpha - 1} e^{-x} dx
 					\end{align*}
 				 \] 
-				<p>Ѓi‰E•У‘ж1ЌЂ‚Й‚Ё‚ў‚ДЃC$\alpha < 0$ ‚Е‚ ‚й‚ЖЃC$x \rightarrow 0$ ‚Е $x^\alpha \rightarrow \infty$ ‚Ж”­ЋU‚µ‚Д‚µ‚Ь‚ўЃC$\Gamma (\alpha + 1)$ ‚М’l‚Є’и‚Ь‚з‚И‚ўЃB‚±‚М‚Ѕ‚ЯЃCѓKѓ“ѓ}ЉЦђ”‚М’и‹`€ж‚Н $\alpha > 0$ ‚Й‚И‚Б‚Д‚ў‚йЃBЃj</p>
-				<p>Ѓ@‰E•У‘ж1ЌЂ‚Н0ЃC‘ж2ЌЂ‚Н’и‹`‚ж‚и $\alpha \Gamma (\alpha)$ ‚ѕ‚©‚зЃC</p>
+				<p>пј€еЏіиѕєз¬¬1й …гЃ«гЃЉгЃ„гЃ¦пјЊ$\alpha < 0$ гЃ§гЃ‚г‚‹гЃЁпјЊ$x \rightarrow 0$ гЃ§ $x^\alpha \rightarrow \infty$ гЃЁз™єж•ЈгЃ—гЃ¦гЃ—гЃѕгЃ„пјЊ$\Gamma (\alpha + 1)$ гЃ®еЂ¤гЃЊе®љгЃѕг‚‰гЃЄгЃ„гЂ‚гЃ“гЃ®гЃџг‚ЃпјЊг‚¬гѓігѓћй–ўж•°гЃ®е®љзѕ©еџџгЃЇ $\alpha > 0$ гЃ«гЃЄгЃЈгЃ¦гЃ„г‚‹гЂ‚пј‰</p>
+				<p>гЂЂеЏіиѕєз¬¬1й …гЃЇ0пјЊз¬¬2й …гЃЇе®љзѕ©г‚€г‚Љ $\alpha \Gamma (\alpha)$ гЃ гЃ‹г‚‰пјЊ</p>
 				\[ \Gamma (\alpha + 1) = \alpha \Gamma (\alpha) \]
-				<p>‚р“ѕ‚йЃB‚Ь‚ЅЃC</p>
+				<p>г‚’еѕ—г‚‹гЂ‚гЃѕгЃџпјЊ</p>
 				\[ \Gamma (1) = \int_0^\infty e^{-x} dx = \left[ -e^{-x} \right]_0^\infty = 1 \]
-				<p>‚ѕ‚©‚зЃC</p>
+				<p>гЃ гЃ‹г‚‰пјЊ</p>
 				\[
 					\begin{align*}
 						\Gamma (n + 1) &= n\Gamma (n) \\
@@ -809,46 +809,46 @@
 							&= n!
 					\end{align*}
 				 \]
-				 <p>‚Ж‚И‚йЃB</p>
+				 <p>гЃЁгЃЄг‚‹гЂ‚</p>
 			</div>
-			<p>Ѓ@‚а‚¤1‚ВЃCѓKѓ“ѓ}ЉЦђ”‚Мђ«Ћї‚рЋ¦‚·ЃB</p>
+			<p>гЂЂг‚‚гЃ†1гЃ¤пјЊг‚¬гѓігѓћй–ўж•°гЃ®жЂ§иіЄг‚’з¤єгЃ™гЂ‚</p>
 			\[ \Gamma \left( \frac{1}{2} \right) = \sqrt{\pi} \]
 			<div class="proof">
-				<p>Ѓ@’и‹`‚©‚зЃC</p>
+				<p>гЂЂе®љзѕ©гЃ‹г‚‰пјЊ</p>
 				\[ \Gamma \left( \frac{1}{2} \right) = \int_0^\infty x^{-\frac{1}{2}} e^{-x} dx \]
-				<p>‚±‚±‚Е $x = u^2$ ‚Ж•Пђ”•ПЉ·‚·‚й‚ЖЃC$dx = 2udu$ЃC$x^{\frac{1}{2}} = u$ ‚ѕ‚©‚зЃC</p>
+				<p>гЃ“гЃ“гЃ§ $x = u^2$ гЃЁе¤‰ж•°е¤‰жЏ›гЃ™г‚‹гЃЁпјЊ$dx = 2udu$пјЊ$x^{\frac{1}{2}} = u$ гЃ гЃ‹г‚‰пјЊ</p>
 				\[
 					\begin{align*}
 						\Gamma \left( \frac{1}{2} \right) &= \int_0^\infty u^{-1} e^{-u^2} \cdot 2udu \\
 							&= 2\int_0^\infty e^{-u^2} du
 					\end{align*}
 				\]
-				<p>‚±‚к‚НѓKѓEѓXђП•Є‚Е‚ ‚й‚©‚зЃC</p>
+				<p>гЃ“г‚ЊгЃЇг‚¬г‚¦г‚№з©Ќе€†гЃ§гЃ‚г‚‹гЃ‹г‚‰пјЊ</p>
 				\[ \Gamma \left( \frac{1}{2} \right) = 2\cdot \frac{\sqrt{\pi}}{2} = \sqrt{\pi} \]
-				<p>‚Ж‚И‚йЃB</p>
+				<p>гЃЁгЃЄг‚‹гЂ‚</p>
 			</div>
-			<p>Ѓ@ѓKѓ“ѓ}ЉЦђ”‚М‰Ѕ‚ЄѓXѓSѓC‚М‚©‚Ж‚ў‚¤‚ЖЃCѓKѓ“ѓ}ЉЦђ”‚МЊ`‚р‚µ‚ЅђП•Є‚ЄЊ»‚к‚ЅЏкЌ‡‚Й‚НЃCђП•Є‚рЊvЋZ‚·‚й‚±‚Ж‚И‚­ЃCђП•Є‚М‰р‚р‘Q‰»Ћ®‚рЋg‚Б‚Д“ѕ‚з‚к‚й‚Ж‚ў‚¤“_‚Е‚ ‚йЃB—б‚¦‚ОЃC$\displaystyle \Gamma \left( \frac{3}{2} \right)$ ‚Н’и‹`‚ЙЏ]‚¦‚ОЃC</p>
+			<p>гЂЂг‚¬гѓігѓћй–ўж•°гЃ®дЅ•гЃЊг‚№г‚ґг‚¤гЃ®гЃ‹гЃЁгЃ„гЃ†гЃЁпјЊг‚¬гѓігѓћй–ўж•°гЃ®еЅўг‚’гЃ—гЃџз©Ќе€†гЃЊзЏѕг‚ЊгЃџе ґеђ€гЃ«гЃЇпјЊз©Ќе€†г‚’иЁ€з®—гЃ™г‚‹гЃ“гЃЁгЃЄгЃЏпјЊз©Ќе€†гЃ®и§Јг‚’жјёеЊ–ејЏг‚’дЅїгЃЈгЃ¦еѕ—г‚‰г‚Њг‚‹гЃЁгЃ„гЃ†з‚№гЃ§гЃ‚г‚‹гЂ‚дѕ‹гЃ€гЃ°пјЊ$\displaystyle \Gamma \left( \frac{3}{2} \right)$ гЃЇе®љзѕ©гЃ«еѕ“гЃ€гЃ°пјЊ</p>
 			\[ \Gamma  \left( \frac{3}{2} \right) = \int_0^\infty x^{\frac{1}{2}} e^{-x} dx \]
-			<p>‚Ж‚И‚й‚ЄЃC‚±‚к‚р</p>
+			<p>гЃЁгЃЄг‚‹гЃЊпјЊгЃ“г‚Њг‚’</p>
 			\[ \Gamma \left( \frac{3}{2} \right) = \Gamma \left( \frac{1}{2} + 1 \right) = \frac{1}{2} \Gamma  \left( \frac{1}{2} \right) = \frac{\sqrt{\pi}}{2} \]
-			<p>‚Ж‚·‚к‚ОЃC—e€Х‚ЙЊvЋZ‚Є‚Е‚«‚йЃB</p>
+			<p>гЃЁгЃ™г‚ЊгЃ°пјЊе®№ж“гЃ«иЁ€з®—гЃЊгЃ§гЃЌг‚‹гЂ‚</p>
 			<p style="text-align: right">Last modified: September 3, 2015</p>
 		</div>
 		
 		<div class="main">
-			<h1 id="chi2-dist">$\chi^2$ •Є•z‚М•Ѕ‹П‚Ж•ЄЋU</h1>
-			<p>Ѓ@$k$ ‚рЋ©—R“x‚Ж‚·‚й‚ЖЃC</p>
+			<h1 id="chi2-dist">$\chi^2$ е€†еёѓгЃ®е№іеќ‡гЃЁе€†ж•Ј</h1>
+			<p>гЂЂ$k$ г‚’и‡Єз”±еє¦гЃЁгЃ™г‚‹гЃЁпјЊ</p>
 			\[ \mu = k \]
 			\[ \sigma^2 = 2k \]
 			<div class="proof">
-				<p>Ѓ@Љъ‘Т’l‚ЙЉо‚Г‚­ЏШ–ѕ‚Ж<a href="#moment">ђП—¦•кЉЦђ”<a>‚р——p‚·‚йЏШ–ѕ‚р‹LЌЪ‚·‚йЃB’A‚µЃC‚ў‚ё‚к‚МЏШ–ѕ‚Е‚аЃC</p>
+				<p>гЂЂжњџеѕ…еЂ¤гЃ«еџєгЃҐгЃЏиЁјжЋгЃЁ<a href="#moment">з©ЌзЋ‡жЇЌй–ўж•°<a>г‚’е€©з”ЁгЃ™г‚‹иЁјжЋг‚’иЁиј‰гЃ™г‚‹гЂ‚дЅ†гЃ—пјЊгЃ„гЃљг‚ЊгЃ®иЁјжЋгЃ§г‚‚пјЊ</p>
 				\[ L_k =  \frac{1}{\displaystyle 2^{\frac{k}{2}} \Gamma \left( \frac{k}{2} \right)} \]
-				<p>‚Ж‚·‚йЃB</p>
-				<h2>Љъ‘Т’l‚ЙЉо‚Г‚­ЏШ–ѕ</h2>
-				<p>Ѓ@$L_k$ ‚р—p‚ў‚к‚ОЃC$\chi^2$ •Є•z‚МЉm—¦–§“xЉЦђ”‚НЃC</p>
+				<p>гЃЁгЃ™г‚‹гЂ‚</p>
+				<h2>жњџеѕ…еЂ¤гЃ«еџєгЃҐгЃЏиЁјжЋ</h2>
+				<p>гЂЂ$L_k$ г‚’з”ЁгЃ„г‚ЊгЃ°пјЊ$\chi^2$ е€†еёѓгЃ®зўєзЋ‡еЇ†еє¦й–ўж•°гЃЇпјЊ</p>
 				\[ f_k(x) = L_k x^{\frac{k}{2}-1} e^{-\frac{x}{2}} \]
-				<p>‚Ж•\‚і‚к‚йЃB</p>
-				<p>Ѓ@•Ѕ‹П $\mu$ ‚НЃC’и‹`€ж‚Є $x \ge 0$ ‚Е‚ ‚й‚±‚Ж‚Й’Ќ€У‚µ‚ДЃC</p>
+				<p>гЃЁиЎЁгЃ•г‚Њг‚‹гЂ‚</p>
+				<p>гЂЂе№іеќ‡ $\mu$ гЃЇпјЊе®љзѕ©еџџгЃЊ $x \ge 0$ гЃ§гЃ‚г‚‹гЃ“гЃЁгЃ«жіЁж„ЏгЃ—гЃ¦пјЊ</p>
 				\[
 					\begin{align*}
 						E[x] &= \int_{-\infty}^\infty x f_k(x) dx \\
@@ -856,18 +856,18 @@
 							&= L_k \int_0^\infty x^{\frac{k}{2}} e^{-\frac{x}{2}} dx
 					\end{align*}
 				\]
-				<p>‚±‚±‚ЕЃCѓKѓ“ѓ}ЉЦђ”</p>
+				<p>гЃ“гЃ“гЃ§пјЊг‚¬гѓігѓћй–ўж•°</p>
 				\[ \Gamma (\alpha) = \int_0^\infty x^{\alpha - 1} e^{-x} dx \]
-				<p>‚Й‘О‚µ‚ДЃC$\displaystyle x = \frac{u}{2}$ ‚Ж‚Ё‚­‚ЖЃC$\displaystyle dx = \frac{1}{2}du$ ‚ѕ‚©‚зЃC</p>
+				<p>гЃ«еЇѕгЃ—гЃ¦пјЊ$\displaystyle x = \frac{u}{2}$ гЃЁгЃЉгЃЏгЃЁпјЊ$\displaystyle dx = \frac{1}{2}du$ гЃ гЃ‹г‚‰пјЊ</p>
 				\[
 					\begin{align*}
 						\Gamma (\alpha) &= \int_0^\infty \left( \frac{u}{2} \right)^{\alpha - 1} e^{-\frac{u}{2}} \cdot \frac{1}{2}du \\
 							&= \left( \frac{1}{2} \right)^\alpha \int_0^\infty u^{\alpha - 1} e^{-\frac{u}{2}} du
 					\end{align*}
 				\]
-				<p>$\displaystyle \alpha = \frac{k}{2} + 1$ ‚р‘г“ь‚·‚й‚ЖЃC</p>
+				<p>$\displaystyle \alpha = \frac{k}{2} + 1$ г‚’д»Је…ҐгЃ™г‚‹гЃЁпјЊ</p>
 				\[ \Gamma \left( \frac{k}{2} + 1 \right) = \left( \frac{1}{2} \right)^{\frac{k}{2} + 1} \int_0^\infty u^{\frac{k}{2}} e^{-\frac{u}{2}} du \]
-				<p>‚Ж‚И‚иЃCђж‚МЋ®‚М”нђП•ЄЉЦђ”‚Ж“Ї‚¶‚а‚М‚Є“ѕ‚з‚к‚йЃB‚±‚к‚Й‚ж‚иЃC</p>
+				<p>гЃЁгЃЄг‚ЉпјЊе…€гЃ®ејЏгЃ®иў«з©Ќе€†й–ўж•°гЃЁеђЊгЃг‚‚гЃ®гЃЊеѕ—г‚‰г‚Њг‚‹гЂ‚гЃ“г‚ЊгЃ«г‚€г‚ЉпјЊ</p>
 				\[
 					\begin{align*}
 						E[x] &= L_k \int_0^\infty x^{\frac{k}{2}} e^{-\frac{x}{2}} dx \\
@@ -878,7 +878,7 @@
 						\therefore \mu &= k
 					\end{align*}
 				\]
-				<p>Ѓ@Ћџ‚ЙЃC•ЄЋU $\sigma^2$ ‚НЃC</p>
+				<p>гЂЂж¬ЎгЃ«пјЊе€†ж•Ј $\sigma^2$ гЃЇпјЊ</p>
 				\[
 					\begin{align*}
 						E\left[ \left( x - \mu \right)^2 \right] &= \int_{-\infty}^\infty (x - \mu)^2 f_k(x) dx \\
@@ -887,16 +887,16 @@
 							&= L_k \left( \int_0^\infty x^{\frac{k}{2} + 1} e^{-\frac{x}{2}} dx -2k \int_0^\infty x^{\frac{k}{2}} e^{-\frac{x}{2}} dx + k^2 \int_0^\infty x^{\frac{k}{2} - 1} e^{-\frac{x}{2}} dx \right)
 					\end{align*}
 				\]
-				<p>‚±‚±‚ЕЃC</p>
+				<p>гЃ“гЃ“гЃ§пјЊ</p>
 				\[ \Gamma (\alpha) = \left( \frac{1}{2} \right)^\alpha \int_0^\infty x^{\alpha - 1} e^{-\frac{x}{2}} dx \]
-				<p>‚Е‚ ‚Б‚Ѕ‚±‚Ж‚р——p‚·‚к‚ОЃC</p>
+				<p>гЃ§гЃ‚гЃЈгЃџгЃ“гЃЁг‚’е€©з”ЁгЃ™г‚ЊгЃ°пјЊ</p>
 				\[ 2^\alpha \Gamma (\alpha) = \int_0^\infty x^{\alpha - 1} e^{-\frac{x}{2}} dx \]
-				<p>‚Е‚ ‚й‚©‚зЃC</p>
+				<p>гЃ§гЃ‚г‚‹гЃ‹г‚‰пјЊ</p>
 				\[ E\left[ \left( x - \mu \right)^2 \right] = L_k \left\{ 2^{\frac{k}{2} + 2} \Gamma \left( \frac{k}{2} + 2 \right) -2k \cdot 2^{\frac{k}{2} + 1} \Gamma \left( \frac{k}{2} + 1 \right) + k^2 \cdot 2^{\frac{k}{2}} \Gamma \left( \frac{k}{2} \right) \right\} \]
-				<p>Ѓ@‚і‚з‚ЙЃCѓKѓ“ѓ}ЉЦђ”‚М‘Q‰»Ћ®‚ж‚иЃC</p>
+				<p>гЂЂгЃ•г‚‰гЃ«пјЊг‚¬гѓігѓћй–ўж•°гЃ®жјёеЊ–ејЏг‚€г‚ЉпјЊ</p>
 				\[ \Gamma \left( \frac{k}{2} + 1 \right) = \frac{k}{2} \Gamma \left( \frac{k}{2} \right) \]
 				\[ \Gamma \left( \frac{k}{2} + 2 \right) = \left( \frac{k}{2} + 1 \right) \Gamma \left( \frac{k}{2} + 1 \right) = \left( \frac{k}{2} + 1 \right) \cdot \frac{k}{2} \Gamma \left( \frac{k}{2} \right) \]
-				<p>‚И‚М‚ЕЃC</p>
+				<p>гЃЄгЃ®гЃ§пјЊ</p>
 				\[
 					\begin{align*}
 						E\left[ \left( x - \mu \right)^2 \right] &= 2^{\frac{k}{2}} \cdot L_k \Gamma \left( \frac{k}{2} \right) \left\{ 4 \left( \frac{k}{2} + 1 \right) \cdot \frac{k}{2} -4k \cdot \frac{k}{2} + k^2 \right\} \\
@@ -905,10 +905,10 @@
 							\therefore \sigma^2 &= 2k
 					\end{align*}
 				\]
-				<h2>ђП—¦•кЉЦђ”‚р——p‚·‚йЏШ–ѕ</h2>
-				<p>Ѓ@$\chi^2$ •Є•z‚МЉm—¦–§“xЉЦђ”</p>
+				<h2>з©ЌзЋ‡жЇЌй–ўж•°г‚’е€©з”ЁгЃ™г‚‹иЁјжЋ</h2>
+				<p>гЂЂ$\chi^2$ е€†еёѓгЃ®зўєзЋ‡еЇ†еє¦й–ўж•°</p>
 				\[ f_k(x) = L_k x^{\frac{k}{2}-1} e^{-\frac{x}{2}} \]
-				<p>‚Й‘О‚µЃCђП—¦•кЉЦђ”‚НЃC</p>
+				<p>гЃ«еЇѕгЃ—пјЊз©ЌзЋ‡жЇЌй–ўж•°гЃЇпјЊ</p>
 				\[
 					\begin{align*}
 						M(\theta) &= \int_{-\infty}^\infty e^{\theta x} f_k(x) dx \\
@@ -916,7 +916,7 @@
 							&= L_k \int_0^\infty x^{\frac{k}{2}-1} e^{\left( \theta - \frac{1}{2} \right) x} dx
 					\end{align*}
 				\]
-				<p>‚±‚±‚ЕЃC$\displaystyle -u = \left( \theta - \frac{1}{2} \right) x$ ‚Ж‚Ё‚­‚ЖЃC$\displaystyle -du = \left( \theta - \frac{1}{2} \right) dx$ ‚ѕ‚©‚зЃC</p>
+				<p>гЃ“гЃ“гЃ§пјЊ$\displaystyle -u = \left( \theta - \frac{1}{2} \right) x$ гЃЁгЃЉгЃЏгЃЁпјЊ$\displaystyle -du = \left( \theta - \frac{1}{2} \right) dx$ гЃ гЃ‹г‚‰пјЊ</p>
 				\[
 					\begin{align*}
 						M(\theta) &= L_k \int_0^\infty \frac{1}{\displaystyle \left( \frac{1}{2} - \theta \right)^{\frac{k}{2} - 1}} u^{\frac{k}{2}-1} e^{-u} \cdot \frac{1}{\displaystyle \left( \frac{1}{2} - \theta \right)} du \\
@@ -927,7 +927,7 @@
 							&= \left( 1 - 2\theta \right)^{-\frac{k}{2}}
 					\end{align*}
 				\]
-				<p>‚ЖЃCђП—¦•кЉЦђ”‚Н‚±‚±‚Ь‚ЕЉИ’P‰»‚Е‚«‚йЃB</p>
+				<p>гЃЁпјЊз©ЌзЋ‡жЇЌй–ўж•°гЃЇгЃ“гЃ“гЃѕгЃ§з°ЎеЌеЊ–гЃ§гЃЌг‚‹гЂ‚</p>
 				\[
 					\begin{align*}
 						M'(\theta) &= -\frac{k}{2} \left( 1 - 2\theta \right)^{-\frac{k}{2} - 1} \cdot (-2) \\
@@ -935,7 +935,7 @@
 					\end{align*}
 				\]
 				\[ \therefore \mu = M'(0) = k \]
-				<p>Ѓ@‚і‚з‚ЙЃC</p>
+				<p>гЂЂгЃ•г‚‰гЃ«пјЊ</p>
 				\[
 					\begin{align*}
 						M''(\theta) &= k \left( -\frac{k}{2} - 1 \right) (1 - 2\theta)^{-\frac{k}{2} - 2} \cdot (-2) \\
@@ -952,13 +952,13 @@
 		</div>
 		
 		<div class="main">
-			<h1 id="hypergeometric-dist">’ґЉф‰Ѕ•Є•z‚М•Ѕ‹П‚Ж•ЄЋU</h1>
-			<p>Ѓ@‘S‘М‚Е $N$ ЊВ‚ ‚й‚¤‚ї $n$ ЊВ‚р‘I‚СЏo‚·ЃB$N$ ЊВ‚М’†‚Е‚ ‚йђ«ЋїA‚рЋќ‚В‚а‚М‚МЉ„Ќ‡‚Є $p$ ‚Е‚ ‚й‚Ж‚·‚йЃB‚µ‚Ѕ‚Є‚Б‚ДЃC‘S‘М‚Е $Np$ ЊВ‚Єђ«ЋїA‚рЋќ‚ВЃB‘I‚с‚ѕ $n$ ЊВ‚М‚¤‚їЃCђ«ЋїA‚рЋќ‚В‚а‚М‚Є $X$ ЊВЉЬ‚Ь‚к‚Д‚ў‚й‚Ж‚·‚йЃB‚±‚М $X$ ‚МЉm—¦•Є•z</p>
+			<h1 id="hypergeometric-dist">и¶…е№ѕдЅ•е€†еёѓгЃ®е№іеќ‡гЃЁе€†ж•Ј</h1>
+			<p>гЂЂе…ЁдЅ“гЃ§ $N$ еЂ‹гЃ‚г‚‹гЃ†гЃЎ $n$ еЂ‹г‚’йЃёгЃіе‡єгЃ™гЂ‚$N$ еЂ‹гЃ®дё­гЃ§гЃ‚г‚‹жЂ§иіЄAг‚’жЊЃгЃ¤г‚‚гЃ®гЃ®е‰Іеђ€гЃЊ $p$ гЃ§гЃ‚г‚‹гЃЁгЃ™г‚‹гЂ‚гЃ—гЃџгЃЊгЃЈгЃ¦пјЊе…ЁдЅ“гЃ§ $Np$ еЂ‹гЃЊжЂ§иіЄAг‚’жЊЃгЃ¤гЂ‚йЃёг‚“гЃ  $n$ еЂ‹гЃ®гЃ†гЃЎпјЊжЂ§иіЄAг‚’жЊЃгЃ¤г‚‚гЃ®гЃЊ $X$ еЂ‹еђ«гЃѕг‚ЊгЃ¦гЃ„г‚‹гЃЁгЃ™г‚‹гЂ‚гЃ“гЃ® $X$ гЃ®зўєзЋ‡е€†еёѓ</p>
 			\[ p(X) = \frac{{}_{Np}C_X \times {}_{N-Np}C_{n-X}}{{}_NC_n} \]
-			<p>‚р’ґЉф‰Ѕ•Є•z‚ЖЊѕ‚¤ЃB’ґЉф‰Ѕ•Є•z‚М•Ѕ‹П’l‚Ж•ЄЋU‚Н‚»‚к‚ј‚кЃC</p>
+			<p>г‚’и¶…е№ѕдЅ•е€†еёѓгЃЁиЁЂгЃ†гЂ‚и¶…е№ѕдЅ•е€†еёѓгЃ®е№іеќ‡еЂ¤гЃЁе€†ж•ЈгЃЇгЃќг‚ЊгЃћг‚ЊпјЊ</p>
 			\[ \mu = np \]
 			\[ \sigma^2 = \frac{N-n}{N-1}np(1-p) \]
-			<p>‚Ж‚И‚йЃB</p>
+			<p>гЃЁгЃЄг‚‹гЂ‚</p>
 			<div class="proof">
 				\[
 					\begin{align*}
@@ -967,16 +967,16 @@
 							&= \sum_{X=1}^n \frac{Np(Np-1)!}{(X-1)!(Np-X)!} \cdot {}_{N-Np}C_{n-X} \cdot \frac{n(n-1)!(N-n)!}{N(N-1)!} \\
 					\end{align*}
 				\]
-				<p>‚±‚±‚ЕЃC$y = X - 1$ ‚Ж‚·‚й‚ЖЃC</p>
+				<p>гЃ“гЃ“гЃ§пјЊ$y = X - 1$ гЃЁгЃ™г‚‹гЃЁпјЊ</p>
 				\[
 					\begin{align*}
 						E[X] &= np \sum_{y=0}^{n-1} \frac{(Np-1)!}{y!(Np-1-y)!} \cdot {}_{N-Np}C_{n-1-y} \cdot \frac{(n-1)!(N-n)!}{(N-1)!} \\
 							&= np \sum_{y=0}^{n-1} \frac{{}_{Np-1}C_y \times {}_{N-1-(Np-1)}C_{n-1-y}}{{}_{N-1}C_{n-1}}
 					\end{align*}
 				\]
-				<p>‰E•У‚М‘Ќa‚НЃCђ«ЋїA‚рЋќ‚В‚а‚М‚ЖЋќ‚Ѕ‚И‚ў‚а‚М‚Є‚»‚к‚ј‚к $(Np-1)$ ЊВ‚Ж $(N-Np)$ ЊВ‚ЕЃCЌ‡Њv $(N-1)$ ‚©‚з $(n-1)$ ЊВ‚рЋж‚иЏo‚·ЋћЃC‚»‚М’†‚ЙA‚рЋќ‚В‚а‚М‚Є $y$ ЊВЉЬ‚Ь‚к‚йЉm—¦‚рЃC$y$ ‚МЋж‚и“ѕ‚й‘S‚Д‚М’l‚Й‚В‚ў‚Д‰Б‚¦‚Ѕ‚а‚М‚ѕ‚©‚з“–‘R1‚Е‚ ‚йЃB</p>
+				<p>еЏіиѕєгЃ®з·Џе’ЊгЃЇпјЊжЂ§иіЄAг‚’жЊЃгЃ¤г‚‚гЃ®гЃЁжЊЃгЃџгЃЄгЃ„г‚‚гЃ®гЃЊгЃќг‚ЊгЃћг‚Њ $(Np-1)$ еЂ‹гЃЁ $(N-Np)$ еЂ‹гЃ§пјЊеђ€иЁ€ $(N-1)$ гЃ‹г‚‰ $(n-1)$ еЂ‹г‚’еЏ–г‚Ље‡єгЃ™ж™‚пјЊгЃќгЃ®дё­гЃ«Aг‚’жЊЃгЃ¤г‚‚гЃ®гЃЊ $y$ еЂ‹еђ«гЃѕг‚Њг‚‹зўєзЋ‡г‚’пјЊ$y$ гЃ®еЏ–г‚Љеѕ—г‚‹е…ЁгЃ¦гЃ®еЂ¤гЃ«гЃ¤гЃ„гЃ¦еЉ гЃ€гЃџг‚‚гЃ®гЃ гЃ‹г‚‰еЅ“з„¶1гЃ§гЃ‚г‚‹гЂ‚</p>
 				\[ \therefore \mu = np \]
-				<p>Ѓ@Ћџ‚ЙЃC</p>
+				<p>гЂЂж¬ЎгЃ«пјЊ</p>
 				\[
 					\begin{align*}
 					\sigma^2 &= E[X^2] - \left\{ E[X] \right\}^2 \\
@@ -984,7 +984,7 @@
 						&= E[X(X-1)] + \mu - \mu^2
 					\end{align*}
 				\]
-				<p>‚Ж•ПЊ`‚Е‚«‚й‚©‚зЃC‰E•У‚М‘ж1ЌЂ‚ѕ‚Ї‚рЌl‚¦‚к‚О—З‚ўЃB</p>
+				<p>гЃЁе¤‰еЅўгЃ§гЃЌг‚‹гЃ‹г‚‰пјЊеЏіиѕєгЃ®з¬¬1й …гЃ гЃ‘г‚’иЂѓгЃ€г‚ЊгЃ°и‰ЇгЃ„гЂ‚</p>
 				\[
 					\begin{align*}
 						E[X(X-1)] &= \sum_{X-0}^n X(X-1) \frac{{}_{Np}C_X \times {}_{N-Np}C_{n-X}}{{}_NC_n} \\
@@ -992,14 +992,14 @@
 							&= \sum_{X=2}^n \frac{Np(Np-1)(Np-2)!}{(X-2)!(Np-X)!} \cdot {}_{N-Np}C_{n-X} \cdot \frac{n(n-1)(n-2)!(N-n)!}{N(N-1)(N-2)!}
 					\end{align*}
 				\]
-				<p>‚±‚±‚ЕЃC$z = X - 2$ ‚Ж‚·‚й‚ЖЃC</p>
+				<p>гЃ“гЃ“гЃ§пјЊ$z = X - 2$ гЃЁгЃ™г‚‹гЃЁпјЊ</p>
 				\[
 					\begin{align*}
 					E[X(X-1)] &= \frac{p(Np-1)n(n-1)}{N-1} \sum_{z=0}^{n-2} \frac{(Np-2)!}{z!(Np-2-z)!} \cdot {}_{N-Np}C_{n-2-z} \cdot \frac{(n-2)!(N-n)!}{(N-2)!} \\
 						&= \frac{p(Np-1)n(n-1)}{N-1} \sum_{z=0}^{n-2} \frac{{}_{Np-2}C_z \times {}_{N-2-(Np-2)}C_{n-2-z}}{{}_{N-2}C_{n-2}}
 					\end{align*}
 				\]
-				<p>‰E•У‚М‘Ќa‚НЃCђж‚Щ‚З‚Ж“Ї‚¶—ќ—R‚Е1‚Ж‚И‚й‚©‚зЃC</p>
+				<p>еЏіиѕєгЃ®з·Џе’ЊгЃЇпјЊе…€гЃ»гЃ©гЃЁеђЊгЃзђ†з”±гЃ§1гЃЁгЃЄг‚‹гЃ‹г‚‰пјЊ</p>
 				\[
 					\begin{align*}
 						\sigma^2 &= \frac{p(Np-1)n(n-1)}{N-1} + np - (np)^2 \\
@@ -1011,22 +1011,22 @@
 					\end{align*}
 				\]
 			</div>
-			<p>Ѓ@“сЌЂ•Є•z‚М•ЄЋU $np(1-p)$ ‚Ж”д‚Ч‚й‚ЖЃC’ґЉф‰Ѕ•Є•z‚М•ЄЋU‚НЃC$\displaystyle \frac{N-n}{N-1}$ ‚Ж‚ў‚¤ЊWђ”‚Є‚В‚ў‚Д‚ў‚й‚ЖЊѕ‚¦‚йЃB’ґЉф‰Ѕ•Є•z‚ЄЃg”с•њЊі’ЉЏoЃhЃC“сЌЂ•Є•z‚НЃg•њЊі’ЉЏoЃh‚Й‘О‰ћ‚·‚йЃB”с•њЊі’ЉЏo‚Е‚ ‚Б‚Д‚аЃC$N$ ‚ЄЏ\•Є‘е‚«‚Ї‚к‚О $\displaystyle \frac{N-n}{N-1} \rightarrow 1$ ‚И‚М‚ЕЃC’ґЉф‰Ѕ•Є•z‚Н“сЌЂ•Є•z‚Й‹Я‚Г‚­‚±‚Ж‚Є•Є‚©‚йЃB</p>
+			<p>гЂЂдєЊй …е€†еёѓгЃ®е€†ж•Ј $np(1-p)$ гЃЁжЇ”гЃ№г‚‹гЃЁпјЊи¶…е№ѕдЅ•е€†еёѓгЃ®е€†ж•ЈгЃЇпјЊ$\displaystyle \frac{N-n}{N-1}$ гЃЁгЃ„гЃ†дї‚ж•°гЃЊгЃ¤гЃ„гЃ¦гЃ„г‚‹гЃЁиЁЂгЃ€г‚‹гЂ‚и¶…е№ѕдЅ•е€†еёѓгЃЊвЂњйќћеѕ©е…ѓжЉЅе‡євЂќпјЊдєЊй …е€†еёѓгЃЇвЂњеѕ©е…ѓжЉЅе‡євЂќгЃ«еЇѕеїњгЃ™г‚‹гЂ‚йќћеѕ©е…ѓжЉЅе‡єгЃ§гЃ‚гЃЈгЃ¦г‚‚пјЊ$N$ гЃЊеЌЃе€†е¤§гЃЌгЃ‘г‚ЊгЃ° $\displaystyle \frac{N-n}{N-1} \rightarrow 1$ гЃЄгЃ®гЃ§пјЊи¶…е№ѕдЅ•е€†еёѓгЃЇдєЊй …е€†еёѓгЃ«иї‘гЃҐгЃЏгЃ“гЃЁгЃЊе€†гЃ‹г‚‹гЂ‚</p>
 			<p style="text-align: right">Last modified: September 18, 2015</p>
 		</div>
 		
 		<div class="main">
-		  <h1 id="risks-odds">ѓIѓbѓY”д‚ЖѓЉѓXѓN”д‚МЉЦЊW</h1>
-			<p>”­ђ¶Љm—¦‚М’б‚ўЋ–ЏЫ‚МЋћЃCѓIѓbѓY”д‚НѓЉѓXѓN”д‚М—D‚к‚Ѕђ„’и’l‚Е‚ ‚йЃB</p>
+		  <h1 id="risks-odds">г‚Єгѓѓг‚єжЇ”гЃЁгѓЄг‚№г‚ЇжЇ”гЃ®й–ўдї‚</h1>
+			<p>з™єз”џзўєзЋ‡гЃ®дЅЋгЃ„дє‹и±ЎгЃ®ж™‚пјЊг‚Єгѓѓг‚єжЇ”гЃЇгѓЄг‚№г‚ЇжЇ”гЃ®е„Єг‚ЊгЃџжЋЁе®љеЂ¤гЃ§гЃ‚г‚‹гЂ‚</p>
 			<div class="proof">
-			<p>Ѓ@$2\times 2$ •ЄЉ„•\‚МѓZѓ‹‹LЌ†‚р€И‰є‚М‚ж‚¤‚Й’и‚Я‚й‚±‚Ж‚Й‚·‚йЃB</p>
+			<p>гЂЂ$2\times 2$ е€†е‰ІиЎЁгЃ®г‚»гѓ«иЁеЏ·г‚’д»Ґдё‹гЃ®г‚€гЃ†гЃ«е®љг‚Ѓг‚‹гЃ“гЃЁгЃ«гЃ™г‚‹гЂ‚</p>
 				<table>
 					<tbody>
 						<tr>
 							<td></td>
 							<td>$B+$</td>
 							<td>$B-$</td>
-							<td>Ќ‡Њv</td>
+							<td>еђ€иЁ€</td>
 						</tr>
 						<tr>
 							<td>$A+$</td>
@@ -1041,39 +1041,39 @@
 							<td>$c+d$</td>
 						</tr>
 						<tr>
-							<td>Ќ‡Њv</td>
+							<td>еђ€иЁ€</td>
 							<td>$a+c$</td>
 							<td>$b+d$</td>
 							<td>$N$</td>
 						</tr>
 					</tbody>
 				</table>
-				<p>Ѓ@‚±‚МЋћЃCѓIѓbѓY”д $OR$ ‚ЖѓЉѓXѓN”д $RR$ ‚Н‚»‚к‚ј‚кЃC</p>
+				<p>гЂЂгЃ“гЃ®ж™‚пјЊг‚Єгѓѓг‚єжЇ” $OR$ гЃЁгѓЄг‚№г‚ЇжЇ” $RR$ гЃЇгЃќг‚ЊгЃћг‚ЊпјЊ</p>
 				\[ OR = \frac{a/b}{c/d} = \frac{ad}{bc} \]
 				\[ RR = \frac{a/(a+b)}{c/(c+d)} = \frac{a(c+d)}{c(a+b)} \]
-				<p>‚Ж‚И‚йЃB$B+$ ‚Єђ¶‚¶‚йЉm—¦‚Є’б‚ўЏкЌ‡‚НЃC$a \ll b$ЃC$c \ll d$ ‚ѕ‚©‚зЃC$a+b\simeq b$ЃC$c+d\simeq d$ ‚Е‚ ‚йЃB‚д‚¦‚ЙЃC</p>
+				<p>гЃЁгЃЄг‚‹гЂ‚$B+$ гЃЊз”џгЃг‚‹зўєзЋ‡гЃЊдЅЋгЃ„е ґеђ€гЃЇпјЊ$a \ll b$пјЊ$c \ll d$ гЃ гЃ‹г‚‰пјЊ$a+b\simeq b$пјЊ$c+d\simeq d$ гЃ§гЃ‚г‚‹гЂ‚г‚†гЃ€гЃ«пјЊ</p>
 				\[ RR = \frac{a(c+d)}{c(a+b)} \simeq \frac{ad}{bc} = OR	\]
 			</div>
 			<p style="text-align: right">Last modified: September 25, 2015</p>
 		</div>
 		
 		<div class="main">
-		  <h1 id="compu-formula-correlation">‘ЉЉЦЊWђ”‚МЃgЊvЋZЋ®Ѓh</h1>
+		  <h1 id="compu-formula-correlation">з›ёй–ўдї‚ж•°гЃ®вЂњиЁ€з®—ејЏвЂќ</h1>
 		  \[ r = \frac{\displaystyle N\sum xy - \left( \sum x \right)\left( \sum y \right)}{\displaystyle \sqrt{N\sum x^2 - \left( \sum x \right)^2} \sqrt{N\sum y^2 - \left( \sum y^2 \right)^2}} \]
 			<div class="proof">
-				’и‹`Ћ®‚©‚зЏ‡‚р’З‚Б‚Д•ПЊ`‚µ‚Д‚ў‚Ї‚О—З‚ўЃB
-				\[ Ѓm’и‹`Ћ®Ѓn = \frac{\displaystyle \sum (x-\bar{x})(y-\bar{y})}{\displaystyle \sqrt{\sum (x-\bar{x})^2} \sqrt{\sum (y-\bar{y})^2}} \]
+				е®љзѕ©ејЏгЃ‹г‚‰й †г‚’иїЅгЃЈгЃ¦е¤‰еЅўгЃ—гЃ¦гЃ„гЃ‘гЃ°и‰ЇгЃ„гЂ‚
+				\[ пј»е®љзѕ©ејЏпјЅ = \frac{\displaystyle \sum (x-\bar{x})(y-\bar{y})}{\displaystyle \sqrt{\sum (x-\bar{x})^2} \sqrt{\sum (y-\bar{y})^2}} \]
 				\[
 					\begin{align*}
-						Ѓm•ЄЋqЃn &= \sum (xy - x\bar{y} - \bar{x}y + \bar{x}\bar{y}) \\
+						пј»е€†е­ђпјЅ &= \sum (xy - x\bar{y} - \bar{x}y + \bar{x}\bar{y}) \\
 							&= \sum xy - \bar{y}\sum x - \bar{x} \sum y + \sum \bar{x}\bar{y} \\
 							&= \sum xy - N\bar{x}\bar{y} - N\bar{x}\bar{y} + N\bar{x}\bar{y} \\
 							&= \sum xy - N\bar{x}\bar{y}
 					\end{align*}
 				\] 
-				<p>‚Ь‚ЅЃC•Є•к‚Н<a href="#compu-formula-variance">•ОЌ·•Ѕ•ыa‚МЊvЋZ</a>‚©‚зЃCЋџ‚М‚ж‚¤‚Й‚И‚й‚±‚Ж‚Н–ѕ‚з‚©ЃB</p>
-				\[ Ѓm•Є•кЃn = \sqrt{\sum x^2 - N\bar{x}^2}\sqrt{\sum y^2 -N\bar{y}^2} \]
-				<p>‚ж‚Б‚ДЃC</p>
+				<p>гЃѕгЃџпјЊе€†жЇЌгЃЇ<a href="#compu-formula-variance">еЃЏе·®е№іж–№е’ЊгЃ®иЁ€з®—</a>гЃ‹г‚‰пјЊж¬ЎгЃ®г‚€гЃ†гЃ«гЃЄг‚‹гЃ“гЃЁгЃЇжЋг‚‰гЃ‹гЂ‚</p>
+				\[ пј»е€†жЇЌпјЅ = \sqrt{\sum x^2 - N\bar{x}^2}\sqrt{\sum y^2 -N\bar{y}^2} \]
+				<p>г‚€гЃЈгЃ¦пјЊ</p>
 				\[
 					\begin{align*}
 						r &= \frac{\displaystyle \sum xy - N\bar{x}\bar{y}}{\displaystyle \sqrt{\sum x^2 - N\bar{x}^2}\sqrt{\sum y^2 -N\bar{y}^2}} \\
@@ -1086,8 +1086,8 @@
 		</div>  
 		  
 		<div class="main">
-		  <h1 id="phi-chi-cor">$\phi$ ЊWђ”‚М‹Ѓ‚Я•ы‚М“Ї“™ђ«</h1>
-			<p>2‚В‚Мђ…ЏЂ‚Й‘О‚µ‚ДЃC•Ц‹X“I‚Й1‚Ж0‚рЉ„‚и“–‚Д‚йЃB</p>
+		  <h1 id="phi-chi-cor">$\phi$ дї‚ж•°гЃ®ж±‚г‚Ѓж–№гЃ®еђЊз­‰жЂ§</h1>
+			<p>2гЃ¤гЃ®ж°ґжє–гЃ«еЇѕгЃ—гЃ¦пјЊдѕїе®њзљ„гЃ«1гЃЁ0г‚’е‰Іг‚ЉеЅ“гЃ¦г‚‹гЂ‚</p>
 			<table>
 				<tbody>
 					<thead>
@@ -1099,7 +1099,7 @@
 						<td>$x$</td>
 						<td>$1$</td>
 						<td>$0$</td>
-						<td>Ќ‡Њv</td>
+						<td>еђ€иЁ€</td>
 					</thead>
 					<tr>
 						<td>$1$</td>
@@ -1114,26 +1114,26 @@
 						<td>$f$</td>
 					</tr>
 					<tr>
-						<td>Ќ‡Њv</td>
+						<td>еђ€иЁ€</td>
 						<td>$g$</td>
 						<td>$h$</td>
 						<td>$N$</td>
 					</tr>
 				</tbody>
 			</table>
-			<p>Ѓ@‚±‚МЋћЃC‘ЉЉЦЊWђ”‚р‹Ѓ‚Я‚й‚ЖЃC</p>
+			<p>гЂЂгЃ“гЃ®ж™‚пјЊз›ёй–ўдї‚ж•°г‚’ж±‚г‚Ѓг‚‹гЃЁпјЊ</p>
 			\[ r = \frac{ad - bc}{efgh} \]
-			<p>‚ЕЃC‚±‚к‚Є $\phi$ ЊWђ”‚Ж‚И‚йЃB‚Ь‚ЅЃC</p>
+			<p>гЃ§пјЊгЃ“г‚ЊгЃЊ $\phi$ дї‚ж•°гЃЁгЃЄг‚‹гЂ‚гЃѕгЃџпјЊ</p>
 			\[ \frac{\chi^2}{N} = r^2  \]
-			<p>‚Е‚ ‚йЃB</p>
+			<p>гЃ§гЃ‚г‚‹гЂ‚</p>
 			<div class="proof">
-				<p>Ѓ@ЏШ–ѕ‚ЖЊѕ‚Б‚Д‚аЃC‚Р‚Ѕ‚·‚зЊvЋZ‚рђi‚Я‚к‚О—З‚ў‚ѕ‚Ї‚Е‚ ‚йЃB<a href="#compu-formula-correlation">ѓsѓAѓ\ѓ“‚МђП—¦‘ЉЉЦЊWђ”‚МЊvЋZЋ®</a>ЃC</p>
+				<p>гЂЂиЁјжЋгЃЁиЁЂгЃЈгЃ¦г‚‚пјЊгЃІгЃџгЃ™г‚‰иЁ€з®—г‚’йЂІг‚Ѓг‚ЊгЃ°и‰ЇгЃ„гЃ гЃ‘гЃ§гЃ‚г‚‹гЂ‚<a href="#compu-formula-correlation">гѓ”г‚ўг‚ЅгѓігЃ®з©ЌзЋ‡з›ёй–ўдї‚ж•°гЃ®иЁ€з®—ејЏ</a>пјЊ</p>
 				\[ r = \frac{\displaystyle N\sum xy - \left( \sum x \right)\left( \sum y \right)}{\displaystyle \sqrt{N\sum x^2 - \left( \sum x \right)^2} \sqrt{N\sum y^2 - \left( \sum y^2 \right)^2}} \]
-				<p>‚Й‚Ё‚ў‚ДЃC$1$ ‚Ж $0$ ‚М•Ц‹X“I‚И’l‚р—p‚ў‚ЅЏкЌ‡‚НЃC</p>
+				<p>гЃ«гЃЉгЃ„гЃ¦пјЊ$1$ гЃЁ $0$ гЃ®дѕїе®њзљ„гЃЄеЂ¤г‚’з”ЁгЃ„гЃџе ґеђ€гЃЇпјЊ</p>
 				\[ \sum x = \sum x^2 = e \]
 				\[ \sum y = \sum y^2 = g \]
 				\[ \sum xy = a \]
-				<p>‚Е‚ ‚й‚©‚зЃC</p>
+				<p>гЃ§гЃ‚г‚‹гЃ‹г‚‰пјЊ</p>
 				\[
 					\begin{align*}
 						r &= \frac{Na - eg}{\sqrt{Ne-e^2}\sqrt{Ng-g^2}} \\
@@ -1142,7 +1142,7 @@
 							&= \frac{ad-bc}{\sqrt{efgh}}
 					\end{align*}
 				\]
-				<p>Ѓ@‚Ь‚ЅЃC</p>
+				<p>гЂЂгЃѕгЃџпјЊ</p>
 				\[
 					\begin{align*}
 						\chi^2 &= \frac{\displaystyle \left( a-\frac{eg}{N}\right)^2}{\displaystyle \frac{eg}{N}} + \frac{\displaystyle \left( b-\frac{eh}{N}\right)^2}{\displaystyle \frac{eh}{N}} + \frac{\displaystyle \left( c-\frac{fg}{N}\right)^2}{\displaystyle \frac{fg}{N}} + \frac{\displaystyle \left( d-\frac{fh}{N}\right)^2}{\displaystyle \frac{fh}{N}}\\
@@ -1152,13 +1152,13 @@
 				\]
 				\[
 					\begin{align*}
-						Ѓm•ЄЋqЃn &= N^2 (a^2fh + b^2fg + c^2eh + d^2eg) - 2Nefgh (a+b+c+d) + efgh (eg + eh + fg + fh) \\
+						пј»е€†е­ђпјЅ &= N^2 (a^2fh + b^2fg + c^2eh + d^2eg) - 2Nefgh (a+b+c+d) + efgh (eg + eh + fg + fh) \\
 							&= N^2 (a^2fh + b^2fg + c^2eh + d^2eg) - 2N^2efgh + efgh(e+f)(g+h) \\
 							&= N^2 (a^2fh + b^2fg + c^2eh + d^2eg) - 2N^2efgh + N^2efgh \\
 							&= N^2 (a^2fh + b^2fg + c^2eh + d^2eg - efgh) 
 					\end{align*}
 				\]
-				<p>‚±‚±‚ЕЃC</p>
+				<p>гЃ“гЃ“гЃ§пјЊ</p>
 				\[ a^2fh = a^2(c+d)(b+d) = a^2 (bc + cd + bd + d^2) \]
 				\[ b^2fg = b^2(c+d)(a+c) = b^2 (ac + c^2 + ad + cd) \]
 				\[ c^2eh = c^2(a+b)(b+d) = c^2 (ab + ad + \underline{b^2} + bd) \]
@@ -1170,14 +1170,14 @@
 							&= a^2bc + a^2ed + abc^2 + ac^2d + a^2bd + a^2d^2 + \underline{abcd} + acd^2 + ab^2c + \underline{abcd} + b^2c^2 + bc^2d + ab^2d + abd^2 + b^2cd + bcd^2
 					\end{align*}
 				\]
-				<p>‚ЕЃm•ЄЋqЃn‚МЊvЋZ‰Я’ц‚ЕЃC‰єђь•”€ИЉO‚НЏБ‚¦‚й‚М‚ЕЊ‹‹ЗЃC</p>
+				<p>гЃ§пј»е€†е­ђпјЅгЃ®иЁ€з®—йЃЋзЁ‹гЃ§пјЊдё‹з·љйѓЁд»Ґе¤–гЃЇж¶€гЃ€г‚‹гЃ®гЃ§зµђе±ЂпјЊ</p>
 				\[
 					\begin{align*}
-						Ѓm•ЄЋqЃn &= N^2(a^2d^2 + b^2c^2-2abcd) \\
+						пј»е€†е­ђпјЅ &= N^2(a^2d^2 + b^2c^2-2abcd) \\
 							&= N^2 (ad-bc)^2
 					\end{align*}
 				\]
-				<p>‚µ‚Ѕ‚Є‚Б‚ДЃC</p>
+				<p>гЃ—гЃџгЃЊгЃЈгЃ¦пјЊ</p>
 				\[
 					\begin{align*}
 						\chi^2 &= \frac{N^2(ad-bc)^2}{Nefgh} \\
@@ -1190,62 +1190,62 @@
 		</div>
 		
 		<div class="main">
-		  <h1 id="CLT">’†ђS‹ЙЊА’и—ќ</h1>
-			<p>Ѓ@’†ђS‹ЙЊА’и—ќ‚НђFЃX‚И•\Њ»Њ`‚Є‚ ‚й‚ЄЃCЋџ‚М‚а‚М‚а1ѓoЃ[ѓWѓ‡ѓ“‚Е‚ ‚йЃB</p>
+		  <h1 id="CLT">дё­еїѓжҐµй™ђе®љзђ†</h1>
+			<p>гЂЂдё­еїѓжҐµй™ђе®љзђ†гЃЇи‰ІгЂ…гЃЄиЎЁзЏѕеЅўгЃЊгЃ‚г‚‹гЃЊпјЊж¬ЎгЃ®г‚‚гЃ®г‚‚1гѓђгѓјг‚ёгѓ§гѓігЃ§гЃ‚г‚‹гЂ‚</p>
 			<p></p>
 			<div style="border-style:solid;border-width:1px;padding:10px;border-radius:10px;border-color:red;margin-left:auto;margin-right:auto;width:100%">
-				$x$ ‚Є •Ѕ‹П’l $\mu$, •WЏЂ•ОЌ· $\sigma$ ‚М•Є•z‚ЙЏ]‚¤ЋћЃC$n$ ‚ЄЏ\•Є‘е‚«‚Ї‚к‚ОЃC
+				$x$ гЃЊ е№іеќ‡еЂ¤ $\mu$, жЁ™жє–еЃЏе·® $\sigma$ гЃ®е€†еёѓгЃ«еѕ“гЃ†ж™‚пјЊ$n$ гЃЊеЌЃе€†е¤§гЃЌгЃ‘г‚ЊгЃ°пјЊ
 				\[ z = \frac{\bar{x}-\mu}{\sigma /\sqrt{n}} \]
-				‚Н•WЏЂђі‹K•Є•z‚Й‹ЯЋ—‚·‚йЃB
+				гЃЇжЁ™жє–ж­Ји¦Џе€†еёѓгЃ«иї‘дјјгЃ™г‚‹гЂ‚
 			</div>
 			<p></p>
-			<p>Ѓ@‚±‚МЏШ–ѕ‚М‘O‚ЙЃC’PЏѓ‚ИЊvЋZЃi‚М•\‹LЃj–@‘Ґ‚рЏШ–ѕ‚µ‚Д‚Ё‚­ЃB</p>
+			<p>гЂЂгЃ“гЃ®иЁјжЋгЃ®е‰ЌгЃ«пјЊеЌзґ”гЃЄиЁ€з®—пј€гЃ®иЎЁиЁпј‰жі•е‰‡г‚’иЁјжЋгЃ—гЃ¦гЃЉгЃЏгЂ‚</p>
 			<p></p>
 			<div style="border-style:solid;border-width:1px;padding:10px;border-radius:10px;border-color:red;margin-left:auto;margin-right:auto;width:100%">
-				$g(x)$ ‚ЙЉЦ‚·‚йђП—¦•кЉЦђ”‚р
+				$g(x)$ гЃ«й–ўгЃ™г‚‹з©ЌзЋ‡жЇЌй–ўж•°г‚’
 				\[ M_{g(x)} (\theta) = \int_{-\infty}^\infty e^{\theta g(x)}f(x) dx \]
-				‚Ж‚·‚й‚ЖЃC€И‰є‚МЋ®‚Єђ¬‚и—§‚ВЃi’A‚µЃC$c$ ‚Н’иђ”ЃjЃB
+				гЃЁгЃ™г‚‹гЃЁпјЊд»Ґдё‹гЃ®ејЏгЃЊж€ђг‚Љз«‹гЃ¤пј€дЅ†гЃ—пјЊ$c$ гЃЇе®љж•°пј‰гЂ‚
 				<p></p>
-				<p>Ѓ@(1) $M_{cg(x)} (\theta) = M_{g(x)} (c\theta)$</p>
-				<p>Ѓ@(2) $M_{g(x)+c} (\theta) = e^{c\theta}M_{g(x)} (\theta)$</p>
-				<p>Ѓ@(3) $M_{x_1 + \cdots + x_n} (\theta) = M_{x_1} (\theta) \cdots M_{x_n} (\theta)$Ѓi’A‚µЃC$x_1$ЃC$\cdots$ЃC$x_n$ ‚Н“Ж—§Ѓj</p>
-				‚±‚к‚з‚Н—ЈЋUЊ^‚МЏкЌ‡‚Е‚ађ¬‚и—§‚ВЃB
+				<p>гЂЂ(1) $M_{cg(x)} (\theta) = M_{g(x)} (c\theta)$</p>
+				<p>гЂЂ(2) $M_{g(x)+c} (\theta) = e^{c\theta}M_{g(x)} (\theta)$</p>
+				<p>гЂЂ(3) $M_{x_1 + \cdots + x_n} (\theta) = M_{x_1} (\theta) \cdots M_{x_n} (\theta)$пј€дЅ†гЃ—пјЊ$x_1$пјЊ$\cdots$пјЊ$x_n$ гЃЇз‹¬з«‹пј‰</p>
+				гЃ“г‚Њг‚‰гЃЇй›ўж•Јећ‹гЃ®е ґеђ€гЃ§г‚‚ж€ђг‚Љз«‹гЃ¤гЂ‚
 			</div>
 			<p></p>
 			<div class="proof">
 				\[ M_{cg(x)} (\theta) = \int_{-\infty}^\infty e^{\theta cg(x)}f(x) dx = M_{g(x)} (c\theta) \]
 				\[ M_{g(x)+c} (\theta) = \int_{-\infty}^\infty e^{\theta \left\{ g(x)+c \right\}}f(x) dx = e^{c\theta} \int_{-\infty}^\infty e^{\theta g(x)}f(x) dx = e^{c\theta}M_{g(x)} (\theta) \]
-				Ѓ@(1) ‚Ж (2) ‚Н‚±‚к‚ЕЏI‚н‚и‚ѕ‚ЄЃC(3) ‚НЏ­‚µ‚в‚в‚±‚µ‚ўЃB<a href="#moment">Њґ“_ђП—¦</a>‚НЃC
+				гЂЂ(1) гЃЁ (2) гЃЇгЃ“г‚ЊгЃ§зµ‚г‚Џг‚ЉгЃ гЃЊпјЊ(3) гЃЇе°‘гЃ—г‚„г‚„гЃ“гЃ—гЃ„гЂ‚<a href="#moment">еЋџз‚№з©ЌзЋ‡</a>гЃЇпјЊ
 				\[ E\left[ x^n \right] = \int_{-\infty}^\infty x^n f(x) dx \]
-				‚Ж’и‹`‚і‚к‚й‚ЄЃCђП—¦•кЉЦђ”‚ЖЊ©”д‚Ч‚й‚ЖЃC
+				гЃЁе®љзѕ©гЃ•г‚Њг‚‹гЃЊпјЊз©ЌзЋ‡жЇЌй–ўж•°гЃЁи¦‹жЇ”гЃ№г‚‹гЃЁпјЊ
 				\[ M_x (\theta) = \int_{-\infty}^\infty e^{\theta x} f(x) dx = E\left[ e^{\theta x} \right] \]
-				‚ЖЏ‘‚Ї‚й‚±‚Ж‚Є•Є‚©‚йЃB‚±‚М‚±‚ЖЃC‹y‚СЃCЃg$x$ ‚Ж $y$ ‚Є“Ж—§‚И‚з‚О $E[xy] = E[x]E[y]$Ѓh‚Ж‚ў‚¤ЊцЋ®ЃiЏШ–ѕ—ЄЃj‚р—p‚ў‚й‚ЖЃC
+				гЃЁж›ёгЃ‘г‚‹гЃ“гЃЁгЃЊе€†гЃ‹г‚‹гЂ‚гЃ“гЃ®гЃ“гЃЁпјЊеЏЉгЃіпјЊвЂњ$x$ гЃЁ $y$ гЃЊз‹¬з«‹гЃЄг‚‰гЃ° $E[xy] = E[x]E[y]$вЂќгЃЁгЃ„гЃ†е…¬ејЏпј€иЁјжЋз•Ґпј‰г‚’з”ЁгЃ„г‚‹гЃЁпјЊ
 				\[ M_{x_1 + \cdots + x_n} (\theta) = E\left[ e^{\theta (x_1+\cdots+x_n)}\right] = E\left[ e^{\theta x_1}\cdots e^{\theta x_n} \right] = E\left[ e^{\theta x_1}\right] \cdots E\left[ e^{\theta x_n} \right] = M_{x_1} (\theta) \cdots M_{x_n} (\theta) \]
 			</div>
-			<p>Ѓ@‚Е‚НЃC–{‘и‚М’†ђS‹ЙЊА’и—ќ‚МЏШ–ѕ‚Н€И‰є‚М’К‚иЃB</p>
+			<p>гЂЂгЃ§гЃЇпјЊжњ¬йЎЊгЃ®дё­еїѓжҐµй™ђе®љзђ†гЃ®иЁјжЋгЃЇд»Ґдё‹гЃ®йЂљг‚ЉгЂ‚</p>
 			<div class="proof">
-				ЏЂ”х’†ЃB
+				жє–е‚™дё­гЂ‚
 			</div>
 			<p style="text-align: right">Last modified: October 20, 2015</p>
 		</div>
 		
 		<div class="main">
-			<h1 id="normal-equation">ђі‹K•ы’цЋ®</h1>
+			<h1 id="normal-equation">ж­Ји¦Џж–№зЁ‹ејЏ</h1>
 			<div class="proof">
-				ЏЂ”х’†ЃB
+				жє–е‚™дё­гЂ‚
 			</div>
 			<p style="text-align: right">Last modified: November 24, 2015</p>
 		</div>
 		
 		<div class="main">
-			<h1 id="coef-determination">ђ„’и’l‚М•WЏЂЊлЌ·‚Ж‘ЉЉЦЊWђ”‚МЉЦЊW</h1>
+			<h1 id="coef-determination">жЋЁе®љеЂ¤гЃ®жЁ™жє–иЄ¤е·®гЃЁз›ёй–ўдї‚ж•°гЃ®й–ўдї‚</h1>
 			<p></p>
 			<div style="border-style:solid;border-width:1px;padding:10px;border-radius:10px;border-color:red;margin-left:auto;margin-right:auto;width:100%">
 				\[ s_{Y\cdot X} = s_Y \sqrt{(1 - r^2)\frac{N - 1}{N - 2}} \]
 			</div>
 			<p></p>
 			<div class="proof">
-				Ѓ@$Y$ ‚М•ЄЋU $s^2_Y$ ‚ЖЊлЌ·•ЄЋU $s^2_{Y\cdot X}$ ‚М’и‹`Ћ®‚Н€И‰є‚М’К‚иЃB
+				гЂЂ$Y$ гЃ®е€†ж•Ј $s^2_Y$ гЃЁиЄ¤е·®е€†ж•Ј $s^2_{Y\cdot X}$ гЃ®е®љзѕ©ејЏгЃЇд»Ґдё‹гЃ®йЂљг‚ЉгЂ‚
 				\[ s^2_Y = \frac{\sum (Y - \bar{Y})^2}{N - 1} \]
 				\[ s^2_{Y\cdot X} = \frac{\sum (Y - \hat{Y})^2}{N - 2} \]
 			</div>
@@ -1259,7 +1259,7 @@
 
 
     
-<!-- Ѓ«ѓeѓ“ѓvѓЊЃ[ѓg
+<!-- в†“гѓ†гѓігѓ—гѓ¬гѓјгѓ€
 	<div class="main">
 		  <h1 id=""></h1>
 			<p></p>
